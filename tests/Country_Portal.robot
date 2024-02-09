@@ -52,8 +52,8 @@ Country Portal
     VerifyText                  Upload country documents
     ClickText                   UPLOAD                      index=1
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents/Test.txt
-    DoubleClick         suite                       
-    DoubleClick         Documents
+    Double click         suite                       
+    Double click         Documents
     ClickText           Text.txt
     ClickText           Open                        anchor=Cancel
 
