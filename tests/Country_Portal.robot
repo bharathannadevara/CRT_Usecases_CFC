@@ -54,7 +54,7 @@ Country Portal
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents/Test.txt
     Double click                suite
     Double click                Documents
-    ClickText                   Text.txt
+    ClickText                   Test.txt
     ClickText                   Open                        anchor=Cancel
 
 
