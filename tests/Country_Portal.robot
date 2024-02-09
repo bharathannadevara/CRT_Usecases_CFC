@@ -14,7 +14,7 @@ Country Portal
     ClickText                   Show more actions
     ClickText                   Log in to Experience as User
 
-    ClickText                   Country Portal        delay=2
+    ClickText                   Country Portal              delay=2
     TypeText                    Search Country              Somalia
     ClickText                   Somalia                     #Directly identify country, define variable
     ClickText                   NVS Application Round 4 (2023) - Somalia
@@ -52,10 +52,10 @@ Country Portal
     VerifyText                  Upload country documents
     ClickText                   UPLOAD                      index=1
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents/Test.txt
-    QVision.DoubleClick         suite                       anchor=ui-recorder
-    QVision.DoubleClick         Documents
-    QVision.ClickText           FUNDAMENTALS .pdf
-    QVision.ClickText           Open                        anchor=Cancel
+    DoubleClick         suite                       
+    DoubleClick         Documents
+    ClickText           Text.txt
+    ClickText           Open                        anchor=Cancel
 
 
 
