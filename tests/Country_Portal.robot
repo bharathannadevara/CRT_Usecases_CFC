@@ -50,13 +50,16 @@ Country Portal
     ClickText                   NEXT
 
     VerifyText                  Upload country documents
-    ClickText                   UPLOAD                      index=1
-    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents/Test.txt
+    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
+    ClickText                   UPLOAD                      index="1"
     Double click                suite
     Double click                Documents
-    Double click                Test_Gavi.txt
-    ClickText                   Open                        anchor=Cancel
-
+    Double click                Test_Gavi.txt               
+    # ClickText                   Open                        anchor=Cancel
+    ClickText                   UPLOAD                      index="2"
+    Double click                suite
+    Double click                Documents
+    Double click                CRT_Demo.pdf               
 
 
 
