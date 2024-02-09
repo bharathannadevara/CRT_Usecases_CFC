@@ -30,7 +30,7 @@ Country Portal
     SwitchWindow                index=1
     ClickText                   NEXT
     ScrollTo                    Date of Programme Capacity Assessment
-    ClickText                   Overall expenditures and financing for immunisation #Once submitted we can't edit this page again
+    # ClickText                   Overall expenditures and financing for immunisation     anchor=Country health and immunisation data #Once submitted we can't edit this page again
 
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[3]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]
     ClickText                   2022                        anchor=From
@@ -50,6 +50,7 @@ Country Portal
     ClickText                   NEXT
     
     VerifyText                  Upload country documents
+    
 
 
 
