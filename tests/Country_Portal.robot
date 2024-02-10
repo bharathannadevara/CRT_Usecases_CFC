@@ -1,5 +1,6 @@
 *** Settings ***
 Resource                        ../resource/common.robot
+Library                         QWeb
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
 
@@ -56,7 +57,8 @@ Country Portal
     Double click                Documents
     Double click                Test_Gavi.txt               
     # ClickText                   Open                        anchor=Cancel
-    ClickText                   UPLOAD                      index=2
+    ClickText                   UPLOAD         anchor=Country strategic multi-year plan / cMYP costing tool
+    Select Radio Button         SomaliaDraft cMYP20212515 March 2021 2_17-05-21_16.01.52        Line 2
     Double click                suite
     Double click                Documents
     Double click                CRT_Demo.pdf               
