@@ -79,8 +79,6 @@ Country Portal
     ClickText                   SELECT                      partial_match=False       delay=2
     Sleep                       6
     ClickText                   UPDATE                      anchor=7
-    Double click                suite                       anchor=ui-recorder
-    Double click                Documents
     Double click                CRT_Demo.pdf               
     Sleep                       6
     ClickText                   NEXT
