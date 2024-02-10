@@ -1,7 +1,8 @@
 *** Settings ***
 Library                         QForce
-Library                         QWeb
+# Library                         QWeb
 Library                         QVision
+Library                         SeleniumLibrary
 
 
 *** Variables ***
