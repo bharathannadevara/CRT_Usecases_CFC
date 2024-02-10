@@ -56,32 +56,33 @@ Country Portal
     Double click                suite
     Double click                Documents
     Double click                Test_Gavi.txt               
-    Sleep                       8
+    Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
     UseTable                    File(s)
     ClickCell                   r1c1
     ClickText                   SELECT                      partial_match=False       delay=2
-    Sleep                       8
+    Sleep                       6
     
     ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM) assessment
     UseTable                    File(s)
     ClickCell                   r2c1
     ClickText                   SELECT                      partial_match=False       delay=2
-    Sleep                       8
+    Sleep                       6
     ClickText                   REMOVE                      anchor=6
-    Sleep                       8
+    Sleep                       6
     
+    SwipeDown                   Effective Vaccine Management (EVM): most recent improvement plan progress report
     ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
     UseTable                    File(s)
     ClickCell                   r2c1
     ClickText                   SELECT                      partial_match=False       delay=2
-    Sleep                       8
+    Sleep                       6
     ClickText                   UPDATE                      anchor=7
-    Double click                suite
+    Double click                suite                       
     Double click                Documents
     Double click                CRT_Demo.pdf               
-    Sleep                       8
+    Sleep                       6
 
 
 
