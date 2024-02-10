@@ -72,7 +72,7 @@ Country Portal
     ClickText                   REMOVE                      anchor=6
     Sleep                       6
     
-    SwipeDown                   Effective Vaccine Management (EVM): most recent improvement plan progress report
+    SwipeDown                   1
     ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
     UseTable                    File(s)
     ClickCell                   r2c1
@@ -83,6 +83,7 @@ Country Portal
     Double click                Documents
     Double click                CRT_Demo.pdf               
     Sleep                       6
+    ClickText                   NEXT
 
 
 
