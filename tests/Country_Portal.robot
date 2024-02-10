@@ -57,33 +57,50 @@ Country Portal
     Double click                Documents
     Double click                Test_Gavi.txt
     # ClickText                 Open                        anchor=Cancel
-    ClickText                   UPLOAD                      anchor=Country strategic multi-year plan / cMYP costing tool
-    Select Radio Button         SomaliaDraft cMYP20212515 March 2021 2_17-05-21_16.01.52    Line 2
-    Double click                suite
-    Double click                Documents
-    Double click                CRT_Demo.pdf
 
 
-
-
-
-    ClickText                   Update                      anchor=C.ZMB.U.22.1.1
-
-C.ZMB.U.22.2.5
-    ClickText                   Update                      anchor=C.ZMB.U.22.2.5
-    ClickElement                xpath=/html/body/div[3]/div[2]/div/div[1]/div/div/c-p-e-f_-l-w-c_-milestones/div/div[3]/div/div[3]/c-p-e-f_-l-w-c_-milestone-custom-datatable/div[2]/div/div/table/tbody/tr[1]/td[1]/lightning-primitive-cell-factory/span/div/lightning-primitive-cell-button/lightning-button-icon/button
-
-
-   
-   
-    TypeText                    Value                       ACLAIM Africa
-    ClickText                   ACLAIM Africa
-    ClickText                   Clear
-
-    TypeText                    Value                       AFRIVAC
-    ClickText                   AFRIVAC
-    ClickText                   Clear
+    ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
+    UseTable                    File(s)
+    ClickCell                   r1c1
+    ClickText                   SELECT                      partial_match=False       delay=2
+    Sleep                       5
+    ClickText                   REMOVE                      anchor=4
     
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # ClickText                 Update                      anchor=C.ZMB.U.22.1.1
+
+
+    # ClickText                 Update                      anchor=C.ZMB.U.22.2.5
+    # ClickElement              xpath=/html/body/div[3]/div[2]/div/div[1]/div/div/c-p-e-f_-l-w-c_-milestones/div/div[3]/div/div[3]/c-p-e-f_-l-w-c_-milestone-custom-datatable/div[2]/div/div/table/tbody/tr[1]/td[1]/lightning-primitive-cell-factory/span/div/lightning-primitive-cell-button/lightning-button-icon/button
+
+
+
+
+    # TypeText                  Value                       ACLAIM Africa
+    # ClickText                 ACLAIM Africa
+    # ClickText                 Clear
+
+    # TypeText                  Value                       AFRIVAC
+    # ClickText                 AFRIVAC
+    # ClickText                 Clear
+
 
 
 
