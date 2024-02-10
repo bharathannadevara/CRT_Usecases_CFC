@@ -55,34 +55,45 @@ Country Portal
     ClickText                   UPLOAD                      index=1
     Double click                suite
     Double click                Documents
-    Double click                Test_Gavi.txt               
+    Double click                Test_Gavi.txt
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
     UseTable                    File(s)
     ClickCell                   r1c1
-    ClickText                   SELECT                      partial_match=False       delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
-    
+
     ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM) assessment
     UseTable                    File(s)
     ClickCell                   r2c1
-    ClickText                   SELECT                      partial_match=False       delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
     ClickText                   REMOVE                      anchor=6
     Sleep                       6
-    
     SwipeDown                   1
+
     ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
     UseTable                    File(s)
     ClickCell                   r2c1
-    ClickText                   SELECT                      partial_match=False       delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
     ClickText                   UPDATE                      anchor=7
-    Double click                CRT_Demo.pdf               
+    Double click                CRT_Demo.pdf
     Sleep                       6
     ClickText                   NEXT
 
+    ClickText                   Yes                         anchor=1
+    ClickText                   Yes                         anchor=2
+    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[5]/div[1]/mat-form-field[1]/div[1]/div[1]/div[2]/mat-datepicker-toggle[1]/button[1]/span[1]/mat-icon[1]/*[1]
+    ClickText                   Feb
+    TypeText                    Required date for vaccine and supplies to arrive        17 Feb 2024
+    TypeText                    Planned launch date         24 Aug 2024
+    Click Element               xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[7]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]
+    ClickText                   2025
+    TypeText                    Vaccine presentation registration or licensing          Testing
+    ClickText                   No                        anchor=Vaccine procurement
+    ClickText                   NEXT
 
 
 
