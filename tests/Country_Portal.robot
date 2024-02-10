@@ -20,7 +20,7 @@ Country Portal
     ClickText                   Somalia                     #Directly identify country, define variable
     ClickText                   NVS Application Round 4 (2023) - Somalia
     ClickText                   Measles 1st and 2nd dose routine.                       delay=2
-    # ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-switch-option[2]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/mat-slide-toggle[1]/label[1]/div[1]
+    # ClickElement              xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-switch-option[2]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/mat-slide-toggle[1]/label[1]/div[1]
     Sleep                       3
     ClickText                   NEXT
     VerifyText                  Gavi terms and conditions                               anchor=1.2.1
@@ -55,18 +55,35 @@ Country Portal
     ClickText                   UPLOAD                      index=1
     Double click                suite
     Double click                Documents
-    Double click                Test_Gavi.txt               
-    # ClickText                   Open                        anchor=Cancel
-    ClickText                   UPLOAD         anchor=Country strategic multi-year plan / cMYP costing tool
-    Select Radio Button         SomaliaDraft cMYP20212515 March 2021 2_17-05-21_16.01.52        Line 2
+    Double click                Test_Gavi.txt
+    # ClickText                 Open                        anchor=Cancel
+    ClickText                   UPLOAD                      anchor=Country strategic multi-year plan / cMYP costing tool
+    Select Radio Button         SomaliaDraft cMYP20212515 March 2021 2_17-05-21_16.01.52    Line 2
     Double click                suite
     Double click                Documents
-    Double click                CRT_Demo.pdf               
+    Double click                CRT_Demo.pdf
 
 
 
 
 
+    ClickText                   Update                      anchor=C.ZMB.U.22.1.1
+
+C.ZMB.U.22.2.5
+    ClickText                   Update                      anchor=C.ZMB.U.22.2.5
+    ClickElement                xpath=/html/body/div[3]/div[2]/div/div[1]/div/div/c-p-e-f_-l-w-c_-milestones/div/div[3]/div/div[3]/c-p-e-f_-l-w-c_-milestone-custom-datatable/div[2]/div/div/table/tbody/tr[1]/td[1]/lightning-primitive-cell-factory/span/div/lightning-primitive-cell-button/lightning-button-icon/button
+
+
+   
+   
+    TypeText                    Value                       ACLAIM Africa
+    ClickText                   ACLAIM Africa
+    ClickText                   Clear
+
+    TypeText                    Value                       AFRIVAC
+    ClickText                   AFRIVAC
+    ClickText                   Clear
+    
 
 
 
