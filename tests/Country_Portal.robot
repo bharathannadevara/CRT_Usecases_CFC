@@ -26,8 +26,8 @@ Country Portal
     VerifyText                  Gavi terms and conditions                               anchor=1.2.1
     ClickText                   NEXT
     ClickText                   http://www.gavi.org/support/process/apply/
-    # ClickText                 Accept ALL                  recognition_mode=vision
     VerifyText                  Gavi Guidelines
+    Sleep                       3
     SwitchWindow                index=1
     ClickText                   NEXT
     ScrollTo                    Date of Programme Capacity Assessment
@@ -56,17 +56,27 @@ Country Portal
     Double click                suite
     Double click                Documents
     Double click                Test_Gavi.txt
-    # ClickText                 Open                        anchor=Cancel
-
+    Sleep                       5
 
     ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
     UseTable                    File(s)
     ClickCell                   r1c1
     ClickText                   SELECT                      partial_match=False       delay=2
     Sleep                       5
-    ClickText                   REMOVE                      anchor=4
     
+    ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM) assessment
+    UseTable                    File(s)
+    ClickCell                   r2c1
+    ClickText                   SELECT                      partial_match=False       delay=2
+    Sleep                       5
+    ClickText                   REMOVE                      anchor=6
     
+    ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
+    UseTable                    File(s)
+    ClickCell                   r2c1
+    ClickText                   SELECT                      partial_match=False       delay=2
+    Sleep                       5
+    ClickText                   UPDATE                      anchor=8
 
 
 
