@@ -73,7 +73,6 @@ Country Portal
     ClickText                   REMOVE                      anchor=6
     Sleep                       6
     
-    ScrollText                  Effective Vaccine Management (EVM) assessment
     ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
     UseTable                    File(s)
     ClickCell                   r2c1
@@ -83,8 +82,9 @@ Country Portal
     Double click                CRT_Demo.pdf
     Sleep                       6
 
+    # Coordination and advisory groups documents
     ScrollText                  Coordination and advisory groups documents
-    ClickText                   UPLOAD                      anchor=10
+    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference
     Double click                Test_Gavi.txt
     Sleep                       6
     
@@ -94,7 +94,8 @@ Country Portal
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
     
-    ClickText                   SELECT FROM LIBRARY         anchor=Other documents (optional)    partial_match=false
+    # Other documents
+    ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS    partial_match=false
     UseTable                    File(s)
     ClickCell                   r1c1
     ClickText                   SELECT                      partial_match=False         delay=2
