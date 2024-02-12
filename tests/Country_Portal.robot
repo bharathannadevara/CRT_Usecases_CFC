@@ -72,13 +72,13 @@ Country Portal
     Sleep                       6
     ClickText                   REMOVE                      anchor=6
     Sleep                       6
-    
+
     ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
     UseTable                    File(s)
     ClickCell                   r2c1
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
-    ClickText                   UPDATE                      anchor=7                    
+    ClickText                   UPDATE                      anchor=7
     Double click                CRT_Demo.pdf
     Sleep                       6
 
@@ -87,21 +87,21 @@ Country Portal
     ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference
     Double click                Test_Gavi.txt
     Sleep                       6
-    
+
     ClickText                   SELECT FROM LIBRARY         anchor=National Coordination Forum meeting minutes of the past 12 months
     UseTable                    File(s)
     ClickCell                   r3c1
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
-    
+
     # Other documents
-    ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS    partial_match=false
+    ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS             partial_match=false
     UseTable                    File(s)
     ClickCell                   r1c1
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
     ClickText                   NEXT
-    
+
     # 3.1 Vaccine and programmatic data
     ClickText                   SELECT
     ClickText                   M, 5 doses/vial, Lyophilised
@@ -123,21 +123,22 @@ Country Portal
     ClickText                   NEXT
 
     # 3.2 Target Information
-    TypeText    //*[@id\='mat-input-0']    5
-    ClickText    months    anchor=weeks
-    TypeText    //*[@id\='mat-input-1']    5
-    ClickText    weeks    anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
-    UseTable    \n \n \n \n
-    ClickCell    r1c2
-    TypeText    //*[@id\='mat-input-2']    1008
-    ClickText    SAVE
-    ClickCell    r1c3
-    TypeText    //*[@id\='mat-input-3']    1241
-    ClickText    SAVE
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    6        Partial_match=False
-    # ClickText                   weeks                       anchor=1
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    6        Partial_match=False
-    # ClickText                   weeks                       anchor=2
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    6
+    ClickText                   weeks                       anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    6
+    ClickText                   weeks                       anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
+    UseTable                    Population in the target age cohort (#)
+    ClickTableCell              
+    ClickCell                   r1c2
+    TypeText                    //*[@id\='mat-input-2']     1008
+    ClickText                   SAVE
+    ClickCell                   r1c3
+    TypeText                    //*[@id\='mat-input-3']     1241
+    ClickText                   SAVE
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    6    Partial_match=False
+    # ClickText                 weeks                       anchor=1
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    6    Partial_match=False
+    # ClickText                 weeks                       anchor=2
 
 
 
