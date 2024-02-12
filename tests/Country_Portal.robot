@@ -83,8 +83,17 @@ Country Portal
     Sleep                       6
     ClickText                   NEXT
 
+    ClickText                   SELECT                      
+    ClickText                   M, 5 doses/vial, Lyophilised
+    ClickText                   APPLY
+    Wait                        5
     ClickText                   Yes                         anchor=1
+    ClickText                   SELECT
+    ClickText                   M, 10 doses/vial, Lyophilised
+    ClickText                   APPLY
+    Wait                        5
     ClickText                   Yes                         anchor=2
+    TypeText                    Required date for vaccine and supplies to arrive        17 FEB 2024
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[5]/div[1]/mat-form-field[1]/div[1]/div[1]/div[2]/mat-datepicker-toggle[1]/button[1]/span[1]/mat-icon[1]/*[1]
     ClickText                   Feb
     TypeText                    Required date for vaccine and supplies to arrive        17 Feb 2024
@@ -94,6 +103,8 @@ Country Portal
     TypeText                    Vaccine presentation registration or licensing          Testing
     ClickText                   No                        anchor=Vaccine procurement
     ClickText                   NEXT
+
+    
 
 
 
@@ -112,11 +123,8 @@ Country Portal
 
     # ClickText                 Update                      anchor=C.ZMB.U.22.1.1
 
-
     # ClickText                 Update                      anchor=C.ZMB.U.22.2.5
     # ClickElement              xpath=/html/body/div[3]/div[2]/div/div[1]/div/div/c-p-e-f_-l-w-c_-milestones/div/div[3]/div/div[3]/c-p-e-f_-l-w-c_-milestone-custom-datatable/div[2]/div/div/table/tbody/tr[1]/td[1]/lightning-primitive-cell-factory/span/div/lightning-primitive-cell-button/lightning-button-icon/button
-
-
 
 
     # TypeText                  Value                       ACLAIM Africa
