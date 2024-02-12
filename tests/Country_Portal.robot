@@ -50,6 +50,7 @@ Country Portal
     TypeText                    Coverage and equity situation analysis                  Testing
     ClickText                   NEXT
 
+    # 2.4 Upload country documents
     VerifyText                  Upload country documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      index=1
