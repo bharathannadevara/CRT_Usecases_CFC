@@ -98,6 +98,7 @@ Country Portal
     TypeText                    Planned launch date         17 AUG 2024
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[7]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   2025
+    Wait                        6
     TypeText                    Vaccine presentation registration or licensing          Test
     ClickText                   Yes                         anchor=Vaccine procurement
     ClickText                   NEXT
