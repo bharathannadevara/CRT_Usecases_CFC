@@ -83,7 +83,8 @@ Country Portal
     Sleep                       6
     ClickText                   NEXT
 
-    ClickText                   SELECT                      
+    # 3.1 Vaccine and programmatic data
+    ClickText                   SELECT
     ClickText                   M, 5 doses/vial, Lyophilised
     ClickText                   APPLY
     Wait                        5
@@ -93,18 +94,34 @@ Country Portal
     ClickText                   APPLY
     Wait                        5
     ClickText                   Yes                         anchor=2
-    TypeText                    Required date for vaccine and supplies to arrive        17 FEB 2024
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[5]/div[1]/mat-form-field[1]/div[1]/div[1]/div[2]/mat-datepicker-toggle[1]/button[1]/span[1]/mat-icon[1]/*[1]
-    ClickText                   Feb
-    TypeText                    Required date for vaccine and supplies to arrive        17 Feb 2024
-    TypeText                    Planned launch date         24 Aug 2024
-    Click Element               xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[7]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]
+    TypeText                    Required date for vaccine and supplies to arrive        17 MAR 2024
+    TypeText                    Planned launch date         17 AUG 2024
+    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[7]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   2025
-    TypeText                    Vaccine presentation registration or licensing          Testing
-    ClickText                   No                        anchor=Vaccine procurement
+    TypeText                    Vaccine presentation registration or licensing          Test
+    ClickText                   Yes                         anchor=Vaccine procurement
     ClickText                   NEXT
 
-    
+    # 3.2 Target Information
+    TypeText    //*[@id\='mat-input-0']    5
+    ClickText    months    anchor=weeks
+    TypeText    //*[@id\='mat-input-1']    5
+    ClickText    weeks    anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
+    UseTable    \n \n \n \n
+    ClickCell    r1c2
+    TypeText    //*[@id\='mat-input-2']    1008
+    ClickText    SAVE
+    ClickCell    r1c3
+    TypeText    //*[@id\='mat-input-3']    1241
+    ClickText    SAVE
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    6        Partial_match=False
+    # ClickText                   weeks                       anchor=1
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    6        Partial_match=False
+    # ClickText                   weeks                       anchor=2
+
+
+
+
 
 
 
