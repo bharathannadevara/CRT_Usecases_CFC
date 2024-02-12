@@ -101,6 +101,7 @@ Country Portal
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
     ClickText                   NEXT
+    
     # 3.1 Vaccine and programmatic data
     ClickText                   SELECT
     ClickText                   M, 5 doses/vial, Lyophilised
