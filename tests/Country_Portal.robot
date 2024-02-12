@@ -53,7 +53,7 @@ Country Portal
     # 2.4 Upload country documents
     VerifyText                  Upload country documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
-    ClickText                   UPLOAD                      index=1
+    ClickText                   UPLOAD                      anchor=1
     Double click                suite
     Double click                Documents
     Double click                Test_Gavi.txt
@@ -72,17 +72,33 @@ Country Portal
     Sleep                       6
     ClickText                   REMOVE                      anchor=6
     Sleep                       6
-    SwipeDown                   1
-
+    
+    ScrollText                  Effective Vaccine Management (EVM) assessment
     ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
     UseTable                    File(s)
     ClickCell                   r2c1
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
-    ClickText                   UPDATE                      anchor=7                    delay=2
+    ClickText                   UPDATE                      anchor=7                    
     Double click                CRT_Demo.pdf
     Sleep                       6
-    ClickText                   NEXT
+
+    ScrollText                  Coordination and advisory groups documents
+    ClickText                   UPLOAD                      anchor=10
+    Double click                Test_Gavi.txt
+    Sleep                       6
+    
+    ClickText                   SELECT FROM LIBRARY         anchor=National Coordination Forum meeting minutes of the past 12 months
+    UseTable                    File(s)
+    ClickCell                   r3c1
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+    
+    ClickText                   SELECT FROM LIBRARY         anchor=Other documents (optional)    partial_match=false
+    UseTable                    File(s)
+    ClickCell                   r1c1
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
 
     # 3.1 Vaccine and programmatic data
     ClickText                   SELECT
