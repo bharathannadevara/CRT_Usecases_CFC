@@ -60,13 +60,13 @@ Country Portal
 
     ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
     UseTable                    File(s)
-    ClickCell                   r1c1
+    ClickCell                   r1c1                        delay=2
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM) assessment
     UseTable                    File(s)
-    ClickCell                   r2c1
+    ClickCell                   r2c1                        delay=2
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
     ClickText                   REMOVE                      anchor=6
@@ -78,7 +78,7 @@ Country Portal
     ClickCell                   r2c1
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
-    ClickText                   UPDATE                      anchor=7
+    ClickText                   UPDATE                      anchor=7                    delay=2
     Double click                CRT_Demo.pdf
     Sleep                       6
     ClickText                   NEXT
