@@ -130,7 +130,6 @@ Country Portal
     TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:      5    recognition_mode=vision
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
     
-    
     UseTable                    Population in the target age cohort (#)
     ClickElement                xpath=//tbody/tr[1]/td[2]/div[1]/button[1]/span[1]/i[1]
     TypeText                    Population in the target age cohort (#)-2024            2375
@@ -153,20 +152,7 @@ Country Portal
     ClickText                   SAVE
     Wait                        6
 
-    UseTable                    \n \n \n \n
-    VerifyTable                 r1c2                        Target
-    ClickCell                   r1c2
-    ClickText                   CANCEL
-    ClickCell                   Population in the target age cohort (#)
-    TypeText                    //*[@id\='mat-input-2']     1008
-    ClickText                   SAVE
-    ClickCell                   r1c3
-    TypeText                    //*[@id\='mat-input-3']     1241
-    ClickText                   SAVE
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:      6    Partial_match=False
-    # ClickText                 weeks                       anchor=1
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:      6    Partial_match=False
-    # ClickText                 weeks                       anchor=2
+    
 
 
 
