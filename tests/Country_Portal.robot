@@ -123,10 +123,13 @@ Country Portal
     ClickText                   NEXT
 
     # 3.2 Target Information
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:1    6    partial_match=false
-    ClickText                   weeks                       anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:    
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    6    partial_match=false    delay=2
-    ClickText                   months                       anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:      6    partial_match=false
+    ClickText                   weeks                       anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
+    VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-qa-combo-value-type-input[2]/div[1]/div[1]/div[1]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:      5    recognition_mode=vision
+    ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
+    
     
     UseTable                    Population in the target age cohort (#)
     ClickElement                xpath=//tbody/tr[1]/td[2]/div[1]/button[1]/span[1]/i[1]
@@ -160,9 +163,9 @@ Country Portal
     ClickCell                   r1c3
     TypeText                    //*[@id\='mat-input-3']     1241
     ClickText                   SAVE
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    6    Partial_match=False
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:      6    Partial_match=False
     # ClickText                 weeks                       anchor=1
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    6    Partial_match=False
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:      6    Partial_match=False
     # ClickText                 weeks                       anchor=2
 
 
