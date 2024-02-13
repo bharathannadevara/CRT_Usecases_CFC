@@ -123,13 +123,38 @@ Country Portal
     ClickText                   NEXT
 
     # 3.2 Target Information
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    6
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    6    anchor=1
     ClickText                   weeks                       anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    6
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    6    anchor=2
     ClickText                   weeks                       anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
+    
     UseTable                    Population in the target age cohort (#)
-    ClickTableCell              
+    ClickElement                xpath=//tbody/tr[1]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                    Population in the target age cohort (#)-2024            2375
+    ClickText                   SAVE
+    Wait                        6
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                    Target population to be vaccinated (first dose) (#)-2024                       2451
+    ClickText                   SAVE
+    Wait                        6
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                    Population in the target age cohort for last dose(#)-2024                      4568
+    ClickText                   SAVE
+    Wait                        6
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[4]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                    Target population to be vaccinated for last dose (#)-2024                      2343
+    ClickText                   SAVE
+    Wait                        6
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[5]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                    Estimated wastage rates for preferred presentation (%)-2024                    47
+    ClickText                   SAVE
+    Wait                        6
+
+    UseTable                    \n \n \n \n
+    VerifyTable                 r1c2                        Target
     ClickCell                   r1c2
+    ClickText                   CANCEL
+    ClickCell                   Population in the target age cohort (#)
     TypeText                    //*[@id\='mat-input-2']     1008
     ClickText                   SAVE
     ClickCell                   r1c3
