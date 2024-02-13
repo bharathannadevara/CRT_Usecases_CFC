@@ -102,7 +102,7 @@ Country Portal
     Sleep                       6
     ClickText                   NEXT
 
-    # 3.1 Vaccine and programmatic data
+    # 3.1.1 Vaccine and programmatic data
     ClickText                   SELECT
     ClickText                   M, 5 doses/vial, Lyophilised
     ClickText                   APPLY
@@ -122,7 +122,7 @@ Country Portal
     ClickText                   Yes                         anchor=Vaccine procurement
     ClickText                   NEXT
 
-    # 3.2 Target Information
+    # 3.1.2 Target Information
     TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:      6    partial_match=false
     ClickText                   weeks                       anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
@@ -151,10 +151,22 @@ Country Portal
     TypeText                    Estimated wastage rates for preferred presentation (%)-2024                    47
     ClickText                   SAVE
     Wait                        6
-
+    ClickText                   NEXT
     
+    # 3.1.3 Co-financing information
+    ClickText                   Yes                        anchor=Do you accept?
+    ClickText                   Update Estimated Values To be Financed
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    25
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    23
+    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickText                   March 
+    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickText                   April     
+    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[2]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickText                   2025    
 
-
+    # 3.1.4 Financial support from Gavi    
+    
 
 
 
