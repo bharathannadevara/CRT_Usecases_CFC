@@ -51,7 +51,7 @@ Country Portal
     ClickText                   NEXT
 
     # 2.4 Upload country documents
-    VerifyText                  Upload country documents
+    VerifyText                  Country and planning documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      anchor=1
     Double click                suite
@@ -59,13 +59,13 @@ Country Portal
     Double click                Test_Gavi.txt
     Sleep                       6
 
-    ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
+    ClickText                   SELECT FROM LIBRARY         anchor=2     #Country strategic multi-year plan / cMYP costing tool
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=2
+    ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
-    ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM) assessment
+    ClickText                   SELECT FROM LIBRARY         anchor=3      #Effective Vaccine Management (EVM) assessment
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=2
     ClickText                   SELECT                      partial_match=False         delay=2
@@ -73,7 +73,7 @@ Country Portal
     ClickText                   REMOVE                      anchor=6
     Sleep                       6
 
-    ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
+    ClickText                   SELECT FROM LIBRARY         anchor=4      #Effective Vaccine Management (EVM): most recent improvement plan progress report
     UseTable                    File(s)
     ClickCell                   r2c1
     ClickText                   SELECT                      partial_match=False         delay=2
@@ -123,34 +123,34 @@ Country Portal
     ClickText                   NEXT
 
     # 3.1.2 Target Information
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    6    partial_match=false
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    5    partial_match=false
     ClickText                   weeks                       anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
     ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-qa-combo-value-type-input[2]/div[1]/div[1]/div[1]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]
     TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    5    recognition_mode=vision
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
-    UseTable                    Population in the target age cohort (#)
-    ClickElement                xpath=//tbody/tr[1]/td[2]/div[1]/button[1]/span[1]/i[1]
-    TypeText                    Population in the target age cohort (#)-2024            2375
-    ClickText                   SAVE
-    Wait                        6
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]/span[1]/i[1]
-    TypeText                    Target population to be vaccinated (first dose) (#)-2024                           2451
-    ClickText                   SAVE
-    Wait                        6
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]/span[1]/i[1]
-    TypeText                    Population in the target age cohort for last dose(#)-2024                          4568
-    ClickText                   SAVE
-    Wait                        6
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[4]/td[2]/div[1]/button[1]/span[1]/i[1]
-    TypeText                    Target population to be vaccinated for last dose (#)-2024                          2343
-    ClickText                   SAVE
-    Wait                        6
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[5]/td[2]/div[1]/button[1]/span[1]/i[1]
-    TypeText                    Estimated wastage rates for preferred presentation (%)-2024                        47
-    ClickText                   SAVE
-    Wait                        6
+    # UseTable                    Population in the target age cohort (#)
+    # ClickElement                xpath=//tbody/tr[1]/td[2]/div[1]/button[1]/span[1]/i[1]
+    # TypeText                    Population in the target age cohort (#)-2024            2375
+    # ClickText                   SAVE
+    # Wait                        6
+    # ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]/span[1]/i[1]
+    # TypeText                    Target population to be vaccinated (first dose) (#)-2024                           2451
+    # ClickText                   SAVE
+    # Wait                        6
+    # ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]/span[1]/i[1]
+    # TypeText                    Population in the target age cohort for last dose(#)-2024                          4568
+    # ClickText                   SAVE
+    # Wait                        6
+    # ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[4]/td[2]/div[1]/button[1]/span[1]/i[1]
+    # TypeText                    Target population to be vaccinated for last dose (#)-2024                          2343
+    # ClickText                   SAVE
+    # Wait                        6
+    # ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[5]/td[2]/div[1]/button[1]/span[1]/i[1]
+    # TypeText                    Estimated wastage rates for preferred presentation (%)-2024                        47
+    # ClickText                   SAVE
+    # Wait                        6
     ClickText                   NEXT
 
     # 3.1.3 Co-financing information
@@ -160,10 +160,13 @@ Country Portal
     TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    23
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   March
+    Sleep                       2
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   April
+    Sleep                       2
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[2]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   2025
+    ClickText                   NEXT
 
     # 3.1.4 Financial support from Gavi
     TypeText                    Live births (year of introduction)                      2452
