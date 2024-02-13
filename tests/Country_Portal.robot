@@ -194,9 +194,58 @@ Country Portal
     TypeText                    Indicative major measles and rubella activities planned for the next 5 years       Testing
     ClickText                   NEXT
 
+    # 3.1.6 Report on Grant Performance Framework
     ClickText                   FILL IN GRANT PERFORMANCE FRAMEWORK
+    SwitchWindow                index=1
+    ClickText                   NEXT
 
+    # 3.1.7 Upload new application documents
+    VerifyText                  Application documents
+    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
+    ClickText                   UPLOAD                      anchor=1
+    Double click                suite
+    Double click                Documents
+    Double click                Test_Gavi.txt
+    Sleep                       6
 
+    ClickText                   SELECT FROM LIBRARY         anchor=2                        
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    ClickText                   SELECT FROM LIBRARY         anchor=3
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+    ClickText                   REMOVE                      anchor=3
+    Sleep                       6
+    
+    ClickText                   SELECT FROM LIBRARY         anchor=3
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+    ClickText                   UPDATE                      anchor=3
+    Double click                CRT_Demo.pdf
+    Sleep                       6
+    
+    VerifyText                  MoH and MoF signatures
+    ClickText                   SELECT FROM LIBRARY         anchor=4
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    VerifyText                  Endorsement by coordination and advisory groups
+    ClickText                   SELECT FROM LIBRARY         anchor=5
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    
 
 
 
