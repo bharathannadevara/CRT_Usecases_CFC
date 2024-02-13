@@ -165,8 +165,13 @@ Country Portal
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[2]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   2025    
 
-    # 3.1.4 Financial support from Gavi    
-    
+    # 3.1.4 Financial support from Gavi 
+    ClickItem                   Open calendar                       
+    ClickText                   15
+      
+
+    ClickText    14 FEB 2024
+    ClickElement                xpath=
 
 
 
