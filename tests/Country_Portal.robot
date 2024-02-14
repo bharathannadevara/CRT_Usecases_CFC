@@ -339,7 +339,6 @@ Country Portal
 
 
 
-
     # ClickText                 Update                      anchor=C.ZMB.U.22.1.1
 
     # ClickText                 Update                      anchor=C.ZMB.U.22.2.5
