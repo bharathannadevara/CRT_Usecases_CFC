@@ -224,31 +224,37 @@ Country Portal
     Sleep                       6
     ClickText                   REMOVE                      anchor=3
     Sleep                       6
-    
+
     ClickText                   SELECT FROM LIBRARY         anchor=3
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=2
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
-    ClickText                   UPDATE                      anchor=3
-    Double click                CRT_Demo.pdf
-    Sleep                       6
-    
-    VerifyText                  MoH and MoF signatures
+
     ClickText                   SELECT FROM LIBRARY         anchor=4
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=2
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
-
-    VerifyText                  Endorsement by coordination and advisory groups
+    ClickText                   UPDATE                      anchor=4
+    Double click                CRT_Demo.pdf
+    Sleep                       6
+    
+    VerifyText                  MoH and MoF signatures
     ClickText                   SELECT FROM LIBRARY         anchor=5
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=2
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
+    VerifyText                  Endorsement by coordination and advisory groups
     ClickText                   SELECT FROM LIBRARY         anchor=6
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    ClickText                   SELECT FROM LIBRARY         anchor=7
     UseTable                    File(s)
     ClickCell                   r3c1                        delay=2
     ClickText                   SELECT                      partial_match=False         delay=2
@@ -256,12 +262,6 @@ Country Portal
 
     ScrollText                  Vaccine specific
     VerifyText                  Vaccine specific
-    ClickText                   SELECT FROM LIBRARY         anchor=7
-    UseTable                    File(s)
-    ClickCell                   r1c1                        delay=2
-    ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
-
     ClickText                   SELECT FROM LIBRARY         anchor=8
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=2
