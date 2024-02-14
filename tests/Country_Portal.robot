@@ -255,14 +255,13 @@ Country Portal
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       7
 
+    VerifyText                  cMYP addendum
     ClickText                   SELECT FROM LIBRARY         anchor=7
     UseTable                    File(s)
     ClickCell                   r3c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       7
 
-    ScrollText                  Vaccine specific
-    VerifyText                  Vaccine specific
     ClickText                   SELECT FROM LIBRARY         anchor=8
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
