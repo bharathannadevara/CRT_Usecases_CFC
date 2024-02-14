@@ -258,7 +258,7 @@ Country Portal
     VerifyText                  cMYP addendum
     ClickText                   SELECT FROM LIBRARY         anchor=7
     UseTable                    File(s)
-    ClickCell                   r3c1                        delay=3
+    ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       7
 
