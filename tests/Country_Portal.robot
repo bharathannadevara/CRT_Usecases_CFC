@@ -248,7 +248,88 @@ Country Portal
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
-    
+    ClickText                   SELECT FROM LIBRARY         anchor=6
+    UseTable                    File(s)
+    ClickCell                   r3c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    ScrollText                  Vaccine specific
+    VerifyText                  Vaccine specific
+    ClickText                   SELECT FROM LIBRARY         anchor=7
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    VerifyText                  Vaccine specific
+    ClickText                   SELECT FROM LIBRARY         anchor=8
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    VerifyText                  Vaccine specific
+    ClickText                   SELECT FROM LIBRARY         anchor=9
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    VerifyText                  Vaccine specific
+    ClickText                   SELECT FROM LIBRARY         anchor=10
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    VerifyText                  Vaccine specific
+    ClickText                   SELECT FROM LIBRARY         anchor=11
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    ClickText                   SELECT FROM LIBRARY         anchor=12
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    ClickText                   SELECT FROM LIBRARY         anchor=13
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+    ClickText                   SELECT FROM LIBRARY         anchor=14
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=2
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Sleep                       6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
