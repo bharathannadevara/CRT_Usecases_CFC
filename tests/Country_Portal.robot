@@ -204,61 +204,62 @@ Country Portal
 
     # 3.1.7 Upload new application documents
     VerifyText                  Application documents
+    ScrollText                  Application documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      anchor=1
     Double click                suite
     Double click                Documents
     Double click                Test_Gavi.txt
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=2                        
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=3
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
     ClickText                   REMOVE                      anchor=3
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=3
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=4
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
     ClickText                   UPDATE                      anchor=4
     Double click                CRT_Demo.pdf
-    Sleep                       6
+    Sleep                       7
     
     VerifyText                  MoH and MoF signatures
     ClickText                   SELECT FROM LIBRARY         anchor=5
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     VerifyText                  Endorsement by coordination and advisory groups
     ClickText                   SELECT FROM LIBRARY         anchor=6
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=7
     UseTable                    File(s)
     ClickCell                   r3c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     ScrollText                  Vaccine specific
     VerifyText                  Vaccine specific
@@ -266,43 +267,43 @@ Country Portal
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=9
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=10
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=11
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=12
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=13
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=14
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Sleep                       7
 
 
 
