@@ -213,13 +213,13 @@ Country Portal
 
     ClickText                   SELECT FROM LIBRARY         anchor=2                        
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=2
+    ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=3
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=2
+    ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
     ClickText                   REMOVE                      anchor=3
@@ -227,13 +227,13 @@ Country Portal
 
     ClickText                   SELECT FROM LIBRARY         anchor=3
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=2
+    ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=4
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=2
+    ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
     ClickText                   UPDATE                      anchor=4
@@ -243,20 +243,20 @@ Country Portal
     VerifyText                  MoH and MoF signatures
     ClickText                   SELECT FROM LIBRARY         anchor=5
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=2
+    ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     VerifyText                  Endorsement by coordination and advisory groups
     ClickText                   SELECT FROM LIBRARY         anchor=6
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=2
+    ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=7
     UseTable                    File(s)
-    ClickCell                   r3c1                        delay=2
+    ClickCell                   r3c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
@@ -264,43 +264,43 @@ Country Portal
     VerifyText                  Vaccine specific
     ClickText                   SELECT FROM LIBRARY         anchor=8
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=2
+    ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=9
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=2
+    ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=10
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=2
+    ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=11
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=2
+    ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=12
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=2
+    ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=13
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=2
+    ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
     ClickText                   SELECT FROM LIBRARY         anchor=14
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=2
+    ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       6
 
