@@ -223,7 +223,7 @@ Country Portal
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       7
-    ClickText                   REMOVE                      anchor=3
+    ClickText                   REMOVE                      anchor=Workplan with activities specific to Vaccine grant
     Sleep                       7
 
     ClickText                   SELECT FROM LIBRARY         anchor=3
@@ -232,16 +232,16 @@ Country Portal
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       7
 
+    VerifyText                  MoH and MoF signatures
     ClickText                   SELECT FROM LIBRARY         anchor=4
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
     Sleep                       7
-    ClickText                   UPDATE                      anchor=4
+    ClickText                   UPDATE                      anchor=MoH and MoF signature page
     Double click                CRT_Demo.pdf
     Sleep                       7
     
-    VerifyText                  MoH and MoF signatures
     ClickText                   SELECT FROM LIBRARY         anchor=5
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
