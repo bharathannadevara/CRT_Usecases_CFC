@@ -379,15 +379,15 @@ Country Portal
     ClickText                   months                      anchor=2
 
     # UseTable                  Population in the target age cohort (#)
-    ClickElement                xpath=//tbody/tr[1]/td[2]/div[1]/button[1]/span[1]/i[1]
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/button[1]
     TypeText                    Population in target age cohort (#)-2024                2375
     ClickText                   SAVE
     Wait                        5
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]/span[1]/i[1]
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]
     TypeText                    Target population to be vaccinated (first dose) (#)-2024                            2451
     ClickText                   SAVE
     Wait                        5
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]/span[1]/i[1]
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]
     TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         47
     ClickText                   SAVE
     Wait                        5
@@ -425,8 +425,7 @@ Country Portal
     ClickText                   NEXT
 
     # 3.2.4 Financial support from Gavi
-    TypeText                    Live births (year of introduction)                      2452
-    ClickItem                   Open calendar
+    ClickItem                   Open calendar                        anchor=Funding needed in country by
     ClickText                   22
     TypeText                    Total amount - Gov. Funding / Country Co-financing (US$)                            200000
     TypeText                    Total amount - Other donors (US$)                       65000
@@ -536,25 +535,25 @@ Country Portal
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=11
+    ClickText                   SELECT FROM LIBRARY         anchor=Cold chain equipment inventory
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=12
+    ClickText                   SELECT FROM LIBRARY         anchor=If country request any salaries,top-up/allowance
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=13
+    ClickText                   SELECT FROM LIBRARY         anchor=Supplementary Immunisation Activity (SIA) technical report
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
-
-    ClickText                   SELECT FROM LIBRARY         anchor=14
+    ScrollText                  Evaluations (SIA report, PCCS, outbreak root cause analysis)
+    ClickText                   SELECT FROM LIBRARY         anchor=Evaluations (SIA report, PCCS, outbreak root cause analysis)
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
