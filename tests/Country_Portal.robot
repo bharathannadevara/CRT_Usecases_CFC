@@ -115,7 +115,7 @@ Country Portal
 
     # Coordination and advisory groups documents
     ScrollText                  Coordination and advisory groups documents
-    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference    delay=3
+    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference              delay=3
     Double click                Test_Gavi.txt
     Pause
 
@@ -148,21 +148,22 @@ Country Portal
     ClickText                   FEB
     ClickText                   22
     ClickItem                   Open calendar               anchor=Planned launch date
-    ClickText                   FEB
+    ClickText                   AUG
     ClickText                   22
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[7]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   2024
-    Wait                        6
+    Pause
+    ScrollText                  Vaccine procurement
     TypeText                    Vaccine presentation registration or licensing          Test
     ClickText                   Yes                         anchor=Vaccine procurement
     ClickText                   NEXT
 
     # 3.1.2 Target Information
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    5    partial_match=false
-    ClickText                   weeks                       anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:           5                         partial_match=false
+    ClickText                   months                      anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-qa-combo-value-type-input[2]/div[1]/div[1]/div[1]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    5    recognition_mode=vision
+    ClickElement               xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-qa-combo-value-type-input[2]/div[1]/div[1]/div[1]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:           5                         partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
     # UseTable                  Population in the target age cohort (#)
@@ -190,17 +191,20 @@ Country Portal
 
     # 3.1.3 Co-financing information
     ClickText                   Yes                         anchor=Do you accept?
+    ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    25
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    23
+    Pause
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.                  25
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:        23
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
-    ClickText                   March
+    ClickText                   March   
+    UseModal                    off                
     Sleep                       2
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   April
     Sleep                       2
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[2]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
-    ClickText                   2025
+    ClickText                   2024
     ClickText                   NEXT
 
     # 3.1.4 Financial support from Gavi
@@ -223,8 +227,8 @@ Country Portal
 
     # 3.1.5 Strategic considerations
     TypeText                    Rationale for this request                              Testing
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    Testing
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    Testing
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)        Testing
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)          Testing
     TypeText                    Financial sustainability    Testing
     TypeText                    Programmatic challenges     Testing
     TypeText                    Improving coverage and equity of routine immunisation                               Testing
@@ -339,8 +343,219 @@ Country Portal
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
     ClickText                   NEXT
+    
 
 
+
+# 3.2.1 Vaccine and programmatic data
+    ClickText                   SELECT
+    ClickText                   M, 5 doses/vial, Lyophilised
+    ClickText                   APPLY
+    Wait                        5
+    ClickText                   Yes                         anchor=1
+    ClickText                   SELECT
+    ClickText                   M, 10 doses/vial, Lyophilised
+    ClickText                   APPLY
+    Wait                        5
+    ClickText                   Yes                         anchor=2
+    ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
+    ClickText                   FEB
+    ClickText                   22
+    ClickItem                   Open calendar               anchor=Planned launch date
+    ClickText                   AUG
+    ClickText                   22
+    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[7]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickText                   2024
+    Pause
+    ScrollText                  Vaccine procurement
+    TypeText                    Vaccine presentation registration or licensing          Test
+    ClickText                   Yes                         anchor=Vaccine procurement
+    ClickText                   NEXT
+
+    # 3.2.2 Target Information
+    TypeText                   From                        5
+    ClickText                   weeks                      anchor=1
+    TypeText                    To                        6
+    ClickText                   months                    anchor=2
+    
+    # UseTable                  Population in the target age cohort (#)
+    ClickItem                   mode_edit                 anchor=Population in target age cohort (#)
+    ClickElement              xpath=//tbody/tr[1]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                  Population in target age cohort (#)-2024            2375
+    ClickText                 SAVE
+    Wait                      6
+    ClickElement              xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                  Target population to be vaccinated (first dose) (#)-2024                            2451
+    ClickText                 SAVE
+    Wait                      6
+    ClickElement              xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                  Population in the target age cohort for last dose(#)-2024                           4568
+    ClickText                 SAVE
+    Wait                      6
+    ClickElement              xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[4]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                  Target population to be vaccinated for last dose (#)-2024                           2343
+    ClickText                 SAVE
+    Wait                      6
+    ClickElement              xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[5]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                  Estimated wastage rates for preferred presentation (%)-2024                         47
+    ClickText                 SAVE
+    Wait                      6
+    ClickText                   NEXT
+
+    # 3.2.3 Co-financing information
+    ClickText                   Yes                         anchor=Do you accept?
+    ScrollText                  Country choice of co-financing amount per vaccine dose
+    ClickText                   Update Estimated Values To be Financed
+    Pause
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.                  25
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:        23
+    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickText                   March   
+    UseModal                    off                
+    Sleep                       2
+    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickText                   April
+    Sleep                       2
+    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[2]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickText                   2024
+    ClickText                   NEXT
+
+    # 3.2.4 Financial support from Gavi
+    TypeText                    Live births (year of introduction)                      2452
+    ClickItem                   Open calendar
+    ClickText                   22
+    TypeText                    Total amount - Gov. Funding / Country Co-financing (US$)                            200000
+    TypeText                    Total amount - Other donors (US$)                       65000
+    TypeText                    Total amount - Gavi support (US$)                       85000
+    TypeText                    Amount per target person - Gov. Funding / Country Co-financing (US$)                127622
+    TypeText                    Amount per target person - Other donors (US$)           272622
+    Typetext                    Amount per target person - Gavi support (US$)           342452
+    TypeText                    Key Budget Activities       Testing
+    TypeText                    Financial management procedures                         Testing
+    ClickText                   Yes                         anchor=Compliance with guidelines for use of Gavi financial support for human resources (HR) costs
+    TypeText                    Please provide further information and justification concerning human resources costs, particularly when issues and challenges have been raised regarding the compliance with Gavi guidelines.    Testing
+    TypeText                    Fiduciary management        5%
+    TypeText                    Use of financial support to fund additional Technical Assistance needs              Testing
+    ClickText                   NEXT
+
+    # 3.2.5 Strategic considerations
+    TypeText                    Rationale for this request                              Testing
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)        Testing
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)          Testing
+    TypeText                    Financial sustainability    Testing
+    TypeText                    Programmatic challenges     Testing
+    TypeText                    Improving coverage and equity of routine immunisation                               Testing
+    TypeText                    Synergies                   Testing
+    TypeText                    Indicative major measles and rubella activities planned for the next 5 years        Testing
+    ClickText                   NEXT
+
+    # 3.2.6 Report on Grant Performance Framework
+    ClickText                   FILL IN GRANT PERFORMANCE FRAMEWORK
+    SwitchWindow                index=1
+    ClickText                   NEXT
+
+    # 3.2.7 Upload new application documents
+    VerifyText                  Application documents
+    ScrollText                  Application documents
+    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
+    ClickText                   UPLOAD                      anchor=1
+    Double click                suite
+    Double click                Documents
+    Double click                Test_Gavi.txt
+    Sleep                       10
+
+    ClickText                   SELECT FROM LIBRARY         anchor=2
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=3
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+    ClickText                   REMOVE                      anchor=Workplan with activities specific to Vaccine grant
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=3
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    VerifyText                  MoH and MoF signatures
+    ClickText                   SELECT FROM LIBRARY         anchor=4
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+    ClickText                   UPDATE                      anchor=MoH and MoF signature page
+    Double click                CRT_Demo.pdf
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=5
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    VerifyText                  Endorsement by coordination and advisory groups
+    ClickText                   SELECT FROM LIBRARY         anchor=6
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    VerifyText                  cMYP addendum
+    ClickText                   SELECT FROM LIBRARY         anchor=cMYP addendum
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=8
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=9
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=10
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=11
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=12
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=13
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=14
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+    ClickText                   NEXT
 
 
 
