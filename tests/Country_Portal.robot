@@ -57,49 +57,79 @@ Country Portal
     Double click                suite
     Double click                Documents
     Double click                Test_Gavi.txt
-    Sleep                       6
+    Sleep                       10
 
     ClickText                   SELECT FROM LIBRARY         anchor=2     #Country strategic multi-year plan / cMYP costing tool
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=3      #Effective Vaccine Management (EVM) assessment
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=2
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Pause
     ClickText                   REMOVE                      anchor=6
-    Sleep                       6
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=4      #Effective Vaccine Management (EVM): most recent improvement plan progress report
     UseTable                    File(s)
     ClickCell                   r2c1
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Pause
     ClickText                   UPDATE                      anchor=7
     Double click                CRT_Demo.pdf
-    Sleep                       6
+    Pause
+    
+    ClickText                   SELECT FROM LIBRARY         anchor=5
+    UseTable                    File(s)
+    ClickCell                   r5c1
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=6
+    UseTable                    File(s)
+    ClickCell                   r4c1
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=7
+    UseTable                    File(s)
+    ClickCell                   r3c1
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=8
+    UseTable                    File(s)
+    ClickCell                   r2c1
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Pause
+    
+    ClickText                   SELECT FROM LIBRARY         anchor=9
+    UseTable                    File(s)
+    ClickCell                   r1c1
+    ClickText                   SELECT                      partial_match=False         delay=2
+    Pause
 
     # Coordination and advisory groups documents
     ScrollText                  Coordination and advisory groups documents
     ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference
     Double click                Test_Gavi.txt
-    Sleep                       6
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=National Coordination Forum meeting minutes of the past 12 months
     UseTable                    File(s)
     ClickCell                   r3c1
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Pause
 
     # Other documents
     ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS             partial_match=false
     UseTable                    File(s)
     ClickCell                   r1c1
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       6
+    Pause
     ClickText                   NEXT
 
     # 3.1.1 Vaccine and programmatic data
@@ -121,7 +151,7 @@ Country Portal
     TypeText                    Vaccine presentation registration or licensing          Test
     ClickText                   Yes                         anchor=Vaccine procurement
     ClickText                   NEXT
-
+    
     # 3.1.2 Target Information
     TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    5    partial_match=false
     ClickText                   weeks                       anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
@@ -210,100 +240,100 @@ Country Portal
     Double click                suite
     Double click                Documents
     Double click                Test_Gavi.txt
-    Sleep                       7
+    Sleep                       10
 
     ClickText                   SELECT FROM LIBRARY         anchor=2                        
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=3
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
     ClickText                   REMOVE                      anchor=Workplan with activities specific to Vaccine grant
-    Sleep                       7
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=3
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     VerifyText                  MoH and MoF signatures
     ClickText                   SELECT FROM LIBRARY         anchor=4
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
     ClickText                   UPDATE                      anchor=MoH and MoF signature page
     Double click                CRT_Demo.pdf
-    Sleep                       7
+    Pause
     
     ClickText                   SELECT FROM LIBRARY         anchor=5
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     VerifyText                  Endorsement by coordination and advisory groups
     ClickText                   SELECT FROM LIBRARY         anchor=6
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     VerifyText                  cMYP addendum
-    ClickText                   SELECT FROM LIBRARY         anchor=7
+    ClickText                   SELECT FROM LIBRARY         anchor=cMYP addendum                
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=8
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=9
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=10
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=11
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=12
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=13
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
+    Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=14
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=2
-    Sleep                       7
-
+    Pause
+    ClickText                   NEXT
 
 
 
