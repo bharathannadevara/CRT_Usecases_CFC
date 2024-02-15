@@ -54,3 +54,6 @@ Log Out
 Switch To Lightning If Classic
     ${is_classic} =             Is Text                     Switch to Lightning Experience                          timeout=2                   # Short timeout for quick check
     Run Keyword If              ${is_classic}               Click Text                  Switch to Lightning Experience
+
+Pause
+    Sleep                       7
