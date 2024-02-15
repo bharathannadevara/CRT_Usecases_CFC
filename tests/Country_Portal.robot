@@ -52,6 +52,7 @@ Country Portal
 
     # 2.4 Upload country documents
     VerifyText                  Country and planning documents
+    ScrollText                  Country and planning documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      anchor=1
     Double click                suite
