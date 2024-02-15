@@ -115,7 +115,7 @@ Country Portal
 
     # Coordination and advisory groups documents
     ScrollText                  Coordination and advisory groups documents
-    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference              delay=3
+    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference    delay=3
     Double click                Test_Gavi.txt
     Pause
 
@@ -159,11 +159,11 @@ Country Portal
     ClickText                   NEXT
 
     # 3.1.2 Target Information
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:           5                         partial_match=false
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    5    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
-    ClickElement               xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-qa-combo-value-type-input[2]/div[1]/div[1]/div[1]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:           5                         partial_match=false
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-qa-combo-value-type-input[2]/div[1]/div[1]/div[1]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    5    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
     # UseTable                  Population in the target age cohort (#)
@@ -194,11 +194,11 @@ Country Portal
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.                  25
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:        23
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    25
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    23
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
-    ClickText                   March   
-    UseModal                    off                
+    ClickText                   March
+    UseModal                    off
     Sleep                       2
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   April
@@ -227,8 +227,8 @@ Country Portal
 
     # 3.1.5 Strategic considerations
     TypeText                    Rationale for this request                              Testing
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)        Testing
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)          Testing
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    Testing
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    Testing
     TypeText                    Financial sustainability    Testing
     TypeText                    Programmatic challenges     Testing
     TypeText                    Improving coverage and equity of routine immunisation                               Testing
@@ -343,11 +343,11 @@ Country Portal
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
     ClickText                   NEXT
-    
 
 
 
-# 3.2.1 Vaccine and programmatic data
+
+    # 3.2.1 Vaccine and programmatic data
     ClickText                   SELECT
     ClickText                   M, 5 doses/vial, Lyophilised
     ClickText                   APPLY
@@ -373,33 +373,37 @@ Country Portal
     ClickText                   NEXT
 
     # 3.2.2 Target Information
-    TypeText                   From                        5
-    ClickText                   weeks                      anchor=1
-    TypeText                    To                        6
-    ClickText                   months                    anchor=2
-    
+    TypeText                    From                        5
+    ClickText                   weeks                       anchor=1
+    TypeText                    To                          6
+    ClickText                   months                      anchor=2
+
     # UseTable                  Population in the target age cohort (#)
-    ClickItem                   mode_edit                 anchor=Population in target age cohort (#)
-    ClickElement              xpath=//tbody/tr[1]/td[2]/div[1]/button[1]/span[1]/i[1]
-    TypeText                  Population in target age cohort (#)-2024            2375
-    ClickText                 SAVE
-    Wait                      6
-    ClickElement              xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]/span[1]/i[1]
-    TypeText                  Target population to be vaccinated (first dose) (#)-2024                            2451
-    ClickText                 SAVE
-    Wait                      6
-    ClickElement              xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]/span[1]/i[1]
-    TypeText                  Population in the target age cohort for last dose(#)-2024                           4568
-    ClickText                 SAVE
-    Wait                      6
-    ClickElement              xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[4]/td[2]/div[1]/button[1]/span[1]/i[1]
-    TypeText                  Target population to be vaccinated for last dose (#)-2024                           2343
-    ClickText                 SAVE
-    Wait                      6
-    ClickElement              xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[5]/td[2]/div[1]/button[1]/span[1]/i[1]
-    TypeText                  Estimated wastage rates for preferred presentation (%)-2024                         47
-    ClickText                 SAVE
-    Wait                      6
+    ClickElement                xpath=//tbody/tr[1]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                    Population in target age cohort (#)-2024                2375
+    ClickText                   SAVE
+    Wait                        5
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                    Target population to be vaccinated (first dose) (#)-2024                            2451
+    ClickText                   SAVE
+    Wait                        5
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]/span[1]/i[1]
+    TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         47
+    ClickText                   SAVE
+    Wait                        5
+    ScrollText                  Targets for measles routine first dose (M1)
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[2]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/button[1]
+    TypeText                    Population in the target age cohort (#)-2024                           4568
+    ClickText                   SAVE
+    Wait                        5
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[2]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]
+    TypeText                    Target population to be vaccinated (first dose) (#)-2024                           2343
+    ClickText                   SAVE
+    Wait                        5
+    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[2]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]
+    TypeText                    Number of doses procured-2024                         12344
+    ClickText                   SAVE
+    Wait                        5
     ClickText                   NEXT
 
     # 3.2.3 Co-financing information
@@ -407,11 +411,11 @@ Country Portal
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.                  25
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:        23
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    25
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    23
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
-    ClickText                   March   
-    UseModal                    off                
+    ClickText                   March
+    UseModal                    off
     Sleep                       2
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   April
@@ -440,8 +444,8 @@ Country Portal
 
     # 3.2.5 Strategic considerations
     TypeText                    Rationale for this request                              Testing
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)        Testing
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)          Testing
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    Testing
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    Testing
     TypeText                    Financial sustainability    Testing
     TypeText                    Programmatic challenges     Testing
     TypeText                    Improving coverage and equity of routine immunisation                               Testing
