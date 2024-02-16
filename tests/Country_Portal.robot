@@ -457,6 +457,7 @@ Country_Portal_Keywords
 
     # 3.2.6 Report on Grant Performance Framework
     ClickText                   FILL IN GRANT PERFORMANCE FRAMEWORK
+    Sleep                       3
     SwitchWindow                index=1
     ClickText                   NEXT
 
@@ -472,28 +473,28 @@ Country_Portal_Keywords
 
     ClickText                   SELECT FROM LIBRARY         anchor=2
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=MoH and MoF signatures
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
     ClickText                   REMOVE                      anchor=Workplan with activities specific to Vaccine grant
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=MoH and MoF signatures
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Endorsement by coordination and advisory groups
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
     ClickText                   UPDATE                      anchor=MoH and MoF signature page
     Double click                CRT_Demo.pdf
@@ -501,64 +502,65 @@ Country_Portal_Keywords
 
     ClickText                   SELECT FROM LIBRARY         anchor=Minutes of NITAG meeting with specific recommendations on the requested vaccine support
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Vaccine specific
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     VerifyText                  cMYP addendum
     ClickText                   SELECT FROM LIBRARY         anchor=cMYP addendum
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
+    ClickCell                   r2c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=EVM improvement plan
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Cold chain equipment inventory
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
+    
 
     ClickText                   SELECT FROM LIBRARY         anchor=If country request any salaries,top-up/allowance
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Supplementary Immunisation Activity (SIA) technical report
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Outbreak response with root cause analysis, if available , including M&RP supported activities
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ScrollText                  Evaluations (SIA report, PCCS, outbreak root cause analysis)
     ClickText                   SELECT FROM LIBRARY         anchor=Evaluations (SIA report, PCCS, outbreak root cause analysis)
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
     ClickText                   NEXT
 
