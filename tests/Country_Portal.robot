@@ -559,10 +559,20 @@ Country Portal
     Pause
     ClickText                   NEXT
 
+    # 4.1 Submission Details
+    ScrollText                  Contacts
+    TypeText                    Name                        Test User
+    TypeText                    Position                    Associate
+    TypeText                    Phone Number                1234567890
+    TypeText                    Email                       Testuser@gmail.com
+    TypeText                    Organisation                Gavi
+    ClickText                   ADD CONTACT
+    Sleep                       4
 
+    TypeText                    Please let us know if you have any comments about this application                  Testing
 
-
-
+    VerifyText                  Signatures
+    ClickText                   DOWNLOAD APPLICATION
 
 
 
