@@ -1,7 +1,7 @@
 *** Settings ***
 Resource                        ../resource/common.robot
 Resource                        ../resource/Xpath_Variables.robot
-Library                         QWeb
+Library                        DataDriver    reader_class=testdataapi    
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
 
