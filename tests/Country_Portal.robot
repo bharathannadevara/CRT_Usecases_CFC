@@ -256,29 +256,29 @@ Country_Portal_Keywords
 
     ClickText                   SELECT FROM LIBRARY         anchor=2
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=3
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
     ClickText                   REMOVE                      anchor=Workplan with activities specific to Vaccine grant
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=3
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     VerifyText                  MoH and MoF signatures
     ClickText                   SELECT FROM LIBRARY         anchor=4
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
     ClickText                   UPDATE                      anchor=MoH and MoF signature page
     Double click                CRT_Demo.pdf
@@ -416,14 +416,13 @@ Country_Portal_Keywords
     Pause
     TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    25
     TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    23
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickElement                ${Co_financing_Payment_fundmonth}
     ClickText                   March
-    UseModal                    off
     Sleep                       2
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickElement                ${Co_financing_Payment_Supportmonth}
     ClickText                   April
     Sleep                       2
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[2]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickElement                ${Co_financing_Payment_Supportyear}
     ClickText                   2024
     ClickText                   NEXT
 
