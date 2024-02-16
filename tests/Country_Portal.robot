@@ -1,7 +1,7 @@
 *** Settings ***
 Resource                        ../resource/common.robot
 Resource                        ../resource/Xpath_Variables.robot
-Library                        DataDriver    reader_class=testdataapi    
+Library                        DataDriver    reader_class=TestDataApi      Name=Country_Portal1  
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
 
