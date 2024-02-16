@@ -10,12 +10,6 @@ Country_Portal_TestCase
 
 *** Keywords ***
 Country_Portal_Keywords
-    # [Arguments]               ${Country}                  ${From_Year}                ${To_Year}                  ${Customs_Regulations}    ${Regulatory_Agency}    ${Coverage_and_Equity}    ${Vaccine_Presentation}    ${First_Dose}
-    # ...                       ${Second_Dose}              ${Co_financing_Payment1}    ${Co_financing_Payment2}    ${Live_Births}    ${Gov_Funding}    ${Other_Donors}
-    # ...                       ${Gavi_Support}             ${Amount_Gov_Funding}       ${Amount_Other_Donors}      ${Amount_Gavi_Support}    ${Key_Budget}
-    # ...                       ${Financial_Management}     ${Compliance_Gavi_Guidelines}                           ${Fiduciary_Management}    ${Additional_Technical_Assistance}
-    # ...                       ${Rationale_Request}        ${cMYP}                     ${NITAG}                    ${Financial_Sustainability}    ${Programmatic_Challenges}
-    # ...                       ${Improving_Coverage_and_Equity}                        ${Synergies}                ${Measles_and_Rubella_Activities}
     Run Keyword                 Login
     Switch To Lightning If Classic
     LaunchApp                   GAVI CRM
