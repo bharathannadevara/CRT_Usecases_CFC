@@ -30,7 +30,6 @@ Country_Portal_Keywords
     ClickText                   ${Country}                     
     ClickText                   NVS Application Round 4 (2023) - Somalia
     ClickText                   Measles 1st and 2nd dose routine.                       delay=2
-    # ClickElement              xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-switch-option[2]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/mat-slide-toggle[1]/label[1]/div[1]
     Sleep                       3
     ClickText                   NEXT
     VerifyText                  Gavi terms and conditions                               anchor=1.2.1
@@ -44,9 +43,9 @@ Country_Portal_Keywords
     # ClickText                 Overall expenditures and financing for immunisation     anchor=Country health and immunisation data #Once submitted we can't edit this page again
 
     ClickElement                ${NHSP_FromYear}
-    ClickText                   2023                        anchor=From
+    ClickText                   ${From_Year}                        anchor=From
     ClickElement                ${NHSP_ToYear}
-    ClickText                   2024                        anchor=To
+    ClickText                   ${To_Year}                        anchor=To
     ClickText                   Yes
     TypeText                    National customs regulations                            ${Customs_Regulations}
     TypeText                    National Regulatory Agency                              ${Regulatory_Agency}
