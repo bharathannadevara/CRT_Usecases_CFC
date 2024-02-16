@@ -240,6 +240,7 @@ Country_Portal_Keywords
 
     # 3.1.6 Report on Grant Performance Framework
     ClickText                   FILL IN GRANT PERFORMANCE FRAMEWORK
+    Sleep                       3
     SwitchWindow                index=1
     ClickText                   NEXT
 
@@ -285,64 +286,64 @@ Country_Portal_Keywords
 
     ClickText                   SELECT FROM LIBRARY         anchor=5
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     VerifyText                  Endorsement by coordination and advisory groups
     ClickText                   SELECT FROM LIBRARY         anchor=6
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     VerifyText                  cMYP addendum
     ClickText                   SELECT FROM LIBRARY         anchor=cMYP addendum
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=8
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=9
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=10
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=11
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=12
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=13
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=14
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
     ClickText                   NEXT
 
