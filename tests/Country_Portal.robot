@@ -1,11 +1,14 @@
 *** Settings ***
 Resource                        ../resource/common.robot
+Resource                        ../resource/Xpath_Variables.robot
 Library                         QWeb
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
 
 *** Test Cases ***
 Country Portal
+    [Arguments]                 ${Country}    ${Customs_Regulations}    ${Regulatory_Agency}    ${Coverage_and_Equity}    ${Vaccine_Presentation}    ${First_Dose}    ${Second_Dose}    ${Co_financing_Payment1}    ${Co_financing_Payment2}     ${Live_Births}    ${Gov_Funding}    ${Other_Donors}    ${Gavi_Support}    ${Amount_Gov_Funding}    
+    ...                        ${Amount_Other_Donors}    ${Amount_Gavi_Support}    ${Key_Budget}    ${Financial_Management}    ${Compliance_Gavi_Guidelines}    ${Fiduciary_Management}    ${Additional_Technical_Assistance}    ${Rationale_Request}    ${cMYP}    ${NITAG}    ${Financial_Sustainability}    ${Programmatic_Challenges}    ${Improving_Coverage_and_Equity}    ${Synergies}    ${Measles_and_Rubella_Activities}
     Run Keyword                 Login
     Switch To Lightning If Classic
     LaunchApp                   GAVI CRM
@@ -16,7 +19,7 @@ Country Portal
     ClickText                   Log in to Experience as User
 
     ClickText                   Country Portal              delay=2
-    TypeText                    Search Country              Somalia
+    TypeText                    Search Country              ${Country}
     ClickText                   Somalia                     #Directly identify country, define variable
     ClickText                   NVS Application Round 4 (2023) - Somalia
     ClickText                   Measles 1st and 2nd dose routine.                       delay=2
@@ -33,21 +36,20 @@ Country Portal
     ScrollTo                    Date of Programme Capacity Assessment
     # ClickText                 Overall expenditures and financing for immunisation     anchor=Country health and immunisation data #Once submitted we can't edit this page again
 
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[3]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]
+    ClickElement                ${NHSP_FromYear}
     ClickText                   2023                        anchor=From
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[3]/app-qa-combo-select-input[2]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]
-    ClickText                   2024
+    ClickElement                ${NHSP_ToYear}
+    ClickText                   2024                        anchor=To
     ClickText                   Yes
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[4]/app-qa-combo-text-input[1]/div[1]/div[1]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/textarea[1]
-    TypeText                    National customs regulations                            Testing
-    TypeText                    National Regulatory Agency                              Testing
+    TypeText                    National customs regulations                            ${Customs_Regulations}
+    TypeText                    National Regulatory Agency                              ${Regulatory_Agency}
     ClickText                   NEXT
 
     VerifyText                  Financial Overview of Active Vaccine Programmes
     VerifyText                  Summary of active Vaccine Programmes
     ClickText                   NEXT
 
-    TypeText                    Coverage and equity situation analysis                  Testing
+    TypeText                    Coverage and equity situation analysis                  ${Coverage_and_Equity}
     ClickText                   NEXT
 
     # 2.4 Upload country documents
@@ -150,20 +152,20 @@ Country Portal
     ClickItem                   Open calendar               anchor=Planned launch date
     ClickText                   AUG
     ClickText                   22
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[7]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickElement                ${Support_Requested}
     ClickText                   2024
     Pause
     ScrollText                  Vaccine procurement
-    TypeText                    Vaccine presentation registration or licensing          Test
+    TypeText                    Vaccine presentation registration or licensing          ${Vaccine_Presentation}
     ClickText                   Yes                         anchor=Vaccine procurement
     ClickText                   NEXT
 
     # 3.1.2 Target Information
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    5    partial_match=false
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    ${First_Dose}    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-qa-combo-value-type-input[2]/div[1]/div[1]/div[1]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/input[1]
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    5    partial_match=false
+    ClickElement                ${Second_Dose_Xpath}
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    ${Second_Dose}    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
     # UseTable                  Population in the target age cohort (#)
@@ -194,46 +196,46 @@ Country Portal
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    25
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    23
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    ${Co_financing_Payment1}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
+    ClickElement                ${Co_financing_Payment_fundmonth}
     ClickText                   March
     UseModal                    off
     Sleep                       2
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickElement                ${Co_financing_Payment_Supportmonth}
     ClickText                   April
     Sleep                       2
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-combo-components[1]/div[1]/div[2]/app-qa-combo-select-input[2]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickElement                ${Co_financing_Payment_Supportyear}
     ClickText                   2024
     ClickText                   NEXT
 
     # 3.1.4 Financial support from Gavi
-    TypeText                    Live births (year of introduction)                      2452
+    TypeText                    Live births (year of introduction)                      ${Live_Births}
     ClickItem                   Open calendar
     ClickText                   22
-    TypeText                    Total amount - Gov. Funding / Country Co-financing (US$)                            200000
-    TypeText                    Total amount - Other donors (US$)                       65000
-    TypeText                    Total amount - Gavi support (US$)                       85000
-    TypeText                    Amount per target person - Gov. Funding / Country Co-financing (US$)                127622
-    TypeText                    Amount per target person - Other donors (US$)           272622
-    Typetext                    Amount per target person - Gavi support (US$)           342452
-    TypeText                    Key Budget Activities       Testing
-    TypeText                    Financial management procedures                         Testing
+    TypeText                    Total amount - Gov. Funding / Country Co-financing (US$)                            ${Gov_Funding}
+    TypeText                    Total amount - Other donors (US$)                       ${Other_Donors}
+    TypeText                    Total amount - Gavi support (US$)                       ${Gavi_Support}
+    TypeText                    Amount per target person - Gov. Funding / Country Co-financing (US$)                ${Amount_Gov_Funding}
+    TypeText                    Amount per target person - Other donors (US$)           ${Amount_Other_Donors}
+    Typetext                    Amount per target person - Gavi support (US$)           ${Amount_Gavi_Support}
+    TypeText                    Key Budget Activities       ${Key_Budget}
+    TypeText                    Financial management procedures                         ${Financial_Management}
     ClickText                   Yes                         anchor=Compliance with guidelines for use of Gavi financial support for human resources (HR) costs
-    TypeText                    Please provide further information and justification concerning human resources costs, particularly when issues and challenges have been raised regarding the compliance with Gavi guidelines.    Testing
-    TypeText                    Fiduciary management        5%
-    TypeText                    Use of financial support to fund additional Technical Assistance needs              Testing
+    TypeText                    Please provide further information and justification concerning human resources costs, particularly when issues and challenges have been raised regarding the compliance with Gavi guidelines.    ${Compliance_Gavi_Guidelines}
+    TypeText                    Fiduciary management        ${Fiduciary_Management}
+    TypeText                    Use of financial support to fund additional Technical Assistance needs              ${Additional_Technical_Assistance}
     ClickText                   NEXT
 
     # 3.1.5 Strategic considerations
-    TypeText                    Rationale for this request                              Testing
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    Testing
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    Testing
-    TypeText                    Financial sustainability    Testing
-    TypeText                    Programmatic challenges     Testing
-    TypeText                    Improving coverage and equity of routine immunisation                               Testing
-    TypeText                    Synergies                   Testing
-    TypeText                    Indicative major measles and rubella activities planned for the next 5 years        Testing
+    TypeText                    Rationale for this request                              ${Rationale_Request}
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    ${cMYP}
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    ${NITAG}
+    TypeText                    Financial sustainability    ${Financial_Sustainability}
+    TypeText                    Programmatic challenges     ${Programmatic_Challenges}
+    TypeText                    Improving coverage and equity of routine immunisation                               ${Improving_Coverage_and_Equity}
+    TypeText                    Synergies                   ${Synergies}
+    TypeText                    Indicative major measles and rubella activities planned for the next 5 years        ${Measles_and_Rubella_Activities}
     ClickText                   NEXT
 
     # 3.1.6 Report on Grant Performance Framework
