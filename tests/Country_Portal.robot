@@ -473,7 +473,7 @@ Country Portal
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=3
+    ClickText                   SELECT FROM LIBRARY         anchor=MoH and MoF signatures
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
@@ -481,14 +481,13 @@ Country Portal
     ClickText                   REMOVE                      anchor=Workplan with activities specific to Vaccine grant
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=3
+    ClickText                   SELECT FROM LIBRARY         anchor=MoH and MoF signatures
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
 
-    VerifyText                  MoH and MoF signatures
-    ClickText                   SELECT FROM LIBRARY         anchor=4
+    ClickText                   SELECT FROM LIBRARY         anchor=Endorsement by coordination and advisory groups
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
@@ -497,14 +496,13 @@ Country Portal
     Double click                CRT_Demo.pdf
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=5
+    ClickText                   SELECT FROM LIBRARY         anchor=Minutes of NITAG meeting with specific recommendations on the requested vaccine support
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
 
-    VerifyText                  Endorsement by coordination and advisory groups
-    ClickText                   SELECT FROM LIBRARY         anchor=6
+    ClickText                   SELECT FROM LIBRARY         anchor=Vaccine specific
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
@@ -517,19 +515,7 @@ Country Portal
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=8
-    UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
-
-    ClickText                   SELECT FROM LIBRARY         anchor=9
-    UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
-
-    ClickText                   SELECT FROM LIBRARY         anchor=10
+    ClickText                   SELECT FROM LIBRARY         anchor=EVM improvement plan    
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
@@ -552,8 +538,21 @@ Country Portal
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=Outbreak response with root cause analysis, if available , including M&RP supported activities
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+
     ScrollText                  Evaluations (SIA report, PCCS, outbreak root cause analysis)
     ClickText                   SELECT FROM LIBRARY         anchor=Evaluations (SIA report, PCCS, outbreak root cause analysis)
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
+    Pause
+    
+    ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
