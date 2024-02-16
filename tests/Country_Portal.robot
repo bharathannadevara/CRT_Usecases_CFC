@@ -10,12 +10,12 @@ Country_Portal_TestCase
 
 *** Keywords ***
 Country_Portal_Keywords
-    # [Arguments]                 ${Country}                  ${Customs_Regulations}      ${Regulatory_Agency}        ${Coverage_and_Equity}      ${Vaccine_Presentation}     ${First_Dose}
-    # ...                         ${Second_Dose}              ${Co_financing_Payment1}    ${Co_financing_Payment2}    ${Live_Births}              ${Gov_Funding}              ${Other_Donors}
-    # ...                         ${Gavi_Support}             ${Amount_Gov_Funding}       ${Amount_Other_Donors}      ${Amount_Gavi_Support}      ${Key_Budget}
-    # ...                         ${Financial_Management}     ${Compliance_Gavi_Guidelines}                           ${Fiduciary_Management}     ${Additional_Technical_Assistance}
-    # ...                         ${Rationale_Request}        ${cMYP}                     ${NITAG}                    ${Financial_Sustainability}                             ${Programmatic_Challenges}
-    # ...                         ${Improving_Coverage_and_Equity}                        ${Synergies}                ${Measles_and_Rubella_Activities}
+    # [Arguments]               ${Country}                  ${From_Year}                ${To_Year}                  ${Customs_Regulations}    ${Regulatory_Agency}    ${Coverage_and_Equity}    ${Vaccine_Presentation}    ${First_Dose}
+    # ...                       ${Second_Dose}              ${Co_financing_Payment1}    ${Co_financing_Payment2}    ${Live_Births}    ${Gov_Funding}    ${Other_Donors}
+    # ...                       ${Gavi_Support}             ${Amount_Gov_Funding}       ${Amount_Other_Donors}      ${Amount_Gavi_Support}    ${Key_Budget}
+    # ...                       ${Financial_Management}     ${Compliance_Gavi_Guidelines}                           ${Fiduciary_Management}    ${Additional_Technical_Assistance}
+    # ...                       ${Rationale_Request}        ${cMYP}                     ${NITAG}                    ${Financial_Sustainability}    ${Programmatic_Challenges}
+    # ...                       ${Improving_Coverage_and_Equity}                        ${Synergies}                ${Measles_and_Rubella_Activities}
     Run Keyword                 Login
     Switch To Lightning If Classic
     LaunchApp                   GAVI CRM
@@ -27,7 +27,7 @@ Country_Portal_Keywords
 
     ClickText                   Country Portal              delay=2
     TypeText                    Search Country              ${Country}
-    ClickText                   ${Country}                     
+    ClickText                   ${Country}
     ClickText                   NVS Application Round 4 (2023) - Somalia
     ClickText                   Measles 1st and 2nd dose routine.                       delay=2
     Sleep                       3
@@ -43,9 +43,9 @@ Country_Portal_Keywords
     # ClickText                 Overall expenditures and financing for immunisation     anchor=Country health and immunisation data #Once submitted we can't edit this page again
 
     ClickElement                ${NHSP_FromYear}
-    ClickText                   ${From_Year}                        anchor=From
+    ClickText                   ${From_Year}                anchor=From
     ClickElement                ${NHSP_ToYear}
-    ClickText                   ${To_Year}                        anchor=To
+    ClickText                   ${To_Year}                  anchor=To
     ClickText                   Yes
     TypeText                    National customs regulations                            ${Customs_Regulations}
     TypeText                    National Regulatory Agency                              ${Regulatory_Agency}
@@ -123,7 +123,7 @@ Country_Portal_Keywords
 
     # Coordination and advisory groups documents
     ScrollText                  Coordination and advisory groups documents
-    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference                               delay=3
+    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference    delay=3
     Double click                Test_Gavi.txt
     Pause
 
@@ -167,11 +167,11 @@ Country_Portal_Keywords
     ClickText                   NEXT
 
     # 3.1.2 Target Information
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:                            ${First_Dose}               partial_match=false
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    ${First_Dose}    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
     ClickElement                ${Second_Dose_Xpath}
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:                            ${Second_Dose}              partial_match=false
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    ${Second_Dose}    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
     # UseTable                  Population in the target age cohort (#)
@@ -202,8 +202,8 @@ Country_Portal_Keywords
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.            ${Co_financing_Payment1}
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:                              ${Co_financing_Payment2}
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    ${Co_financing_Payment1}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth}
     ClickText                   March
     UseModal                    off
@@ -235,8 +235,8 @@ Country_Portal_Keywords
 
     # 3.1.5 Strategic considerations
     TypeText                    Rationale for this request                              ${Rationale_Request}
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                         ${cMYP}
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                           ${NITAG}
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    ${cMYP}
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    ${NITAG}
     TypeText                    Financial sustainability    ${Financial_Sustainability}
     TypeText                    Programmatic challenges     ${Programmatic_Challenges}
     TypeText                    Improving coverage and equity of routine immunisation                               ${Improving_Coverage_and_Equity}
@@ -419,8 +419,8 @@ Country_Portal_Keywords
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.            25
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:                              23
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    25
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    23
     ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[5]/app-qa-combo-select-input[1]/div[1]/div[1]/div[3]/form[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
     ClickText                   March
     UseModal                    off
@@ -451,8 +451,8 @@ Country_Portal_Keywords
 
     # 3.2.5 Strategic considerations
     TypeText                    Rationale for this request                              Testing
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                         Testing
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                           Testing
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    Testing
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    Testing
     TypeText                    Financial sustainability    Testing
     TypeText                    Programmatic challenges     Testing
     TypeText                    Improving coverage and equity of routine immunisation                               Testing
