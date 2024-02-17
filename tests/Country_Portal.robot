@@ -367,7 +367,7 @@ Country_Portal_Keywords
     ClickItem                   Open calendar               anchor=Planned launch date
     ClickText                   AUG
     ClickText                   22
-    ClickElement                xpath=//body/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-presentation-date[1]/div[1]/div[1]/form[1]/div[7]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]
+    ClickElement                ${Support_Requested}
     ClickText                   2024
     Pause
     ScrollText                  Vaccine procurement
