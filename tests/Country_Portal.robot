@@ -373,10 +373,12 @@ Country_Portal_Keywords
     ClickText                   NEXT
 
     # 3.2.2 Target Information
-    TypeText                    From                        5
-    ClickText                   weeks                       anchor=1
-    TypeText                    To                          6
-    ClickText                   months                      anchor=2
+    TypeText                    Please describe the target age cohort for the MR 1st dose routine immunisation:    ${First_Dose}    partial_match=false
+    ClickText                   months                      anchor=Please describe the target age cohort for the MR 1st dose routine immunisation:
+    VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
+    ClickElement                ${Second_Dose_Xpath}
+    TypeText                    Please describe the target age cohort for the MR 2nd dose routine immunisation:    ${Second_Dose}    partial_match=false
+    ClickText                   months                      anchor=Please describe the target age cohort for the MR 2nd dose routine immunisation:
 
     # UseTable                  Population in the target age cohort (#)
     ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/button[1]
@@ -411,8 +413,8 @@ Country_Portal_Keywords
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    25
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    23
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    ${Co_financing_Payment1}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth}
     ClickText                   March
     Sleep                       2
@@ -424,31 +426,32 @@ Country_Portal_Keywords
     ClickText                   NEXT
 
     # 3.2.4 Financial support from Gavi
+    TypeText                    Live births (year of introduction)                      ${Live_Births}
     ClickItem                   Open calendar               anchor=Funding needed in country by
     ClickText                   22
-    TypeText                    Total amount - Gov. Funding / Country Co-financing (US$)                            200000
-    TypeText                    Total amount - Other donors (US$)                       65000
-    TypeText                    Total amount - Gavi support (US$)                       85000
-    TypeText                    Amount per target person - Gov. Funding / Country Co-financing (US$)                127622
-    TypeText                    Amount per target person - Other donors (US$)           272622
-    Typetext                    Amount per target person - Gavi support (US$)           342452
-    TypeText                    Key Budget Activities       Testing
-    TypeText                    Financial management procedures                         Testing
+    TypeText                    Total amount - Gov. Funding / Country Co-financing (US$)                            ${Gov_Funding}
+    TypeText                    Total amount - Other donors (US$)                       ${Other_Donors}
+    TypeText                    Total amount - Gavi support (US$)                       ${Gavi_Support}
+    TypeText                    Amount per target person - Gov. Funding / Country Co-financing (US$)                ${Amount_Gov_Funding}
+    TypeText                    Amount per target person - Other donors (US$)           ${Amount_Other_Donors}
+    Typetext                    Amount per target person - Gavi support (US$)           ${Amount_Gavi_Support}
+    TypeText                    Key Budget Activities       ${Key_Budget}
+    TypeText                    Financial management procedures                         ${Financial_Management}
     ClickText                   Yes                         anchor=Compliance with guidelines for use of Gavi financial support for human resources (HR) costs
-    TypeText                    Please provide further information and justification concerning human resources costs, particularly when issues and challenges have been raised regarding the compliance with Gavi guidelines.    Testing
-    TypeText                    Fiduciary management        5%
-    TypeText                    Use of financial support to fund additional Technical Assistance needs              Testing
+    TypeText                    Please provide further information and justification concerning human resources costs, particularly when issues and challenges have been raised regarding the compliance with Gavi guidelines.    ${Compliance_Gavi_Guidelines}
+    TypeText                    Fiduciary management        ${Fiduciary_Management}
+    TypeText                    Use of financial support to fund additional Technical Assistance needs              ${Additional_Technical_Assistance}
     ClickText                   NEXT
 
     # 3.2.5 Strategic considerations
-    TypeText                    Rationale for this request                              Testing
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    Testing
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    Testing
-    TypeText                    Financial sustainability    Testing
-    TypeText                    Programmatic challenges     Testing
-    TypeText                    Improving coverage and equity of routine immunisation                               Testing
-    TypeText                    Synergies                   Testing
-    TypeText                    Indicative major measles and rubella activities planned for the next 5 years        Testing
+    TypeText                    Rationale for this request                              ${Rationale_Request}
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    ${cMYP}
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    ${NITAG}
+    TypeText                    Financial sustainability    ${Financial_Sustainability}
+    TypeText                    Programmatic challenges     ${Programmatic_Challenges}
+    TypeText                    Improving coverage and equity of routine immunisation                               ${Improving_Coverage_and_Equity}
+    TypeText                    Synergies                   ${Synergies}
+    TypeText                    Indicative major measles and rubella activities planned for the next 5 years        ${Measles_and_Rubella_Activities}
     ClickText                   NEXT
 
     # 3.2.6 Report on Grant Performance Framework
@@ -556,6 +559,7 @@ Country_Portal_Keywords
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
+    ClickText                   NEXT
 
     # 4.1 Submission Details
     ScrollText                  Contacts
