@@ -22,7 +22,7 @@ Country_Portal_Keywords
     ClickText                   Country Portal              delay=2
     TypeText                    Search Country              ${Country}
     ClickText                   ${Country}
-    ClickText                   NVS Application Round 4 (2023) - Somalia
+    ClickText                   NVS Application Round 4 (2023) - ${Country}
     ClickText                   Measles 1st and 2nd dose routine.                       delay=2
     Sleep                       3
     ClickText                   NEXT
@@ -576,9 +576,19 @@ Country_Portal_Keywords
     TypeText                    Please let us know if you have any comments about this application                  Testing
 
     VerifyText                  Signatures
-    ClickText                   DOWNLOAD APPLICATION
+    ClickText                   DOWNLOAD APPLICATION                        #Download application and PDF steps
 
+    ClickElement                xpath=//i[contains(text(),'language')]
+    ClickText                   Français
+    ClickText                   TÉLÉCHARGER UNE COPIE
 
+    ClickElement                xpath=//i[contains(text(),'language')]
+    ClickText                   Español
+    ClickText                   DESCARGAR UNA COPIA
+
+    ClickElement                xpath=//i[contains(text(),'language')]
+    ClickText                   Pyccknñ
+    ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
 
 
 
