@@ -367,7 +367,7 @@ Country_Portal_Keywords
     ClickText                   2024
     Pause
     ScrollText                  Vaccine procurement
-    TypeText                    Vaccine presentation registration or licensing          Test
+    TypeText                    Vaccine presentation registration or licensing          ${Vaccine_Presentation}
     ClickText                   Yes                         anchor=Vaccine procurement
     ClickText                   NEXT
 
