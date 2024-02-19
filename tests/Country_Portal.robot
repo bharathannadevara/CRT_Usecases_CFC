@@ -336,7 +336,8 @@ Country_Portal_Keywords
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
-
+    
+    ScrollText                  Evaluations (SIA report, PCCS, outbreak root cause analysis)
     ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=4
@@ -457,6 +458,16 @@ Country_Portal_Keywords
     ClickText                   NEXT
 
     # 3.2.7 Upload new application documents
+    VerifyText                  MoH and MoF signatures
+    ClickText                   SELECT FROM LIBRARY         anchor=MoH and MoF signature page
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
+    Pause
+    ClickText                   UPDATE                      anchor=MoH and MoF signature page
+    Double click                CRT_Demo.pdf
+    Pause
+
     VerifyText                  Application documents
     ScrollText                  Application documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
@@ -464,25 +475,11 @@ Country_Portal_Keywords
     Double click                suite
     Double click                Documents
     Double click                Test_Gavi.txt
-    Sleep                       10
+    Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=2
+    ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=4
-    ClickText                   SELECT                      partial_match=False         delay=4
-    Pause
-
-    ClickText                   SELECT FROM LIBRARY         anchor=MoH and MoF signatures
-    UseTable                    File(s)
-    ClickCell                   r2c1                        delay=4
-    ClickText                   SELECT                      partial_match=False         delay=4
-    Pause
-    ClickText                   REMOVE                      anchor=Workplan with activities specific to Vaccine grant
-    Pause
-
-    ClickText                   SELECT FROM LIBRARY         anchor=MoH and MoF signatures
-    UseTable                    File(s)
-    ClickCell                   r2c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
@@ -491,8 +488,12 @@ Country_Portal_Keywords
     ClickCell                   r2c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
-    ClickText                   UPDATE                      anchor=MoH and MoF signature page
-    Double click                CRT_Demo.pdf
+    ClickText                   REMOVE                      anchor=Endorsement by coordination and advisory groups
+    Pause
+    ClickText                   SELECT FROM LIBRARY         anchor=Endorsement by coordination and advisory groups
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Minutes of NITAG meeting with specific recommendations on the requested vaccine support
@@ -503,20 +504,19 @@ Country_Portal_Keywords
 
     ClickText                   SELECT FROM LIBRARY         anchor=Vaccine specific
     UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
+    ClickCell                   r2c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    VerifyText                  cMYP addendum
-    ClickText                   SELECT FROM LIBRARY         anchor=cMYP addendum
+    ClickText                   SELECT FROM LIBRARY         anchor=Annual EPI plan
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=4
-    ClickText                   SELECT                      partial_match=False         delay=3
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=EVM improvement plan
     UseTable                    File(s)
-    ClickCell                   r1c1                        delay=4
+    ClickCell                   r2c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
@@ -544,19 +544,18 @@ Country_Portal_Keywords
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    ScrollText                  Evaluations (SIA report, PCCS, outbreak root cause analysis)
     ClickText                   SELECT FROM LIBRARY         anchor=Evaluations (SIA report, PCCS, outbreak root cause analysis)
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
-
+    
+    ScrollText                  Evaluations (SIA report, PCCS, outbreak root cause analysis)
     ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
-    ClickText                   NEXT
 
     # 4.1 Submission Details
     ScrollText                  Contacts
