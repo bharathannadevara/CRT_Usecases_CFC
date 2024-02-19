@@ -150,7 +150,7 @@ Country_Portal_Keywords
     ClickText                   SELECT
     ClickText                   M, 10 doses/vial, Lyophilised
     ClickText                   APPLY
-    Wait                        30
+    Wait                        25
     ClickText                   Yes                         anchor=2
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
     ClickText                   FEB
@@ -206,13 +206,12 @@ Country_Portal_Keywords
     TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
-    UseModal                    off
     Sleep                       2
     ClickElement                ${Co_financing_Payment_Supportmonth_Xpath}
-    ClickText                   April
+    ClickText                   April                        anchor=The payment for the first year of co-financed support will be made in the month of:
     Sleep                       2
     ClickElement                ${Co_financing_Payment_Supportyear_Xpath}
-    ClickText                   2024
+    ClickText                   2024                        anchor=The payment for the first year of co-financed support will be made in the month of:
     ClickText                   NEXT
 
     # 3.1.4 Financial support from Gavi
@@ -354,14 +353,14 @@ Country_Portal_Keywords
 
     # 3.2.1 Vaccine and programmatic data
     ClickText                   SELECT
-    ClickText                   M, 5 doses/vial, Lyophilised
+    ClickText                   MR, 5 doses/vial, Lyophilised
     ClickText                   APPLY
-    Wait                        5
+    Pause
     ClickText                   Yes                         anchor=1
     ClickText                   SELECT
-    ClickText                   M, 10 doses/vial, Lyophilised
+    ClickText                   MR, 10 doses/vial, Lyophilised
     ClickText                   APPLY
-    Wait                        5
+    Wait                        20
     ClickText                   Yes                         anchor=2
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
     ClickText                   FEB
