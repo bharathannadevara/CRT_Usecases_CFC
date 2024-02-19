@@ -245,37 +245,8 @@ Country_Portal_Keywords
     ClickText                   NEXT
 
     # 3.1.7 Upload new application documents
-    VerifyText                  Application documents
-    ScrollText                  Application documents
-    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
-    ClickText                   UPLOAD                      anchor=1
-    Double click                suite
-    Double click                Documents
-    Double click                Test_Gavi.txt
-    Sleep                       10
-
-    ClickText                   SELECT FROM LIBRARY         anchor=2
-    UseTable                    File(s)
-    ClickCell                   r1c1                        delay=4
-    ClickText                   SELECT                      partial_match=False         delay=4
-    Pause
-
-    ClickText                   SELECT FROM LIBRARY         anchor=3
-    UseTable                    File(s)
-    ClickCell                   r2c1                        delay=4
-    ClickText                   SELECT                      partial_match=False         delay=4
-    Pause
-    ClickText                   REMOVE                      anchor=Workplan with activities specific to Vaccine grant
-    Pause
-
-    ClickText                   SELECT FROM LIBRARY         anchor=3
-    UseTable                    File(s)
-    ClickCell                   r2c1                        delay=4
-    ClickText                   SELECT                      partial_match=False         delay=4
-    Pause
-
     VerifyText                  MoH and MoF signatures
-    ClickText                   SELECT FROM LIBRARY         anchor=4
+    ClickText                   SELECT FROM LIBRARY         anchor=MoH and MoF signature page
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
@@ -284,68 +255,93 @@ Country_Portal_Keywords
     Double click                CRT_Demo.pdf
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=5
+    VerifyText                  Application documents
+    ScrollText                  Application documents
+    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
+    ClickText                   UPLOAD                      anchor=Budget and Planning Tool
+    Double click                suite
+    Double click                Documents
+    Double click                Test_Gavi.txt
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=Endorsement by coordination and advisory groups
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
+    Pause
+    ClickText                   REMOVE                      anchor=Endorsement by coordination and advisory groups
+    Pause
+    ClickText                   SELECT FROM LIBRARY         anchor=Endorsement by coordination and advisory groups
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    VerifyText                  Endorsement by coordination and advisory groups
-    ClickText                   SELECT FROM LIBRARY         anchor=6
+    ClickText                   SELECT FROM LIBRARY         anchor=Minutes of NITAG meeting with specific recommendations on the requested vaccine support
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    VerifyText                  cMYP addendum
-    ClickText                   SELECT FROM LIBRARY         anchor=cMYP addendum
+    ClickText                   SELECT FROM LIBRARY         anchor=Vaccine specific
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=8
+    ClickText                   SELECT FROM LIBRARY         anchor=Annual EPI plan
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=EVM improvement plan
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
+    Pause
+
+    ClickText                   SELECT FROM LIBRARY         anchor=Cold chain equipment inventory
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=9
+    ClickText                   SELECT FROM LIBRARY         anchor=If country request any salaries,top-up/allowance
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=10
+    ClickText                   SELECT FROM LIBRARY         anchor=Supplementary Immunisation Activity (SIA) technical report
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=11
+    ClickText                   SELECT FROM LIBRARY         anchor=Outbreak response with root cause analysis, if available , including M&RP supported activities
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=12
+    ClickText                   SELECT FROM LIBRARY         anchor=Evaluations (SIA report, PCCS, outbreak root cause analysis)
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=13
+    ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
-
-    ClickText                   SELECT FROM LIBRARY         anchor=14
-    UseTable                    File(s)
-    ClickCell                   r1c1                        delay=4
-    ClickText                   SELECT                      partial_match=False         delay=4
-    Pause
-    ClickText                   NEXT
 
 
 
@@ -464,7 +460,7 @@ Country_Portal_Keywords
     VerifyText                  Application documents
     ScrollText                  Application documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
-    ClickText                   UPLOAD                      anchor=1
+    ClickText                   UPLOAD                      anchor=Budget and Planning Tool
     Double click                suite
     Double click                Documents
     Double click                Test_Gavi.txt
@@ -529,7 +525,6 @@ Country_Portal_Keywords
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
-
 
     ClickText                   SELECT FROM LIBRARY         anchor=If country request any salaries,top-up/allowance
     UseTable                    File(s)
