@@ -379,37 +379,32 @@ Country_Portal_Keywords
     # 3.2.2 Target Information
     TypeText                    Please describe the target age cohort for the MR 1st dose routine immunisation:    ${First_Dose}    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 1st dose routine immunisation:
-    VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
-    ClickElement                ${Second_Dose_Xpath}
-    TypeText                    Please describe the target age cohort for the MR 2nd dose routine immunisation:    ${Second_Dose}    partial_match=false
+    VerifyText                  Please describe the target age cohort for the MR 2nd dose routine immunisation:
+    ClickElement                ${Second_Dose_Xpath}        
+    TypeText                    weeks    ${Second_Dose}    anchor=2   recognition_mode=vision
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 2nd dose routine immunisation:
 
-    # UseTable                  Population in the target age cohort (#)
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/button[1]
-    TypeText                    Population in target age cohort (#)-2024                2375
+    UseTable                    Population in the target age cohort (#)
+    ClickElement                ${Target_Age_Cohort_Xpath}
+    TypeText                    Population in the target age cohort (#)-2024            ${Target_Age_Cohort}
     ClickText                   SAVE
-    Wait                        5
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]
-    TypeText                    Target population to be vaccinated (first dose) (#)-2024                            2451
+    Wait                        6
+    ClickElement                ${Target_Population_FirstDose_Xpath}
+    TypeText                    Target population to be vaccinated (first dose) (#)-2024                            ${Target_Population_FirstDose}
     ClickText                   SAVE
-    Wait                        5
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[1]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]
-    TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         47
+    Wait                        6
+    ClickElement                ${Target_Age_Cohort_LastDose_Xpath}
+    TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose}
     ClickText                   SAVE
-    Wait                        5
-    ScrollText                  Targets for measles routine first dose (M1)
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[2]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[2]/div[1]/button[1]
-    TypeText                    Population in the target age cohort (#)-2024            4568
+    Wait                        6
+    ClickElement                ${Target_Population_LastDose_Xpath}
+    TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose}
     ClickText                   SAVE
-    Wait                        5
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[2]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/div[1]/button[1]
-    TypeText                    Target population to be vaccinated (first dose) (#)-2024                            2343
+    Wait                        6
+    ClickElement                ${Estimated_Wastage_Rate_Xpath}
+    TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate}
     ClickText                   SAVE
-    Wait                        5
-    ClickElement                xpath=//body[1]/div[1]/block-ui[1]/app-layout[1]/div[1]/div[1]/div[2]/div[1]/app-dynamic-area[1]/app-dynamic-template[1]/div[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/div[1]/app-section[2]/app-table[1]/div[1]/div[1]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/div[1]/button[1]
-    TypeText                    Number of doses procured-2024                           12344
-    ClickText                   SAVE
-    Wait                        5
+    Wait                        6
     ClickText                   NEXT
 
     # 3.2.3 Co-financing information
