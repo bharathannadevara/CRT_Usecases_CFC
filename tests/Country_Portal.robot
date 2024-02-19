@@ -36,9 +36,9 @@ Country_Portal_Keywords
     ScrollTo                    Date of Programme Capacity Assessment
     # ClickText                 Overall expenditures and financing for immunisation     anchor=Country health and immunisation data #Once submitted we can't edit this page again
 
-    ClickElement                ${NHSP_FromYear}
+    ClickElement                ${NHSP_FromYear_Xpath}
     ClickText                   ${From_Year}                anchor=From
-    ClickElement                ${NHSP_ToYear}
+    ClickElement                ${NHSP_ToYear_Xpath}
     ClickText                   ${To_Year}                  anchor=To
     ClickText                   Yes
     TypeText                    National customs regulations                            ${Customs_Regulations}
@@ -152,7 +152,7 @@ Country_Portal_Keywords
     ClickItem                   Open calendar               anchor=Planned launch date
     ClickText                   AUG
     ClickText                   22
-    ClickElement                ${Support_Requested}
+    ClickElement                ${Support_Requested_Xpath}
     ClickText                   2024
     Pause
     ScrollText                  Vaccine procurement
@@ -169,24 +169,24 @@ Country_Portal_Keywords
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
     UseTable                    Population in the target age cohort (#)
-    ClickElement                ${Target_Age_Cohort}
-    TypeText                    Population in the target age cohort (#)-2024            2375
+    ClickElement                ${Target_Age_Cohort_Xpath}
+    TypeText                    Population in the target age cohort (#)-2024            ${Target_Age_Cohort}
     ClickText                   SAVE
     Wait                        6
-    ClickElement                ${Target_Population_FirstDose}
-    TypeText                    Target population to be vaccinated (first dose) (#)-2024                            2451
+    ClickElement                ${Target_Population_FirstDose_Xpath}
+    TypeText                    Target population to be vaccinated (first dose) (#)-2024                            ${Target_Population_FirstDose}
     ClickText                   SAVE
     Wait                        6
-    ClickElement                ${Target_Age_Cohort_LastDose}
-    TypeText                    Population in the target age cohort for last dose(#)-2024                           4568
+    ClickElement                ${Target_Age_Cohort_LastDose_Xpath}
+    TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose}
     ClickText                   SAVE
     Wait                        6
-    ClickElement                ${Target_Population_LastDose}
-    TypeText                    Target population to be vaccinated for last dose (#)-2024                           2343
+    ClickElement                ${Target_Population_LastDose_Xpath}
+    TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose}
     ClickText                   SAVE
     Wait                        6
-    ClickElement                ${Estimated_Wastage_Rate}
-    TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         47
+    ClickElement                ${Estimated_Wastage_Rate_Xpath}
+    TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate}
     ClickText                   SAVE
     Wait                        6
     ClickText                   NEXT
@@ -198,14 +198,14 @@ Country_Portal_Keywords
     Pause
     TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    ${Co_financing_Payment1}
     TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
-    ClickElement                ${Co_financing_Payment_fundmonth}
+    ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     UseModal                    off
     Sleep                       2
-    ClickElement                ${Co_financing_Payment_Supportmonth}
+    ClickElement                ${Co_financing_Payment_Supportmonth_Xpath}
     ClickText                   April
     Sleep                       2
-    ClickElement                ${Co_financing_Payment_Supportyear}
+    ClickElement                ${Co_financing_Payment_Supportyear_Xpath}
     ClickText                   2024
     ClickText                   NEXT
 
@@ -363,7 +363,7 @@ Country_Portal_Keywords
     ClickItem                   Open calendar               anchor=Planned launch date
     ClickText                   AUG
     ClickText                   22
-    ClickElement                ${Support_Requested}
+    ClickElement                ${Support_Requested_Xpath}
     ClickText                   2024
     Pause
     ScrollText                  Vaccine procurement
@@ -414,13 +414,13 @@ Country_Portal_Keywords
     Pause
     TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    ${Co_financing_Payment1}
     TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
-    ClickElement                ${Co_financing_Payment_fundmonth}
+    ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     Sleep                       2
-    ClickElement                ${Co_financing_Payment_Supportmonth}
+    ClickElement                ${Co_financing_Payment_Supportmonth_Xpath}
     ClickText                   April
     Sleep                       2
-    ClickElement                ${Co_financing_Payment_Supportyear}
+    ClickElement                ${Co_financing_Payment_Supportyear_Xpath}
     ClickText                   2024
     ClickText                   NEXT
 
@@ -575,15 +575,15 @@ Country_Portal_Keywords
     VerifyText                  Signatures
     ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
 
-    ClickElement                xpath=//i[contains(text(),'language')]
+    ClickElement                ${Globe_Xpath}
     ClickText                   Français
     ClickText                   TÉLÉCHARGER UNE COPIE
 
-    ClickElement                xpath=//i[contains(text(),'language')]
+    ClickElement                ${Globe_Xpath}
     ClickText                   Español
     ClickText                   DESCARGAR UNA COPIA
 
-    ClickElement                xpath=//i[contains(text(),'language')]
+    ClickElement                ${Globe_Xpath}
     ClickText                   Pyccknñ
     ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
 
