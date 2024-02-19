@@ -62,21 +62,21 @@ Country_Portal_Keywords
     Double click                Test_Gavi.txt
     Sleep                       10
 
-    ClickText                   SELECT FROM LIBRARY         anchor=2                    #Country strategic multi-year plan / cMYP costing tool
+    ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=3                    #Effective Vaccine Management (EVM) assessment
+    ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM) assessment
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
-    ClickText                   REMOVE                      anchor=6
+    ClickText                   REMOVE                      anchor=5
     Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=4                    #Effective Vaccine Management (EVM): most recent improvement plan progress report
+    ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
@@ -128,6 +128,7 @@ Country_Portal_Keywords
     Pause
 
     # Other documents
+    ScrollText                  Other documents
     ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS             partial_match=false
     UseTable                    File(s)
     ClickCell                   r1c1                        delay=3
