@@ -26,6 +26,8 @@ Country_Portal_Keywords
     ClickText                   Measles 1st and 2nd dose routine.                       delay=2
     Sleep                       3
     ClickText                   NEXT
+
+    # 1.2 Gavi terms and conditions
     VerifyText                  Gavi terms and conditions                               anchor=1.2.1
     ClickText                   NEXT
     ClickText                   http://www.gavi.org/support/process/apply/
@@ -36,6 +38,7 @@ Country_Portal_Keywords
     ScrollTo                    Date of Programme Capacity Assessment
     # ClickText                 Overall expenditures and financing for immunisation     anchor=Country health and immunisation data #Once submitted we can't edit this page again
 
+    # 2.1 Country Profile
     ClickElement                ${NHSP_FromYear_Xpath}
     ClickText                   ${From_Year}                anchor=From
     ClickElement                ${NHSP_ToYear_Xpath}
