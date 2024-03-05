@@ -148,7 +148,7 @@ Country_Portal_Keywords
     Wait                        25
     ClickText                   Yes                         anchor=2
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
-    ClickText                   FEB
+    ClickText                   MAR
     ClickText                   22
     ClickItem                   Open calendar               anchor=Planned launch date
     ClickText                   AUG
@@ -358,7 +358,7 @@ Country_Portal_Keywords
     Wait                        20
     ClickText                   Yes                         anchor=2
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
-    ClickText                   FEB
+    ClickText                   MAR
     ClickText                   22
     ClickItem                   Open calendar               anchor=Planned launch date
     ClickText                   AUG
