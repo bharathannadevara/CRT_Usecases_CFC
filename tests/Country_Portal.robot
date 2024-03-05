@@ -13,7 +13,6 @@ Country_Portal_Keywords
     Run Keyword                 Login
     Switch To Lightning If Classic
     LaunchApp                   GAVI CRM
-    # Run Keyword               Home
     ClickText                   Contacts
     ClickText                   TechMahindra
     ClickText                   Show more actions
@@ -37,9 +36,7 @@ Country_Portal_Keywords
     Sleep                       3
     SwitchWindow                index=1
     ClickText                   NEXT
-    #ScrollTo                    Date of Programme Capacity Assessment
-    # ClickText                 Overall expenditures and financing for immunisation     anchor=Country health and immunisation data #Once submitted we can't edit this page again
-
+    
     # 2.1 Country Profile
     ClickElement                ${NHSP_FromYear_Xpath}
     ClickText                   ${From_Year}                anchor=From
@@ -49,11 +46,9 @@ Country_Portal_Keywords
     TypeText                    National customs regulations                            ${Customs_Regulations}
     TypeText                    National Regulatory Agency                              ${Regulatory_Agency}
     ClickText                   NEXT
-
     VerifyText                  Financial Overview of Active Vaccine Programmes
     VerifyText                  Summary of active Vaccine Programmes
     ClickText                   NEXT
-
     TypeText                    Coverage and equity situation analysis                  ${Coverage_and_Equity}
     ClickText                   NEXT
 
