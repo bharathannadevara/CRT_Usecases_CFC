@@ -1,8 +1,6 @@
 *** Settings ***
 Library                         QForce
 Library                         QWeb
-Library                         QVision
-
 
 
 *** Variables ***
