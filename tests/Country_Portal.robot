@@ -8,6 +8,7 @@ Suite Teardown                  End suite
 
 *** Test Cases ***
 Country_Portal_TestCase
+    [Tags]                      Country_Portal
 
 *** Keywords ***
 Country_Portal_Keywords
