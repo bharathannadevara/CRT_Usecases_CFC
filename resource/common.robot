@@ -56,7 +56,7 @@ Switch To Lightning If Classic
 Click New or See Application
     ${isNewVisible}=    Is Text    START NEW
     IF    ${isNewVisible}
-        Click Text    START NEW
+        Click Text    START NEW             anchor=APPLY FOR NEW SUPPORT        recognition_mode=vision
     ELSE
         Click Text    SEE APPLICATION(S)    anchor=NVS Application Round 4 (2023) - ${Country}    recognition_mode=vision
     END
