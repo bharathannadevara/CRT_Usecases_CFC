@@ -176,19 +176,19 @@ Country_Portal_Keywords
     ClickText                   SAVE
     Wait                        6
     ClickElement                ${Target_Population_FirstDose_Xpath}
-    TypeText                    Target population to be vaccinated (first dose) (#)                           ${Target_Population_FirstDose}
+    TypeText                    Target population to be vaccinated (first dose) (#)-2024                            ${Target_Population_FirstDose}
     ClickText                   SAVE
     Wait                        6
     ClickElement                ${Target_Age_Cohort_LastDose_Xpath}
-    TypeText                    Population in the target age cohort for last dose(#)                          ${Target_Age_Cohort_LastDose}
+    TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose}
     ClickText                   SAVE
     Wait                        6
     ClickElement                ${Target_Population_LastDose_Xpath}
-    TypeText                    Target population to be vaccinated for last dose (#)                           ${Target_Population_LastDose}
+    TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose}
     ClickText                   SAVE
     Wait                        6
     ClickElement                ${Estimated_Wastage_Rate_Xpath}
-    TypeText                    Estimated wastage rates for preferred presentation (%)                         ${Estimated_Wastage_Rate}
+    TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate}
     ClickText                   SAVE
     Wait                        6
     ClickText                   NEXT
