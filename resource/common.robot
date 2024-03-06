@@ -11,7 +11,7 @@ ${username}                     mounika.t@cloudfulcrum.com.uat
 ${password}                     GAVI@1234
 ${login_url}                    https://test.salesforce.com                             # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
-
+${Round}                        NVS Application Round 4 (2023)
 
 *** Keywords ***
 Setup Browser
@@ -58,7 +58,7 @@ Click START NEW if visible or click SEE APPLICATION
     IF    ${isNewVisible}
         ClickText    START NEW            
     ELSE
-        ClickText    SEE APPLICATION(S)                anchor=NVS Application Round 4 (2023) - ${Country}
+        ClickText    SEE APPLICATION(S)                anchor=${Round} - ${Country}
     END
 
 Pause
