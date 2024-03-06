@@ -59,8 +59,11 @@ Country_Portal_TestCase
     ScrollText                  Country and planning documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      anchor=1
+    # Double click                Suite
+    # Double click                Documents
+    Double click                Home                        anchor=Desktop
+    Double click                execution
     Double click                GAVI
-    Double click                Documents
     Double click                Test_Gavi.txt
     Sleep                       10
 
