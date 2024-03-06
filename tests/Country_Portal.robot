@@ -15,15 +15,15 @@ Country_Portal_Keywords
     Switch To Lightning If Classic
     LaunchApp                   GAVI CRM
     ClickText                   Contacts
-    ClickText                   TechMahindra
+    ClickText                   ${Contact_Rec}            #
     ClickText                   Show more actions
     ClickText                   Log in to Experience as User
 
     ClickText                   Country Portal              delay=2
     TypeText                    Search Country              ${Country}
     ClickText                   ${Country}
-    ClickText                   NVS Application Round 4 (2023) - ${Country}
-    ClickText                   Measles 1st and 2nd dose routine.                       delay=2
+
+    Click New or See Application
     Sleep                       3
     ClickText                   NEXT
 
