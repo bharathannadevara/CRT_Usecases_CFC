@@ -22,8 +22,8 @@ Country_Portal_Keywords
     ClickText                   Country Portal              delay=2
     TypeText                    Search Country              ${Country}
     ClickText                   ${Country}
-
-    Click New or See Application
+    VerifyText                  Status
+    Click START NEW if visible or else click SEE APPLICATION
     Sleep                       3
     ClickText                   NEXT
 
