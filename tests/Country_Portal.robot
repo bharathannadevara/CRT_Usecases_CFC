@@ -23,7 +23,7 @@ Country_Portal_Keywords
     TypeText                    Search Country              ${Country}
     ClickText                   ${Country}
     VerifyText                  Status
-    Click START NEW if visible or else click SEE APPLICATION
+    Click START NEW if visible or click SEE APPLICATION
     Sleep                       3
     ClickText                   NEXT
 
