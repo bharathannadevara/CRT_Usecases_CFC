@@ -63,7 +63,7 @@ Country_Portal_TestCase
     # Double click                Documents
     Double click                Home                        anchor=Desktop
     Double click                execution
-    Double click                GAVi
+    Double click                Gavi
     Double click                Documents
     Double click                Test_Gavi.txt
     Sleep                       10
