@@ -213,7 +213,9 @@ Country_Portal_Keywords
     # 3.1.4 Financial support from Gavi
     TypeText                    Live births (year of introduction)                      ${Live_Births}
     ClickItem                   Open calendar
-    ClickText                   22
+    ClickItem                   Change to year view
+    ClickText                   APR
+    ClickText                   16
     TypeText                    Total amount - Gov. Funding / Country Co-financing (US$)                            ${Gov_Funding}
     TypeText                    Total amount - Other donors (US$)                       ${Other_Donors}
     TypeText                    Total amount - Gavi support (US$)                       ${Gavi_Support}
