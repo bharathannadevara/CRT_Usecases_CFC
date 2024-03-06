@@ -10,13 +10,13 @@ Suite Teardown                  End suite
 Country_Portal_TestCase
     [Tags]                      Country_Portal
 
-# *** Keywords ***
-# Country_Portal_Keywords
+    # *** Keywords ***
+    # Country_Portal_Keywords
     Run Keyword                 Login
     Switch To Lightning If Classic
     LaunchApp                   GAVI CRM
     ClickText                   Contacts
-    ClickText                   ${Contact_Rec}            delay=3    
+    ClickText                   ${Contact_Rec}              delay=3
     ClickText                   Show more actions
     ClickText                   Log in to Experience as User
 
@@ -38,7 +38,7 @@ Country_Portal_TestCase
     Sleep                       3
     SwitchWindow                index=1
     ClickText                   NEXT
-    
+
     # 2.1 Country Profile
     ClickElement                ${NHSP_FromYear_Xpath}
     ClickText                   ${From_Year}                anchor=From
@@ -59,12 +59,12 @@ Country_Portal_TestCase
     ScrollText                  Country and planning documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      anchor=1
-    # Double click                Suite
-    # Double click                Documents
+    # Double click              Suite
+    # Double click              Documents
     Double click                Home                        anchor=Desktop
     Double click                execution
-    Qvision.Double click                Gavi
-    Qvision.Double click                Documents
+    QVision.DoubleClick         Gavi
+    QVision.DoubleClick         Documents
     Double click                Test_Gavi.txt
     Sleep                       10
 
@@ -123,7 +123,7 @@ Country_Portal_TestCase
 
     # Coordination and advisory groups documents
     ScrollText                  Coordination and advisory groups documents
-    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference    delay=3
+    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference                              delay=3
     Double click                Test_Gavi.txt
     Pause
 
@@ -168,11 +168,11 @@ Country_Portal_TestCase
     ClickText                   NEXT
 
     # 3.1.2 Target Information
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:    ${First_Dose}    partial_match=false
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:                           ${First_Dose}    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
     ClickElement                ${Second_Dose_Xpath}
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:    ${Second_Dose}    partial_match=false
+    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:                           ${Second_Dose}    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
     UseTable                    Population in the target age cohort (#)
@@ -203,13 +203,13 @@ Country_Portal_TestCase
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    ${Co_financing_Payment1}
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.           ${Co_financing_Payment1}
     TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     Sleep                       2
     ClickElement                ${Co_financing_Payment_Supportmonth_Xpath}
-    ClickText                   April                        anchor=The payment for the first year of co-financed support will be made in the month of:
+    ClickText                   April                       anchor=The payment for the first year of co-financed support will be made in the month of:
     Sleep                       2
     ClickElement                ${Co_financing_Payment_Supportyear_Xpath}
     ClickText                   2024                        anchor=The payment for the first year of co-financed support will be made in the month of:
@@ -237,8 +237,8 @@ Country_Portal_TestCase
 
     # 3.1.5 Strategic considerations
     TypeText                    Rationale for this request                              ${Rationale_Request}
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    ${cMYP}
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    ${NITAG}
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                        ${cMYP}
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                          ${NITAG}
     TypeText                    Financial sustainability    ${Financial_Sustainability}
     TypeText                    Programmatic challenges     ${Programmatic_Challenges}
     TypeText                    Improving coverage and equity of routine immunisation                               ${Improving_Coverage_and_Equity}
@@ -269,8 +269,8 @@ Country_Portal_TestCase
     ScrollText                  Application documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      anchor=Budget and Planning Tool
-    # Double click                suite
-    # Double click                Documents
+    # Double click              suite
+    # Double click              Documents
     Double click                Test_Gavi.txt
     Pause
 
@@ -346,7 +346,7 @@ Country_Portal_TestCase
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
-    
+
     ScrollText                  Evaluations (SIA report, PCCS, outbreak root cause analysis)
     ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS
     UseTable                    File(s)
@@ -382,11 +382,11 @@ Country_Portal_TestCase
     ClickText                   NEXT
 
     # 3.2.2 Target Information
-    TypeText                    Please describe the target age cohort for the MR 1st dose routine immunisation:    ${First_Dose}    partial_match=false
+    TypeText                    Please describe the target age cohort for the MR 1st dose routine immunisation:     ${First_Dose}              partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the MR 2nd dose routine immunisation:
-    ClickElement                ${Second_Dose_Xpath}     #   
-    TypeText                    Please describe the target age cohort for the MR 2nd dose routine immunisation:    ${Second_Dose}    anchor=2   recognition_mode=vision
+    ClickElement                ${Second_Dose_Xpath}        #
+    TypeText                    Please describe the target age cohort for the MR 2nd dose routine immunisation:     ${Second_Dose}             anchor=2    recognition_mode=vision
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 2nd dose routine immunisation:
 
     UseTable                    Population in the target age cohort (#)
@@ -417,7 +417,7 @@ Country_Portal_TestCase
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.    ${Co_financing_Payment1}
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.           ${Co_financing_Payment1}
     TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
@@ -449,8 +449,8 @@ Country_Portal_TestCase
 
     # 3.2.5 Strategic considerations
     TypeText                    Rationale for this request                              ${Rationale_Request}
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)    ${cMYP}
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)    ${NITAG}
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                        ${cMYP}
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                          ${NITAG}
     TypeText                    Financial sustainability    ${Financial_Sustainability}
     TypeText                    Programmatic challenges     ${Programmatic_Challenges}
     TypeText                    Improving coverage and equity of routine immunisation                               ${Improving_Coverage_and_Equity}
@@ -556,7 +556,7 @@ Country_Portal_TestCase
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
-    
+
     ScrollText                  Evaluations (SIA report, PCCS, outbreak root cause analysis)
     ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS
     UseTable                    File(s)
@@ -578,7 +578,7 @@ Country_Portal_TestCase
     TypeText                    Please let us know if you have any comments about this application                  Testing
 
     VerifyText                  Signatures
-    ClickText                   ATTACH                        anchor=Attach the signature page(s) back.
+    ClickText                   ATTACH                      anchor=Attach the signature page(s) back.
     Double click                CRT_Demo.pdf
     ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
 
