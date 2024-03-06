@@ -58,7 +58,7 @@ Click START NEW if visible or click SEE APPLICATION
     IF    ${isNewVisible}
         Click Text    START NEW            # anchor=Status        recognition_mode=vision
     ELSE
-        Click Text    SEE APPLICATION(S)                          anchor=2 # anchor=NVS Application Round 4 (2023) - ${Country}    recognition_mode=vision
+        Click Text    SEE APPLICATION(S)                         anchor=NVS Application Round 4 (2023) - ${Country}    recognition_mode=vision
     END
 
 Pause
