@@ -253,6 +253,8 @@ Country_Portal_Keywords
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
     ClickText                   UPDATE                      anchor=MoH and MoF signature page
+    Double click                suite
+    Double click                Documents
     Double click                CRT_Demo.pdf
     Pause
 
@@ -260,8 +262,8 @@ Country_Portal_Keywords
     ScrollText                  Application documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      anchor=Budget and Planning Tool
-    Double click                suite
-    Double click                Documents
+    # Double click                suite
+    # Double click                Documents
     Double click                Test_Gavi.txt
     Pause
 
