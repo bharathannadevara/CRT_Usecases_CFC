@@ -27,6 +27,8 @@ Country_Portal_TestCase
     Click START NEW if visible or click SEE APPLICATION
     Sleep                       3
     ClickText                   NEXT
+    ClickElement                ${Gavi_Support1}
+    ClickElement                ${Gavi_Support2}
 
     # 1.2 Gavi terms and conditions
     VerifyText                  Gavi terms and conditions                               anchor=1.2.1
