@@ -63,8 +63,8 @@ Country_Portal_TestCase
     # Double click                Documents
     Double click                Home                        anchor=Desktop
     Double click                execution
-    Double click                Gavi
-    Double click                Documents
+    Qvision.Double click                Gavi
+    Qvision.Double click                Documents
     Double click                Test_Gavi.txt
     Sleep                       10
 
