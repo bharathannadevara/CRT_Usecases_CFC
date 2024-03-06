@@ -10,8 +10,8 @@ Suite Teardown                  End suite
 Country_Portal_TestCase
     [Tags]                      Country_Portal
 
-*** Keywords ***
-Country_Portal_Keywords
+# *** Keywords ***
+# Country_Portal_Keywords
     Run Keyword                 Login
     Switch To Lightning If Classic
     LaunchApp                   GAVI CRM
