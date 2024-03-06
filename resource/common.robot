@@ -52,6 +52,14 @@ Log Out
 Switch To Lightning If Classic
     ${is_classic} =             Is Text                     Switch to Lightning Experience                          timeout=2                   # Short timeout for quick check
     Run Keyword If              ${is_classic}               Click Text                  Switch to Lightning Experience
+    
+Click New or See Application
+    ${isNewVisible}=    Is Text    START NEW
+    IF    ${isNewVisible}
+        Click Text    START NEW
+    ELSE
+        Click Text    SEE APPLICATION(S)    anchor=NVS Application Round 4 (2023) - ${Country}    recognition_mode=vision
+    END
 
 Pause
     Sleep                       7
