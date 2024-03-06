@@ -380,8 +380,8 @@ Country_Portal_Keywords
     TypeText                    Please describe the target age cohort for the MR 1st dose routine immunisation:    ${First_Dose}    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the MR 2nd dose routine immunisation:
-    ClickElement                ${Second_Dose_Xpath}        
-    TypeText                    weeks    ${Second_Dose}    anchor=2   recognition_mode=vision
+    ClickElement                ${Second_Dose_Xpath}     #   
+    TypeText                    Please describe the target age cohort for the MR 2nd dose routine immunisation:    ${Second_Dose}    anchor=2   recognition_mode=vision
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 2nd dose routine immunisation:
 
     UseTable                    Population in the target age cohort (#)
@@ -573,6 +573,8 @@ Country_Portal_Keywords
     TypeText                    Please let us know if you have any comments about this application                  Testing
 
     VerifyText                  Signatures
+    ClickText                   ATTACH                        anchor=Attach the signature page(s) back.
+    Double click                CRT_Demo.pdf
     ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
 
     ClickElement                ${Globe_Xpath}
