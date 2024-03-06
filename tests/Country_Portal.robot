@@ -348,7 +348,7 @@ Country_Portal_Keywords
     ClickCell                   r1c1                        delay=4
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
-
+    ClickText                   NEXT
 
 
     # 3.2.1 Vaccine and programmatic data
