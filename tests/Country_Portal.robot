@@ -16,7 +16,7 @@ Country_Portal_TestCase
     Switch To Lightning If Classic
     LaunchApp                   GAVI CRM
     ClickText                   Contacts
-    ClickText                   ${Contact_Rec}            
+    ClickText                   ${Contact_Rec}            delay=3    
     ClickText                   Show more actions
     ClickText                   Log in to Experience as User
 
