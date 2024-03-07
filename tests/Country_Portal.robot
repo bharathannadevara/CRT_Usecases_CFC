@@ -25,8 +25,8 @@ Country_Portal_TestCase
     ClickText                   ${Country}
     VerifyText                  Status
     Click START NEW if visible or click SEE APPLICATION
-    LogScreenshot
     Sleep                       3
+    LogScreenshot
     ClickElement                ${Gavi_Support1}
     ClickElement                ${Gavi_Support2}            delay=3
     ClickText                   NEXT
@@ -68,7 +68,7 @@ Country_Portal_TestCase
     Double click                Home                        anchor=Desktop
     Double click                execution
     QVision.DoubleClick         Gavi
-    QVision.DoubleClick         Documents
+    # QVision.DoubleClick         Documents
     Double click                Test_Gavi.txt
     Sleep                       10
 
