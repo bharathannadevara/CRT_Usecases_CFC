@@ -588,6 +588,12 @@ Country_Portal_TestCase
     Double click                CRT_Demo.pdf
     ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
 
+    VerifyText                  Signatures
+    ClickText                   ATTACH                      anchor=Attach the signature page(s) back.
+    Double click                CRT_Demo.pdf
+    ClickText                   SUBMIT                      anchor=PREVIOUS
+    ClickText                   DOWNLOAD A COPY
+
     ClickElement                ${Globe_Xpath}
     ClickText                   Français
     ClickText                   TÉLÉCHARGER UNE COPIE
