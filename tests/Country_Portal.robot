@@ -46,6 +46,20 @@ Country_Portal_TestCase
     ClickText                   NEXT
 
     # 2.1 Country Profile
+    ClickText                   Overall expenditures and financing for immunisation
+    QVision.ClickText           2023                        anchor=More
+    QVision.ClickText           Number
+    QVision.TypeText            Number                      23425
+    QVision.ClickText           US$0
+    QVision.TypeText            US$0                        2345    anchor=Total government expenditure
+    QVision.ClickText           US$0
+    QVision.TypeText            US$0                        2342    anchor=Total government health expenditure
+    QVision.ClickText           US$0
+    QVision.TypeText            US$0                        2344    anchor=Immunisation budget
+
+    ClickElement                xpath=//md-tab-item[@role='tab']//span[@class='ng-binding ng-scope'][normalize-space()='2023']
+    TypeText                    Number                      243524
+    VerifyText                  0
     ClickElement                ${NHSP_FromYear_Xpath}
     ClickText                   ${From_Year}                anchor=From
     ClickElement                ${NHSP_ToYear_Xpath}
