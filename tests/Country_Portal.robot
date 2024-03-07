@@ -27,7 +27,7 @@ Country_Portal_TestCase
     Click START NEW if visible or click SEE APPLICATION
     Sleep                       3
     ClickElement                ${Gavi_Support1}
-    ClickElement                ${Gavi_Support2}
+    ClickElement                ${Gavi_Support2}            delay=3
     ClickText                   NEXT
     
 
