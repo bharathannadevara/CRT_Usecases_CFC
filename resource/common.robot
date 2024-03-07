@@ -58,7 +58,7 @@ Click START NEW if visible or click SEE APPLICATION
     IF    ${isNewVisible}
         ClickText    START NEW            
     ELSE
-        ClickText    SEE APPLICATION(S)                anchor=${Round} - ${Country}
+        ClickText    SEE APPLICATION(S)                anchor=${Round} - ${Country}        delay=2
     END
 
 Pause
