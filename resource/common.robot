@@ -60,6 +60,7 @@ Click START NEW if visible or click SEE APPLICATION
     ELSE
         ClickText    SEE APPLICATION(S)                anchor=${Round} - ${Country}        delay=2
     END
+    Log              ${isNewVisible}
 
 Pause
     Sleep                       7
