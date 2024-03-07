@@ -29,7 +29,7 @@ Country_Portal_TestCase
     ClickElement                ${Gavi_Support1}
     ClickElement                ${Gavi_Support2}            delay=3
     ClickText                   NEXT
-    
+
 
     # 1.2 Gavi terms and conditions
     VerifyText                  Gavi terms and conditions                               anchor=1.2.1
