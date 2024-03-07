@@ -178,7 +178,7 @@ Country_Portal_TestCase
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
     ClickElement                ${Second_Dose_Xpath}
-    TypeText                    Please describe the target age cohort for the Measles 2nd dose routine immunisation:                           ${Second_Dose}    partial_match=false
+    TypeText                    ${Second_Dose_Xpath}                           ${Second_Dose}    partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
     UseTable                    Population in the target age cohort (#)
@@ -391,8 +391,8 @@ Country_Portal_TestCase
     TypeText                    Please describe the target age cohort for the MR 1st dose routine immunisation:     ${First_Dose}              partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the MR 2nd dose routine immunisation:
-    ClickElement                ${Second_Dose_Xpath}        #
-    TypeText                    Please describe the target age cohort for the MR 2nd dose routine immunisation:     ${Second_Dose}             anchor=2    recognition_mode=vision
+    ClickElement                ${Second_Dose_Xpath}        
+    TypeText                    ${Second_Dose_Xpath}     ${Second_Dose}             anchor=2    recognition_mode=vision
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 2nd dose routine immunisation:
 
     UseTable                    Population in the target age cohort (#)
