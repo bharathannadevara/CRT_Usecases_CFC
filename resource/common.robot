@@ -54,7 +54,7 @@ Switch To Lightning If Classic
     Run Keyword If              ${is_classic}               Click Text                  Switch to Lightning Experience
     
 Click START NEW if visible or click SEE APPLICATION
-    ${isNewVisible}=    IsText    START NEW
+    ${isNewVisible}=    Is Text    START NEW
     IF    ${isNewVisible}
         ClickText    START NEW            
     ELSE
