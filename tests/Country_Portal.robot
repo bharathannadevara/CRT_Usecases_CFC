@@ -25,6 +25,7 @@ Country_Portal_TestCase
     ClickText                   ${Country}
     VerifyText                  Status
     Click START NEW if visible or click SEE APPLICATION
+    LogScreenshot
     Sleep                       3
     ClickElement                ${Gavi_Support1}
     ClickElement                ${Gavi_Support2}            delay=3
