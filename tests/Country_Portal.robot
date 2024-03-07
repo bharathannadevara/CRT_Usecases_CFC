@@ -50,11 +50,14 @@ Country_Portal_TestCase
     QVision.ClickText           2023                        anchor=More
     QVision.ClickText           Number
     QVision.TypeText            Number                      23425
-    QVision.ClickText           US$0
+    QVision.VerifyText          US$0                        anchor=Total government expenditure
+
+    
+    QVision.ClickText           US$0                        anchor=Total government expenditure
     QVision.TypeText            US$0                        2345    anchor=Total government expenditure
-    QVision.ClickText           US$0
+    QVision.ClickText           US$0                        anchor=Total government health expenditure
     QVision.TypeText            US$0                        2342    anchor=Total government health expenditure
-    QVision.ClickText           US$0
+    QVision.ClickText           US$0                        anchor=Immunisation budget
     QVision.TypeText            US$0                        2344    anchor=Immunisation budget
 
     ClickElement                xpath=//md-tab-item[@role='tab']//span[@class='ng-binding ng-scope'][normalize-space()='2023']
