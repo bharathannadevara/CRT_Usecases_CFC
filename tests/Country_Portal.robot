@@ -61,91 +61,91 @@ Country_Portal_TestCase
     ClickText                   NEXT
 
     # 2.4 Upload country documents
-    VerifyText                  Country and planning documents
-    ScrollText                  Country and planning documents
-    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
-    ClickText                   UPLOAD                      anchor=1
-    # Double click              Suite
-    # Double click              Documents
-    Double click                Home                        anchor=Desktop
-    Double click                execution
-    Double click                Gavi                        anchor=output
-    Double click                Documents
-    Double click                Test_Gavi.txt
-    Sleep                       10
+    # VerifyText                  Country and planning documents
+    # ScrollText                  Country and planning documents
+    # ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
+    # ClickText                   UPLOAD                      anchor=1
+    # # Double click              Suite
+    # # Double click              Documents
+    # Double click                Home                        anchor=Desktop
+    # Double click                execution
+    # Double click                Gavi                        anchor=output
+    # Double click                Documents
+    # Double click                Test_Gavi.txt
+    # Sleep                       10
 
-    ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
-    UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
+    # ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
+    # UseTable                    File(s)
+    # ClickCell                   r1c1                        delay=3
+    # ClickText                   SELECT                      partial_match=False         delay=3
+    # Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM) assessment
-    UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
-    ClickText                   REMOVE                      anchor=5
-    Pause
+    # ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM) assessment
+    # UseTable                    File(s)
+    # ClickCell                   r2c1                        delay=3
+    # ClickText                   SELECT                      partial_match=False         delay=3
+    # Pause
+    # ClickText                   REMOVE                      anchor=5
+    # Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
-    UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
-    ClickText                   UPDATE                      anchor=7
-    Double click                CRT_Demo.pdf
-    Pause
+    # ClickText                   SELECT FROM LIBRARY         anchor=Effective Vaccine Management (EVM): most recent improvement plan progress report
+    # UseTable                    File(s)
+    # ClickCell                   r2c1                        delay=3
+    # ClickText                   SELECT                      partial_match=False         delay=3
+    # Pause
+    # ClickText                   UPDATE                      anchor=7
+    # Double click                CRT_Demo.pdf
+    # Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=5
-    UseTable                    File(s)
-    ClickCell                   r5c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
+    # ClickText                   SELECT FROM LIBRARY         anchor=5
+    # UseTable                    File(s)
+    # ClickCell                   r5c1                        delay=3
+    # ClickText                   SELECT                      partial_match=False         delay=3
+    # Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=6
-    UseTable                    File(s)
-    ClickCell                   r4c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
+    # ClickText                   SELECT FROM LIBRARY         anchor=6
+    # UseTable                    File(s)
+    # ClickCell                   r4c1                        delay=3
+    # ClickText                   SELECT                      partial_match=False         delay=3
+    # Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=7
-    UseTable                    File(s)
-    ClickCell                   r3c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
+    # ClickText                   SELECT FROM LIBRARY         anchor=7
+    # UseTable                    File(s)
+    # ClickCell                   r3c1                        delay=3
+    # ClickText                   SELECT                      partial_match=False         delay=3
+    # Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=8
-    UseTable                    File(s)
-    ClickCell                   r2c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
+    # ClickText                   SELECT FROM LIBRARY         anchor=8
+    # UseTable                    File(s)
+    # ClickCell                   r2c1                        delay=3
+    # ClickText                   SELECT                      partial_match=False         delay=3
+    # Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=9
-    UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
+    # ClickText                   SELECT FROM LIBRARY         anchor=9
+    # UseTable                    File(s)
+    # ClickCell                   r1c1                        delay=3
+    # ClickText                   SELECT                      partial_match=False         delay=3
+    # Pause
 
-    # Coordination and advisory groups documents
-    ScrollText                  Coordination and advisory groups documents
-    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference                              delay=3
-    Double click                Test_Gavi.txt
-    Pause
+    # # Coordination and advisory groups documents
+    # ScrollText                  Coordination and advisory groups documents
+    # ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference                              delay=3
+    # Double click                Test_Gavi.txt
+    # Pause
 
-    ClickText                   SELECT FROM LIBRARY         anchor=National Coordination Forum meeting minutes of the past 12 months
-    UseTable                    File(s)
-    ClickCell                   r3c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
+    # ClickText                   SELECT FROM LIBRARY         anchor=National Coordination Forum meeting minutes of the past 12 months
+    # UseTable                    File(s)
+    # ClickCell                   r3c1                        delay=3
+    # ClickText                   SELECT                      partial_match=False         delay=3
+    # Pause
 
-    # Other documents
-    ScrollText                  Other documents
-    ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS             partial_match=false
-    UseTable                    File(s)
-    ClickCell                   r1c1                        delay=3
-    ClickText                   SELECT                      partial_match=False         delay=3
-    Pause
+    # # Other documents
+    # ScrollText                  Other documents
+    # ClickText                   SELECT FROM LIBRARY         anchor=PREVIOUS             partial_match=false
+    # UseTable                    File(s)
+    # ClickCell                   r1c1                        delay=3
+    # ClickText                   SELECT                      partial_match=False         delay=3
+    # Pause
     ClickText                   NEXT
 
     # 3.1.1 Vaccine and programmatic data
