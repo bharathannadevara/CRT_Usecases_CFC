@@ -62,5 +62,12 @@ Click START NEW if visible or click SEE APPLICATION
     END
     Log              ${isNewVisible}
 
+Overall expenditures and financing for immunisation
+    ${isSubmitVisible}=    Is Text    SUBMIT                 
+    IF    ${isSubmitVisible}
+        
+    ELSE
+        SwitchWindow                index=1
+    END
 Pause
     Sleep                       7
