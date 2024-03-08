@@ -51,11 +51,9 @@ Country_Portal_TestCase
     QVision.ClickText           2023                        anchor=More
     QVision.ClickText           Number
     QVision.TypeText            Number                      23425
-    QVision.VerifyText          US$0                        anchor=Total government expenditure
-
-    
-    QVision.ClickText           US$0                        anchor=Total government expenditure
-    QVision.TypeText            US$0                        2345    anchor=Total government expenditure
+    SetConfig                   ShadowDOM                        on
+    QVision.ClickText           US$0                        anchor=2022
+    QForce.TypeText            US$0                        2345    anchor=Total government expenditure
     QVision.ClickText           US$0                        anchor=Total government health expenditure
     QVision.TypeText            US$0                        2342    anchor=Total government health expenditure
     QVision.ClickText           US$0                        anchor=Immunisation budget
