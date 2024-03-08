@@ -52,7 +52,9 @@ Country_Portal_TestCase
     QVision.ClickText           Number
     QVision.TypeText            Number                      23425
     SetConfig                   ShadowDOM                        on
-    QVision.ClickText           US$0                        anchor=2022
+    VerifyText          1.2 Please indicate health and immunisation financing data in US$
+    QVision.TypeText    US$0    2345    anchor=Total government expenditure    right=4
+    QVision.ClickText           US$0                        anchor=Total government expenditure    
     QForce.TypeText            US$0                        2345    anchor=Total government expenditure
     QVision.ClickText           US$0                        anchor=Total government health expenditure
     QVision.TypeText            US$0                        2342    anchor=Total government health expenditure
