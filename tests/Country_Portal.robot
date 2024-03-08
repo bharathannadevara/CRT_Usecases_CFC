@@ -47,6 +47,20 @@ Country_Portal_TestCase
 
     # 2.1 Country Profile
     ClickText                   Overall expenditures and financing for immunisation
+    SetConfig                   ShadowDOM                        on
+    QVision.ClickText           2023                        anchor=More
+    QVision.ClickText           Number
+    QVision.TypeText            Number                      23425
+    QVision.VerifyText          US$0                        anchor=Total government expenditure
+
+    
+    QVision.ClickText           US$0                        anchor=Total government expenditure
+    QVision.TypeText            US$0                        2345    anchor=Total government expenditure
+    QVision.ClickText           US$0                        anchor=Total government health expenditure
+    QVision.TypeText            US$0                        2342    anchor=Total government health expenditure
+    QVision.ClickText           US$0                        anchor=Immunisation budget
+    QVision.TypeText            US$0                        2344    anchor=Immunisation budget
+
     QVision.ClickText           2023                        anchor=More
     QVision.ClickText           Number
     QVision.TypeText            Number                      23425
