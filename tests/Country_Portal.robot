@@ -48,18 +48,18 @@ Country_Portal_TestCase
     # 2.1 Country Profile
     ClickText                   Overall expenditures and financing for immunisation
     SetConfig                   ShadowDOM                        on
-    QVision.ClickText           2023                        anchor=More
+    ClickText           2023                        anchor=More    recognition_mode=vision
     QVision.ClickText           Number
     QVision.TypeText            Number                      23425
+
     SetConfig                   ShadowDOM                        on
-    VerifyText          1.2 Please indicate health and immunisation financing data in US$
-    QVision.TypeText    US$0    2345    anchor=Total government expenditure    right=4
-    QVision.ClickText           US$0                        anchor=Total government expenditure    
-    QForce.TypeText            US$0                        2345    anchor=Total government expenditure
-    QVision.ClickText           US$0                        anchor=Total government health expenditure
-    QVision.TypeText            US$0                        2342    anchor=Total government health expenditure
-    QVision.ClickText           US$0                        anchor=Immunisation budget
-    QVision.TypeText            US$0                        2344    anchor=Immunisation budget
+    ClickElement                xpath=
+    QVision.ClickText           US$0                        anchor=Domestic     index=1     below=1    
+    QVision.TypeText            US$0                        2345    anchor=Domestic    index=1    below=1
+    QVision.ClickText           US$0                        anchor=GAVI            index=1        below=1
+    QVision.TypeText            US$0                        2342    anchor=GAVI    index=1        below=1
+    QVision.ClickText           US$0                        anchor=UNICEF          index=1        below=1
+    QVision.TypeText            US$0                        2344    anchor=UNICEF                 index=1        below=1
 
     QVision.ClickText           2023                        anchor=More
     QVision.ClickText           Number
