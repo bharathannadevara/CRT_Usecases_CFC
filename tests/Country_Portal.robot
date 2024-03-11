@@ -54,8 +54,9 @@ Country_Portal_TestCase
 
     SetConfig                   ShadowDOM                        on
     ClickElement                xpath=
-    QVision.ClickText           US$0                        anchor=Domestic     index=1     below=1    
-    QVision.TypeText            US$0                        2345    anchor=Domestic    index=1    below=1
+    QVision.ClickCell           r1c1                        anchor=Total government expenditure      
+    QVision.ClickText           US$0                        anchor=Total government expenditure     index=1      
+    QVision.TypeText            US$0                        2345    anchor=Total government expenditure    index=1  
     QVision.ClickText           US$0                        anchor=GAVI            index=1        below=1
     QVision.TypeText            US$0                        2342    anchor=GAVI    index=1        below=1
     QVision.ClickText           US$0                        anchor=UNICEF          index=1        below=1
