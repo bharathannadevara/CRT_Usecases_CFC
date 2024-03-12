@@ -49,11 +49,11 @@ Country_Portal_TestCase
     ClickText                   Overall expenditures and financing for immunisation
     SetConfig                   ShadowDOM                        on
     ClickText           2023                        anchor=More    recognition_mode=vision
-    QVision.ClickText           Number
+    QVision.ClickText           Number                 anchor=1.1 Please indicate the average exchange rate used on expenditures
     QVision.TypeText            Number                      23425
 
-    SetConfig                   ShadowDOM                        on
-    ClickElement                xpath=
+    # SetConfig                   ShadowDOM                        on
+    # ClickElement                xpath=
     QVision.ClickCell           r1c1                        anchor=Total government expenditure      
     QVision.ClickText           US$0                        anchor=Total government expenditure     index=1      
     QVision.TypeText            US$0                        2345    anchor=Total government expenditure    index=1  
