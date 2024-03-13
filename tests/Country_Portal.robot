@@ -51,8 +51,10 @@ Country_Portal_TestCase
     ClickText           2023                        anchor=More    recognition_mode=vision
     QVision.ClickText           Number                 anchor=1.1 Please indicate the average exchange rate used on expenditures
     QVision.TypeText            Number                      23425
+    
+    SetConfig                   ShadowDOM                        on
+    ClickElement                xpath=//div//div[contains(id,'input_16')]
 
-    # SetConfig                   ShadowDOM                        on
     # ClickElement                xpath=
     QVision.ClickCell           r1c1                        anchor=Total government expenditure      
     QVision.ClickText           US$0                        anchor=Total government expenditure     index=1      
