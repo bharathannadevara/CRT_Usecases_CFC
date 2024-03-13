@@ -47,35 +47,54 @@ Country_Portal_TestCase
 
     # 2.1 Country Profile
     ClickText                   Overall expenditures and financing for immunisation
-    SetConfig                   ShadowDOM                        on
-    ClickText           2023                        anchor=More    recognition_mode=vision
-    QVision.ClickText           Number                 anchor=1.1 Please indicate the average exchange rate used on expenditures
+    SetConfig                   ShadowDOM                   on
+    ClickText                   2023                        anchor=More                 recognition_mode=vision
+    QVision.ClickText           Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
     QVision.TypeText            Number                      23425
-    
-    SetConfig                   ShadowDOM                        on
-    ClickElement                xpath=//div//div[contains(id,'input_16')]
 
-    # ClickElement                xpath=
-    QVision.ClickCell           r1c1                        anchor=Total government expenditure      
-    QVision.ClickText           US$0                        anchor=Total government expenditure     index=1      
-    QVision.TypeText            US$0                        2345    anchor=Total government expenditure    index=1  
-    QVision.ClickText           US$0                        anchor=GAVI            index=1        below=1
-    QVision.TypeText            US$0                        2342    anchor=GAVI    index=1        below=1
-    QVision.ClickText           US$0                        anchor=UNICEF          index=1        below=1
-    QVision.TypeText            US$0                        2344    anchor=UNICEF                 index=1        below=1
+    # SetConfig                 ShadowDOM                   on
+    # ClickElement              xpath=//div//div[contains(id,'input_16')]
+
+    # ClickElement              xpath=
+    QVision.ClickCell           row_text=Total government expenditure                   col_text=US$0
+    QVision.WriteText           25455
+
+    QVision.ClickCell           row_text=Total government health expenditure            col_text=US$0
+    QVision.WriteText           73542
+
+    QVision.ClickCell           row_text=Immunisation budget                            col_text=US$0
+    QVision.WriteText           56243
+    
+    QVision.ClickCell           row_text=Other capital costs                            col_text=US$0
+    QVision.WriteText           12345
+    
+    
+    
+    Verifytext                  Total government expenditure                            recognition_mode=vision
+    ClickElement                xpath=//input[@id='input_16']
+    ClickElement                xpath=//body[1]/md-content[1]/md-content[1]/section[1]/form[1]/div[1]/section[2]/div[1]/gavi-financing-table[1]/div[1]/div[2]/div[2]/div[2]/md-input-container[1]/input[1]
+
+    QVision.ClickText           Add US$                     index=16
+    QVision.TypeText            Add US$                     2345                        index=16
+    QVision.ClickText           US$                         anchor=Total government expenditure                     index=1
+    QVision.TypeText            US$                         2345                        anchor=Total government expenditure                    index=1
+    QVision.ClickText           US$0                        anchor=GAVI                 index=1                     below=1
+    QVision.TypeText            US$0                        2342                        anchor=GAVI                 index=1                    below=1
+    QVision.ClickText           US$0                        anchor=UNICEF               index=1                     below=1
+    QVision.TypeText            US$0                        2344                        anchor=UNICEF               index=1                    below=1
 
     QVision.ClickText           2023                        anchor=More
     QVision.ClickText           Number
     QVision.TypeText            Number                      23425
     QVision.VerifyText          US$0                        anchor=Total government expenditure
 
-    
+
     QVision.ClickText           US$0                        anchor=Total government expenditure
-    QVision.TypeText            US$0                        2345    anchor=Total government expenditure
+    QVision.TypeText            US$0                        2345                        anchor=Total government expenditure
     QVision.ClickText           US$0                        anchor=Total government health expenditure
-    QVision.TypeText            US$0                        2342    anchor=Total government health expenditure
+    QVision.TypeText            US$0                        2342                        anchor=Total government health expenditure
     QVision.ClickText           US$0                        anchor=Immunisation budget
-    QVision.TypeText            US$0                        2344    anchor=Immunisation budget
+    QVision.TypeText            US$0                        2344                        anchor=Immunisation budget
 
     ClickElement                xpath=//md-tab-item[@role='tab']//span[@class='ng-binding ng-scope'][normalize-space()='2023']
     TypeText                    Number                      243524
@@ -244,7 +263,7 @@ Country_Portal_TestCase
     ClickText                   Update Estimated Values To be Financed
     Pause
     TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.           ${Co_financing_Payment1}
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:            ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     Sleep                       2
@@ -458,7 +477,7 @@ Country_Portal_TestCase
     ClickText                   Update Estimated Values To be Financed
     Pause
     TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.           ${Co_financing_Payment1}
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:            ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     Sleep                       2
