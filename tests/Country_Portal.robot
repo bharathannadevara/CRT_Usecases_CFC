@@ -65,11 +65,20 @@ Country_Portal_TestCase
     QVision.ClickCell           row_text=Immunisation budget                            col_text=US$0
     QVision.WriteText           56243
     
-    QVision.ClickCell           row_text=Other capital costs                            col_text=US$0
+    QVision.ClickCell           row_text=Other capital costs                            col_text=Domestic
     QVision.WriteText           12345
-    
-    
-    
+
+    QVision.ClickCell           row_text=Other capital costs                            col_text=GAVI
+    QVision.WriteText           67890
+
+    QVision.ClickCell           row_text=Other capital costs                            col_text=UNICEF
+    QVision.WriteText           3452
+
+    QVision.ClickCell           row_text=Other capital costs                            col_text=WHO
+    QVision.WriteText           8675
+    # VerifyElement               xpath=//button[@class='md-raised md-primary md-button md-gavi-blue-theme md-ink-ripple']
+    QVision.ClickText                  SUBMIT                        
+
     Verifytext                  Total government expenditure                            recognition_mode=vision
     ClickElement                xpath=//input[@id='input_16']
     ClickElement                xpath=//body[1]/md-content[1]/md-content[1]/section[1]/form[1]/div[1]/section[2]/div[1]/gavi-financing-table[1]/div[1]/div[2]/div[2]/div[2]/md-input-container[1]/input[1]
