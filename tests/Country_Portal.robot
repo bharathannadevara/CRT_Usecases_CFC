@@ -48,7 +48,7 @@ Country_Portal_TestCase
     # 2.1 Country Profile
     ClickText                   Overall expenditures and financing for immunisation
     SetConfig                   ShadowDOM                   on
-    ClickText                   2023                        anchor=More                 recognition_mode=vision
+    QVision.ClickText                   2023                        anchor=More 
     QVision.ClickText           Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
     QVision.TypeText            Number                      23425
 
