@@ -48,14 +48,10 @@ Country_Portal_TestCase
     # 2.1 Country Profile
     ClickText                   Overall expenditures and financing for immunisation
     SetConfig                   ShadowDOM                   on
-    QVision.ClickText                   2023                        anchor=More 
+    QVision.ClickText           2023                        anchor=More
     QVision.ClickText           Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
     QVision.TypeText            Number                      23425
 
-    # SetConfig                 ShadowDOM                   on
-    # ClickElement              xpath=//div//div[contains(id,'input_16')]
-
-    # ClickElement              xpath=
     QVision.ClickCell           row_text=Total government expenditure                   col_text=US$0
     QVision.WriteText           25455
 
@@ -64,7 +60,7 @@ Country_Portal_TestCase
 
     QVision.ClickCell           row_text=Immunisation budget                            col_text=US$0
     QVision.WriteText           56243
-    
+
     QVision.ClickCell           row_text=Other capital costs                            col_text=Domestic
     QVision.WriteText           12345
 
@@ -76,8 +72,8 @@ Country_Portal_TestCase
 
     QVision.ClickCell           row_text=Other capital costs                            col_text=WHO
     QVision.WriteText           8675
-    # VerifyElement               xpath=//button[@class='md-raised md-primary md-button md-gavi-blue-theme md-ink-ripple']
-    QVision.ClickText                  SUBMIT                        
+    QVision.ClickText           SUBMIT
+    QVision.ClickText           SUBMIT                      anchor=CANCEL
 
     Verifytext                  Total government expenditure                            recognition_mode=vision
     ClickElement                xpath=//input[@id='input_16']
