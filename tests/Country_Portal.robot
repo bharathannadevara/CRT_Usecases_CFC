@@ -9,9 +9,9 @@ Suite Teardown                  End suite
 *** Test Cases ***
 Country_Portal_TestCase
     [Tags]                      Country_Portal
-
-    # *** Keywords ***
-    # Country_Portal_Keywords
+        
+*** Keywords ***
+    [Arguments]                 ${Average_Exchange_Rate}    
     Run Keyword                 Login
     Switch To Lightning If Classic
     LaunchApp                   GAVI CRM
@@ -55,30 +55,34 @@ Country_Portal_TestCase
     IF                          ${isNumberVisible}
         SetConfig               ShadowDOM                       on
         QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
-        QVision.TypeText        Number                      23425
+        Sleep                   2
+        QVision.TypeText        Number                      ${Average_Exchange_Rate}        
 
         QVision.ClickCell       row_text=Total government expenditure                   col_text=US$0
-        QVision.WriteText       25455
+        QVision.WriteText       ${Total_Government_Expenditure}
 
         QVision.ClickCell       row_text=Total government health expenditure            col_text=US$0
-        QVision.WriteText       73542
+        QVision.WriteText       ${Total_Government_Health_Expenditure}
 
         QVision.ClickCell       row_text=Immunisation budget                            col_text=US$0
-        QVision.WriteText       56243
+        QVision.WriteText       ${Immunisation_Budget}
 
         QVision.ClickCell       row_text=Other capital costs                            col_text=Domestic
-        QVision.WriteText       12345
+        QVision.WriteText       ${Domestic}
 
         QVision.ClickCell       row_text=Other capital costs                            col_text=GAVI
-        QVision.WriteText       67890
+        QVision.WriteText       ${GAVI}
 
         QVision.ClickCell       row_text=Other capital costs                            col_text=UNICEF
-        QVision.WriteText       3452
+        QVision.WriteText       ${UNICEF}
 
         QVision.ClickCell       row_text=Other capital costs                            col_text=WHO
-        QVision.WriteText       8675
+        QVision.WriteText       ${WHO}
+
+        QVision.ScrollWhile     1.3 Please indicate all expenditures and financing for immunisation from all sources (Government and Donors) in US$                        
+        QVision.ClickCell       row_text=Expenditure name             col_text=Domestic     anchor=Add US$                
         QVision.ClickText       SUBMIT
-        # QVision.ClickText       SUBMIT                      anchor=CANCEL
+        QVision.ClickText       SUBMIT                      anchor=CANCEL
     ELSE
         SwitchWindow            index=1
     END
