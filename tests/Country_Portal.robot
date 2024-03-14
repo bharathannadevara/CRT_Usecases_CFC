@@ -44,7 +44,7 @@ Country_Portal_TestCase
     Sleep                       3
     SwitchWindow                index=1
     ClickText                   NEXT
-
+    
     # 2.1 Country Profile
     ClickText                   Overall expenditures and financing for immunisation
     SetConfig                   ShadowDOM                   on
