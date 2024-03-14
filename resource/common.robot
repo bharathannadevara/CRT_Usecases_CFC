@@ -65,7 +65,7 @@ Click START NEW if visible or click SEE APPLICATION
 
 Overall expenditures and financing for immunisation
     ${isNumberVisible}=         QWeb.IsText                 SUBMIT                      anchor=Total expenditure for immunisation
-    IF                          ${isNumberVisible} == "True"
+    IF                          ${isNumberVisible}
         QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
         QVision.TypeText        Number                      23425
 
