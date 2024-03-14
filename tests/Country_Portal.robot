@@ -28,7 +28,7 @@ Country_Portal_TestCase
     Sleep                       3
     LogScreenshot
     ClickElement                ${Gavi_Support1}
-    ClickElement                ${Gavi_Support2}            delay=3
+    ClickElement                ${Gavi_Support2}            delay=4
     Sleep                       3
     LogScreenshot
     ClickText                   NEXT
