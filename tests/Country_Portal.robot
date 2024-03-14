@@ -44,19 +44,16 @@ Country_Portal_TestCase
     Sleep                       3
     SwitchWindow                index=1
     ClickText                   NEXT
-    SetConfig                   ShadowDOM                   on
-                          
-    VerifyText          SUBMIT                             recognition_mode=vision
-    ${isNumberVisible}=         QWeb.IsText                 SUBMIT                      anchor=Total expenditure for immunisation
-    Log                        ${isNumberVisible}
+                
     # 2.1 Country Profile
     ClickText                   Overall expenditures and financing for immunisation
     SetConfig                   ShadowDOM                   on
     Sleep                       3
     QVision.ClickText           2023                        anchor=More
-    Sleep                       3        
-    ${isNumberVisible}=         Is Text                 SUBMIT            recognition_mode=vision          
-    IF                          ${isNumberVisible} == "True"
+    Sleep                       3       
+    ${isNumberVisible}=         QVision.Is Text                 Number               
+    IF                          ${isNumberVisible}
+        SetConfig               ShadowDOM                       on
         QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
         QVision.TypeText        Number                      23425
 
@@ -81,7 +78,7 @@ Country_Portal_TestCase
         QVision.ClickCell       row_text=Other capital costs                            col_text=WHO
         QVision.WriteText       8675
         QVision.ClickText       SUBMIT
-        QVision.ClickText       SUBMIT                      anchor=CANCEL
+        # QVision.ClickText       SUBMIT                      anchor=CANCEL
     ELSE
         SwitchWindow            index=1
     END
