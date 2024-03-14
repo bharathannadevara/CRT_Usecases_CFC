@@ -72,7 +72,7 @@ Country_Portal_TestCase
 
     QVision.ClickCell           row_text=Other capital costs                            col_text=WHO
     QVision.WriteText           8675
-    QVision.ClickText           SUBMIT
+    QVision.ClickText           SUBMIT                        
     QVision.ClickText           SUBMIT                      anchor=CANCEL
 
     ClickElement                ${NHSP_FromYear_Xpath}
