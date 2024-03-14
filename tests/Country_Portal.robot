@@ -78,9 +78,7 @@ Country_Portal_TestCase
 
         QVision.ClickCell       row_text=Other capital costs                            col_text=WHO
         QVision.WriteText       ${WHO}
-        QVision.ScrollTo        SUBMIT                        amount=1
-        QVision.ScrollWhile     1.3 Please indicate all expenditures and financing for immunisation from all sources (Government and Donors) in US$                        
-        QVision.ClickCell       row_text=Expenditure name             col_text=Domestic     anchor=Add US$                
+        
         QVision.ClickText       SUBMIT
         QVision.ClickText       SUBMIT                      anchor=CANCEL
     ELSE
