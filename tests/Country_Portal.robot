@@ -9,8 +9,8 @@ Suite Teardown                  End suite
 *** Test Cases ***
 Country_Portal_TestCase
     [Tags]                      Country_Portal
-        
- 
+
+
     Run Keyword                 Login
     Switch To Lightning If Classic
     LaunchApp                   GAVI CRM
@@ -43,19 +43,19 @@ Country_Portal_TestCase
     Sleep                       3
     SwitchWindow                index=1
     ClickText                   NEXT
-                
+
     # 2.1 Country Profile
     ClickText                   Overall expenditures and financing for immunisation
     SetConfig                   ShadowDOM                   on
     Sleep                       3
     QVision.ClickText           2023                        anchor=More
-    Sleep                       3       
-    ${isNumberVisible}=         QVision.Is Text                 Number               
+    Sleep                       3
+    ${isNumberVisible}=         QVision.Is Text             Number
     IF                          ${isNumberVisible}
-        SetConfig               ShadowDOM                       on
+        SetConfig               ShadowDOM                   on
         QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
         Sleep                   2
-        QVision.TypeText        Number                      ${Average_Exchange_Rate}        
+        QVision.TypeText        Number                      ${Average_Exchange_Rate}
 
         QVision.ClickCell       row_text=Total government expenditure                   col_text=US$0
         QVision.WriteText       ${Total_Government_Expenditure}
@@ -77,8 +77,11 @@ Country_Portal_TestCase
 
         QVision.ClickCell       row_text=Other capital costs                            col_text=WHO
         QVision.WriteText       ${WHO}
-        
-        QVision.ClickText       SUBMIT
+        ScrollText              SUBMIT
+
+        QVision.ScrollTo      SUBMIT          amount=-2            anchor=Total expenditure for immunisation        dist=2.0       
+        Pause               
+        QVision.ClickText       SUBMIT        
         QVision.ClickText       SUBMIT                      anchor=CANCEL
     ELSE
         SwitchWindow            index=1
@@ -248,7 +251,7 @@ Country_Portal_TestCase
     ClickText                   Update Estimated Values To be Financed
     Pause
     TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.           ${Co_financing_Payment1}
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:            ${Co_financing_Payment2}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     Sleep                       2
@@ -462,7 +465,7 @@ Country_Portal_TestCase
     ClickText                   Update Estimated Values To be Financed
     Pause
     TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.           ${Co_financing_Payment1}
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:            ${Co_financing_Payment2}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     Sleep                       2
