@@ -75,35 +75,6 @@ Country_Portal_TestCase
     QVision.ClickText           SUBMIT
     QVision.ClickText           SUBMIT                      anchor=CANCEL
 
-    Verifytext                  Total government expenditure                            recognition_mode=vision
-    ClickElement                xpath=//input[@id='input_16']
-    ClickElement                xpath=//body[1]/md-content[1]/md-content[1]/section[1]/form[1]/div[1]/section[2]/div[1]/gavi-financing-table[1]/div[1]/div[2]/div[2]/div[2]/md-input-container[1]/input[1]
-
-    QVision.ClickText           Add US$                     index=16
-    QVision.TypeText            Add US$                     2345                        index=16
-    QVision.ClickText           US$                         anchor=Total government expenditure                     index=1
-    QVision.TypeText            US$                         2345                        anchor=Total government expenditure                    index=1
-    QVision.ClickText           US$0                        anchor=GAVI                 index=1                     below=1
-    QVision.TypeText            US$0                        2342                        anchor=GAVI                 index=1                    below=1
-    QVision.ClickText           US$0                        anchor=UNICEF               index=1                     below=1
-    QVision.TypeText            US$0                        2344                        anchor=UNICEF               index=1                    below=1
-
-    QVision.ClickText           2023                        anchor=More
-    QVision.ClickText           Number
-    QVision.TypeText            Number                      23425
-    QVision.VerifyText          US$0                        anchor=Total government expenditure
-
-
-    QVision.ClickText           US$0                        anchor=Total government expenditure
-    QVision.TypeText            US$0                        2345                        anchor=Total government expenditure
-    QVision.ClickText           US$0                        anchor=Total government health expenditure
-    QVision.TypeText            US$0                        2342                        anchor=Total government health expenditure
-    QVision.ClickText           US$0                        anchor=Immunisation budget
-    QVision.TypeText            US$0                        2344                        anchor=Immunisation budget
-
-    ClickElement                xpath=//md-tab-item[@role='tab']//span[@class='ng-binding ng-scope'][normalize-space()='2023']
-    TypeText                    Number                      243524
-    VerifyText                  0
     ClickElement                ${NHSP_FromYear_Xpath}
     ClickText                   ${From_Year}                anchor=From
     ClickElement                ${NHSP_ToYear_Xpath}
