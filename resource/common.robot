@@ -28,17 +28,17 @@ End suite
 Login
     [Documentation]             Login to Salesforce instance
     GoTo                        ${login_url}
-    TypeText                    Username                    ${username}                 delay=1
-    TypeText                    Password                    ${password}
-    ClickText                   Log In
+    QWeb.TypeText               Username                    ${username}                 delay=1
+    QWeb.TypeText               Password                    ${password}
+    QWeb.ClickText              Log In
 
 Home
     [Documentation]             Navigate to homepage, login if needed
     GoTo                        ${home_url}
-    ${login_status} =           IsText                      To access this page, you have to log in to Salesforce.                              2
+    ${login_status} =           QWeb.IsText                 To access this page, you have to log in to Salesforce.                              2
     Log                         ${login_status}
     Run Keyword If              ${login_status}             Login
-    ClickText                   Home
+    QWeb.ClickText              Home
     VerifyTitle                 Home | Salesforce
 
 Wait And Increase Sleep Time
@@ -47,24 +47,24 @@ Wait And Increase Sleep Time
     Sleep                       ${sleep_time}s
 
 Log Out
-    ClickText                   View profile
-    ClickText                   Log Out                     partial_match=False
+    QWeb.ClickText              View profile
+    QWeb.ClickText              Log Out                     partial_match=False
 
 Switch To Lightning If Classic
-    ${is_classic} =             Is Text                     Switch to Lightning Experience                          timeout=2                   # Short timeout for quick check
-    Run Keyword If              ${is_classic}               Click Text                  Switch to Lightning Experience
+    ${is_classic} =             QWeb.IsText                 Switch to Lightning Experience                          timeout=2                   # Short timeout for quick check
+    Run Keyword If              ${is_classic}               QWeb.Click Text             Switch to Lightning Experience
 
 Click START NEW if visible or click SEE APPLICATION
-    ${isNewVisible}=            Is Text                     START NEW
+    ${isNewVisible}=            QWeb.IsText                 START NEW
     IF                          ${isNewVisible}
-        ClickText               START NEW
+        QWeb.ClickText          START NEW
     ELSE
-        ClickText               SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=2
+        QWeb.ClickText          SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=2
     END
     Log                         ${isNewVisible}
 
 Overall expenditures and financing for immunisation
-    ${isSubmitVisible}=         Is Text                     SUBMIT
+    ${isSubmitVisible}=         QWeb.IsText                 SUBMIT
     IF                          ${isSubmitVisible}
         QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
         QVision.TypeText        Number                      23425
