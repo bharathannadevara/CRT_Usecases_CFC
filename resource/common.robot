@@ -1,6 +1,7 @@
 *** Settings ***
 Library                         QForce
 Library                         QWeb
+Library                         QVision
 
 
 *** Variables ***
@@ -52,22 +53,46 @@ Log Out
 Switch To Lightning If Classic
     ${is_classic} =             Is Text                     Switch to Lightning Experience                          timeout=2                   # Short timeout for quick check
     Run Keyword If              ${is_classic}               Click Text                  Switch to Lightning Experience
-    
+
 Click START NEW if visible or click SEE APPLICATION
-    ${isNewVisible}=    Is Text    START NEW
-    IF    ${isNewVisible}
-        ClickText    START NEW            
+    ${isNewVisible}=            Is Text                     START NEW
+    IF                          ${isNewVisible}
+        ClickText               START NEW
     ELSE
-        ClickText    SEE APPLICATION(S)                anchor=${Round} - ${Country}        delay=2
+        ClickText               SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=2
     END
-    Log              ${isNewVisible}
+    Log                         ${isNewVisible}
 
 Overall expenditures and financing for immunisation
-    ${isSubmitVisible}=    Is Text    SUBMIT                 
-    IF    ${isSubmitVisible}
-        
+    ${isSubmitVisible}=         Is Text                     SUBMIT
+    IF                          ${isSubmitVisible}
+        QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
+        QVision.TypeText        Number                      23425
+
+        QVision.ClickCell       row_text=Total government expenditure                   col_text=US$0
+        QVision.WriteText       25455
+
+        QVision.ClickCell       row_text=Total government health expenditure            col_text=US$0
+        QVision.WriteText       73542
+
+        QVision.ClickCell       row_text=Immunisation budget                            col_text=US$0
+        QVision.WriteText       56243
+
+        QVision.ClickCell       row_text=Other capital costs                            col_text=Domestic
+        QVision.WriteText       12345
+
+        QVision.ClickCell       row_text=Other capital costs                            col_text=GAVI
+        QVision.WriteText       67890
+
+        QVision.ClickCell       row_text=Other capital costs                            col_text=UNICEF
+        QVision.WriteText       3452
+
+        QVision.ClickCell       row_text=Other capital costs                            col_text=WHO
+        QVision.WriteText       8675
+        QVision.ClickText       SUBMIT
+        QVision.ClickText       SUBMIT                      anchor=CANCEL
     ELSE
-        SwitchWindow                index=1
+        SwitchWindow            index=1
     END
 Pause
     Sleep                       7
