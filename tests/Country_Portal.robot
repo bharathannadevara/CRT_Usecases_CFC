@@ -44,12 +44,47 @@ Country_Portal_TestCase
     Sleep                       3
     SwitchWindow                index=1
     ClickText                   NEXT
-    
+    SetConfig                   ShadowDOM                   on
+                          
+    VerifyText          SUBMIT                             recognition_mode=vision
+    ${isNumberVisible}=         QWeb.IsText                 SUBMIT                      anchor=Total expenditure for immunisation
+    Log                        ${isNumberVisible}
     # 2.1 Country Profile
     ClickText                   Overall expenditures and financing for immunisation
     SetConfig                   ShadowDOM                   on
+    Sleep                       3
     QVision.ClickText           2023                        anchor=More
-    Overall expenditures and financing for immunisation
+    Sleep                       3        
+    ${isNumberVisible}=         Is Text                 SUBMIT            recognition_mode=vision          
+    IF                          ${isNumberVisible} == "True"
+        QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
+        QVision.TypeText        Number                      23425
+
+        QVision.ClickCell       row_text=Total government expenditure                   col_text=US$0
+        QVision.WriteText       25455
+
+        QVision.ClickCell       row_text=Total government health expenditure            col_text=US$0
+        QVision.WriteText       73542
+
+        QVision.ClickCell       row_text=Immunisation budget                            col_text=US$0
+        QVision.WriteText       56243
+
+        QVision.ClickCell       row_text=Other capital costs                            col_text=Domestic
+        QVision.WriteText       12345
+
+        QVision.ClickCell       row_text=Other capital costs                            col_text=GAVI
+        QVision.WriteText       67890
+
+        QVision.ClickCell       row_text=Other capital costs                            col_text=UNICEF
+        QVision.WriteText       3452
+
+        QVision.ClickCell       row_text=Other capital costs                            col_text=WHO
+        QVision.WriteText       8675
+        QVision.ClickText       SUBMIT
+        QVision.ClickText       SUBMIT                      anchor=CANCEL
+    ELSE
+        SwitchWindow            index=1
+    END
 
     ClickElement                ${NHSP_FromYear_Xpath}
     ClickText                   ${From_Year}                anchor=From
