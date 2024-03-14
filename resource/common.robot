@@ -64,7 +64,7 @@ Click START NEW if visible or click SEE APPLICATION
     Log                         ${isNewVisible}
 
 Overall expenditures and financing for immunisation
-    ${isSubmitVisible}=         QWeb.IsText                 SUBMIT
+    ${isSubmitVisible}=         QVision.IsText                 SUBMIT
     IF                          ${isSubmitVisible}
         QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
         QVision.TypeText        Number                      23425
