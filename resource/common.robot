@@ -63,36 +63,6 @@ Click START NEW if visible or click SEE APPLICATION
     END
     Log                         ${isNewVisible}
 
-Overall expenditures and financing for immunisation
-    ${isNumberVisible}=         QWeb.IsText                 SUBMIT                      anchor=Total expenditure for immunisation
-    IF                          ${isNumberVisible}
-        QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
-        QVision.TypeText        Number                      23425
-
-        QVision.ClickCell       row_text=Total government expenditure                   col_text=US$0
-        QVision.WriteText       25455
-
-        QVision.ClickCell       row_text=Total government health expenditure            col_text=US$0
-        QVision.WriteText       73542
-
-        QVision.ClickCell       row_text=Immunisation budget                            col_text=US$0
-        QVision.WriteText       56243
-
-        QVision.ClickCell       row_text=Other capital costs                            col_text=Domestic
-        QVision.WriteText       12345
-
-        QVision.ClickCell       row_text=Other capital costs                            col_text=GAVI
-        QVision.WriteText       67890
-
-        QVision.ClickCell       row_text=Other capital costs                            col_text=UNICEF
-        QVision.WriteText       3452
-
-        QVision.ClickCell       row_text=Other capital costs                            col_text=WHO
-        QVision.WriteText       8675
-        QVision.ClickText       SUBMIT
-        QVision.ClickText       SUBMIT                      anchor=CANCEL
-    ELSE
-        SwitchWindow            index=1
-    END
+    
 Pause
     Sleep                       7
