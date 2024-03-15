@@ -48,8 +48,8 @@ Country_Portal_Keywords
     Click START NEW if visible or click SEE APPLICATION
     Sleep                       3
     LogScreenshot
-    ClickElement                ${Gavi_Support1_Xpath}
-    ClickElement                ${Gavi_Support2_Xpath}      delay=4
+    ClickElement                ${Gavi_Support1_Xpath}      delay=5
+    ClickElement                ${Gavi_Support2_Xpath}      delay=5
     Sleep                       3
     LogScreenshot
     ClickText                   NEXT
