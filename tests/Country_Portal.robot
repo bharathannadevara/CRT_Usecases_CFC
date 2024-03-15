@@ -10,6 +10,27 @@ Suite Teardown                  End suite
 Country_Portal_TestCase
     [Tags]                      Country_Portal
 
+*** Keywords ***
+Country_Portal_Keywords
+    [Arguments]                 ${Contact_Rec}              ${Country}                  ${Average_Exchange_Rate}    ${Total_Government_Expenditure}                         ${Total_Government_Health_Expenditure}
+    ...                         ${Immunisation_Budget}      ${Domestic}                 ${GAVI}                     ${UNICEF}                   ${WHO}                      ${From_Year}
+    ...                         ${To_Year}                  ${Customs_Regulations}      ${Regulatory_Agency}        ${Coverage_and_Equity}
+    ...                         ${Vaccine_Presentation}     ${First_Dose}               ${Second_Dose}              ${Target_Age_Cohort}        ${Target_Population_FirstDose}
+    ...                         ${Target_Age_Cohort_LastDose}                           ${Target_Population_LastDose}                           ${Estimated_Wastage_Rate}
+    ...                         ${Co_financing_Payment1}    ${Co_financing_Payment2}    ${Live_Births}
+    ...                         ${Gov_Funding}              ${Other_Donors}             ${Gavi_Support}             ${Amount_Gov_Funding}       ${Amount_Other_Donors}      ${Amount_Gavi_Support}     ${Key_Budget}
+    ...                         ${Financial_Management}     ${Compliance_Gavi_Guidelines}                           ${Fiduciary_Management}     ${Additional_Technical_Assistance}
+    ...                         ${Rationale_Request}        ${cMYP}                     ${NITAG}                    ${Financial_Sustainability}                             ${Programmatic_Challenges}
+    ...                         ${Improving_Coverage_and_Equity}                        ${Synergies}                ${Measles_and_Rubella_Activities}
+    ...                         ${Vaccine_Presentation1}    ${First_Dose1}              ${Second_Dose1}             ${Target_Age_Cohort1}       ${Target_Population_FirstDose1}
+    ...                         ${Target_Age_Cohort_LastDose1}                          ${Target_Population_LastDose1}                          ${Estimated_Wastage_Rate1}
+    ...                         ${Co_financing_Payment11}                               ${Co_financing_Payment21}                               ${Live_Births1}
+    ...                         ${Gov_Funding1}             ${Other_Donors1}            ${Gavi_Support1}            ${Amount_Gov_Funding1}      ${Amount_Other_Donors1}     ${Amount_Gavi_Support1}    ${Key_Budget1}
+    ...                         ${Financial_Management1}    ${Compliance_Gavi_Guidelines1}                          ${Fiduciary_Management1}    ${Additional_Technical_Assistance1}
+    ...                         ${Rationale_Request1}       ${cMYP1}                    ${NITAG1}                   ${Financial_Sustainability1}                            ${Programmatic_Challenges1}
+    ...                         ${Improving_Coverage_and_Equity1}                       ${Synergies1}               ${Measles_and_Rubella_Activities1}
+    ...                         ${Name}                     ${Position}                 ${Phone_number}             ${Email}                    ${Organisation}             ${Comment}
+
 
     Run Keyword                 Login
     Switch To Lightning If Classic
@@ -26,8 +47,8 @@ Country_Portal_TestCase
     Click START NEW if visible or click SEE APPLICATION
     Sleep                       3
     LogScreenshot
-    ClickElement                ${Gavi_Support1}
-    ClickElement                ${Gavi_Support2}            delay=4
+    ClickElement                ${Gavi_Support1_Xpath}
+    ClickElement                ${Gavi_Support2_Xpath}      delay=4
     Sleep                       3
     LogScreenshot
     ClickText                   NEXT
@@ -79,9 +100,9 @@ Country_Portal_TestCase
         QVision.WriteText       ${WHO}
         ScrollText              SUBMIT
 
-        QVision.ScrollTo      SUBMIT          amount=-2            anchor=Total expenditure for immunisation        dist=2.0       
-        Pause               
-        QVision.ClickText       SUBMIT        
+        QVision.ScrollTo        SUBMIT                      amount=-2                   anchor=Total expenditure for immunisation               dist=2.0
+        Pause
+        QVision.ClickText       SUBMIT
         QVision.ClickText       SUBMIT                      anchor=CANCEL
     ELSE
         SwitchWindow            index=1
@@ -170,7 +191,7 @@ Country_Portal_TestCase
 
     # Coordination and advisory groups documents
     ScrollText                  Coordination and advisory groups documents
-    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference                              delay=3
+    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference                               delay=3
     Double click                Test_Gavi.txt
     Pause
 
@@ -215,7 +236,7 @@ Country_Portal_TestCase
     ClickText                   NEXT
 
     # 3.1.2 Target Information
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:                           ${First_Dose}    partial_match=false
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:                            ${First_Dose}               partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
     ClickElement                ${Second_Dose_Xpath}
@@ -250,8 +271,8 @@ Country_Portal_TestCase
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.           ${Co_financing_Payment1}
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.            ${Co_financing_Payment1}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:                              ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     Sleep                       2
@@ -284,8 +305,8 @@ Country_Portal_TestCase
 
     # 3.1.5 Strategic considerations
     TypeText                    Rationale for this request                              ${Rationale_Request}
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                        ${cMYP}
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                          ${NITAG}
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                         ${cMYP}
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                           ${NITAG}
     TypeText                    Financial sustainability    ${Financial_Sustainability}
     TypeText                    Programmatic challenges     ${Programmatic_Challenges}
     TypeText                    Improving coverage and equity of routine immunisation                               ${Improving_Coverage_and_Equity}
@@ -424,37 +445,37 @@ Country_Portal_TestCase
     ClickText                   2024
     Pause
     ScrollText                  Vaccine procurement
-    TypeText                    Vaccine presentation registration or licensing          ${Vaccine_Presentation}
+    TypeText                    Vaccine presentation registration or licensing          ${Vaccine_Presentation1}
     ClickText                   Yes                         anchor=Vaccine procurement
     ClickText                   NEXT
 
     # 3.2.2 Target Information
-    TypeText                    Please describe the target age cohort for the MR 1st dose routine immunisation:     ${First_Dose}              partial_match=false
+    TypeText                    Please describe the target age cohort for the MR 1st dose routine immunisation:     ${First_Dose1}              partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the MR 2nd dose routine immunisation:
     ClickElement                ${Second_Dose_Xpath}
-    TypeText                    ${Second_Dose_Xpath}        ${Second_Dose}              anchor=2                    recognition_mode=vision
+    TypeText                    ${Second_Dose_Xpath}        ${Second_Dose1}             anchor=2                    recognition_mode=vision
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 2nd dose routine immunisation:
 
     UseTable                    Population in the target age cohort (#)
     ClickElement                ${Target_Age_Cohort_Xpath}
-    TypeText                    Population in the target age cohort (#)-2024            ${Target_Age_Cohort}
+    TypeText                    Population in the target age cohort (#)-2024            ${Target_Age_Cohort1}
     ClickText                   SAVE
     Wait                        6
     ClickElement                ${Target_Population_FirstDose_Xpath}
-    TypeText                    Target population to be vaccinated (first dose) (#)-2024                            ${Target_Population_FirstDose}
+    TypeText                    Target population to be vaccinated (first dose) (#)-2024                            ${Target_Population_FirstDose1}
     ClickText                   SAVE
     Wait                        6
     ClickElement                ${Target_Age_Cohort_LastDose_Xpath}
-    TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose}
+    TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose1}
     ClickText                   SAVE
     Wait                        6
     ClickElement                ${Target_Population_LastDose_Xpath}
-    TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose}
+    TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose1}
     ClickText                   SAVE
     Wait                        6
     ClickElement                ${Estimated_Wastage_Rate_Xpath}
-    TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate}
+    TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate1}
     ClickText                   SAVE
     Wait                        6
     ClickText                   NEXT
@@ -464,8 +485,8 @@ Country_Portal_TestCase
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.           ${Co_financing_Payment1}
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.            ${Co_financing_Payment11}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:                              ${Co_financing_Payment21}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     Sleep                       2
@@ -477,32 +498,32 @@ Country_Portal_TestCase
     ClickText                   NEXT
 
     # 3.2.4 Financial support from Gavi
-    TypeText                    Live births (year of introduction)                      ${Live_Births}
+    TypeText                    Live births (year of introduction)                      ${Live_Births1}
     ClickItem                   Open calendar               anchor=Funding needed in country by
     ClickText                   22
-    TypeText                    Total amount - Gov. Funding / Country Co-financing (US$)                            ${Gov_Funding}
-    TypeText                    Total amount - Other donors (US$)                       ${Other_Donors}
-    TypeText                    Total amount - Gavi support (US$)                       ${Gavi_Support}
-    TypeText                    Amount per target person - Gov. Funding / Country Co-financing (US$)                ${Amount_Gov_Funding}
-    TypeText                    Amount per target person - Other donors (US$)           ${Amount_Other_Donors}
-    Typetext                    Amount per target person - Gavi support (US$)           ${Amount_Gavi_Support}
-    TypeText                    Key Budget Activities       ${Key_Budget}
-    TypeText                    Financial management procedures                         ${Financial_Management}
+    TypeText                    Total amount - Gov. Funding / Country Co-financing (US$)                            ${Gov_Funding1}
+    TypeText                    Total amount - Other donors (US$)                       ${Other_Donors1}
+    TypeText                    Total amount - Gavi support (US$)                       ${Gavi_Support1}
+    TypeText                    Amount per target person - Gov. Funding / Country Co-financing (US$)                ${Amount_Gov_Funding1}
+    TypeText                    Amount per target person - Other donors (US$)           ${Amount_Other_Donors1}
+    Typetext                    Amount per target person - Gavi support (US$)           ${Amount_Gavi_Support1}
+    TypeText                    Key Budget Activities       ${Key_Budget1}
+    TypeText                    Financial management procedures                         ${Financial_Management1}
     ClickText                   Yes                         anchor=Compliance with guidelines for use of Gavi financial support for human resources (HR) costs
-    TypeText                    Please provide further information and justification concerning human resources costs, particularly when issues and challenges have been raised regarding the compliance with Gavi guidelines.    ${Compliance_Gavi_Guidelines}
-    TypeText                    Fiduciary management        ${Fiduciary_Management}
-    TypeText                    Use of financial support to fund additional Technical Assistance needs              ${Additional_Technical_Assistance}
+    TypeText                    Please provide further information and justification concerning human resources costs, particularly when issues and challenges have been raised regarding the compliance with Gavi guidelines.    ${Compliance_Gavi_Guidelines1}
+    TypeText                    Fiduciary management        ${Fiduciary_Management1}
+    TypeText                    Use of financial support to fund additional Technical Assistance needs              ${Additional_Technical_Assistance1}
     ClickText                   NEXT
 
     # 3.2.5 Strategic considerations
-    TypeText                    Rationale for this request                              ${Rationale_Request}
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                        ${cMYP}
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                          ${NITAG}
-    TypeText                    Financial sustainability    ${Financial_Sustainability}
-    TypeText                    Programmatic challenges     ${Programmatic_Challenges}
-    TypeText                    Improving coverage and equity of routine immunisation                               ${Improving_Coverage_and_Equity}
-    TypeText                    Synergies                   ${Synergies}
-    TypeText                    Indicative major measles and rubella activities planned for the next 5 years        ${Measles_and_Rubella_Activities}
+    TypeText                    Rationale for this request                              ${Rationale_Request1}
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                         ${cMYP1}
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                           ${NITAG1}
+    TypeText                    Financial sustainability    ${Financial_Sustainability1}
+    TypeText                    Programmatic challenges     ${Programmatic_Challenges1}
+    TypeText                    Improving coverage and equity of routine immunisation                               ${Improving_Coverage_and_Equity1}
+    TypeText                    Synergies                   ${Synergies1}
+    TypeText                    Indicative major measles and rubella activities planned for the next 5 years        ${Measles_and_Rubella_Activities1}
     ClickText                   NEXT
 
     # 3.2.6 Report on Grant Performance Framework
@@ -614,15 +635,15 @@ Country_Portal_TestCase
 
     # 4.1 Submission Details
     ScrollText                  Contacts
-    TypeText                    Name                        Test User
-    TypeText                    Position                    Associate
-    TypeText                    Phone Number                1234567890
-    TypeText                    Email                       Testuser@gmail.com
-    TypeText                    Organisation                Gavi
+    TypeText                    Name                        ${Name}
+    TypeText                    Position                    ${Position}
+    TypeText                    Phone Number                ${Phone_number}
+    TypeText                    Email                       ${Email}
+    TypeText                    Organisation                ${Organisation}
     ClickText                   ADD CONTACT
     Sleep                       4
 
-    TypeText                    Please let us know if you have any comments about this application                  Testing
+    TypeText                    Please let us know if you have any comments about this application                  ${Comment}
 
     VerifyText                  Signatures
     ClickText                   ATTACH                      anchor=Attach the signature page(s) back.
@@ -651,39 +672,6 @@ Country_Portal_TestCase
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # ClickText                 Update                      anchor=C.ZMB.U.22.1.1
-
-    # ClickText                 Update                      anchor=C.ZMB.U.22.2.5
-    # ClickElement              xpath=/html/body/div[3]/div[2]/div/div[1]/div/div/c-p-e-f_-l-w-c_-milestones/div/div[3]/div/div[3]/c-p-e-f_-l-w-c_-milestone-custom-datatable/div[2]/div/div/table/tbody/tr[1]/td[1]/lightning-primitive-cell-factory/span/div/lightning-primitive-cell-button/lightning-button-icon/button
-
-
-    # TypeText                  Value                       ACLAIM Africa
-    # ClickText                 ACLAIM Africa
-    # ClickText                 Clear
-
-    # TypeText                  Value                       AFRIVAC
-    # ClickText                 AFRIVAC
-    # ClickText                 Clear
 
 
 
