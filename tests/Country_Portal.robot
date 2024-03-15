@@ -103,6 +103,7 @@ Country_Portal_Keywords
         Pause
         QVision.ClickText       SUBMIT
         QVision.ClickText       SUBMIT                      anchor=CANCEL
+        SwitchWindow            index=1
     ELSE
         SwitchWindow            index=1
     END
