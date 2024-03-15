@@ -74,7 +74,6 @@ Country_Portal_Keywords
     Sleep                       3
     ${isNumberVisible}=         QVision.Is Text             Number
     IF                          ${isNumberVisible}
-        SetConfig               ShadowDOM                   on
         QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
         Sleep                   2
         QVision.TypeText        Number                      ${Average_Exchange_Rate}
@@ -99,7 +98,6 @@ Country_Portal_Keywords
 
         QVision.ClickCell       row_text=Other capital costs                            col_text=WHO
         QVision.WriteText       ${WHO}
-        ScrollText              SUBMIT
 
         QVision.ScrollTo        SUBMIT                      amount=-2                   anchor=Total expenditure for immunisation               dist=2.0
         Pause
