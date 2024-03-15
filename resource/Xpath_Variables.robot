@@ -18,10 +18,3 @@ ${Globe_Xpath}              xpath=//i[contains(text(),'language')]
 
 
 
-
-
-
-
-
-
-
