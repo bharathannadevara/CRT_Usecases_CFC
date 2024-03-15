@@ -212,12 +212,12 @@ Country_Portal_Keywords
 
     # 3.1.1 Vaccine and programmatic data
     ClickText                   SELECT
-    ClickText                   M, 5 doses/vial, Lyophilised
+    ClickText                   M, 5 doses/vial, Lyophilised                        recognition_mode=vision
     ClickText                   APPLY
     Pause
     ClickText                   Yes                         anchor=1
     ClickText                   SELECT
-    ClickText                   M, 10 doses/vial, Lyophilised
+    ClickText                   M, 10 doses/vial, Lyophilised                       recognition_mode=vision
     ClickText                   APPLY
     Wait                        25
     ClickText                   Yes                         anchor=2
