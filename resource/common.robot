@@ -65,4 +65,4 @@ Click START NEW if visible or click SEE APPLICATION
 
     
 Pause
-    Sleep                       7
+    Sleep                       8
