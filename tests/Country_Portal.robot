@@ -213,7 +213,7 @@ Country_Portal_Keywords
     # 3.1.1 Vaccine and programmatic data
     ClickText                   SELECT
     ClickText                   No presentation selected
-    ClickText                   M, 5 doses/vial, Lyophilised                        recognition_mode=vision    
+    QVision.ClickText                   M, 5 doses/vial, Lyophilised                            
     ClickText                   APPLY
     Pause
     ClickText                   Yes                         anchor=1
