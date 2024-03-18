@@ -53,15 +53,7 @@ Log Out
 Switch To Lightning If Classic
     ${is_classic} =             QWeb.IsText                 Switch to Lightning Experience                          timeout=2                   # Short timeout for quick check
     Run Keyword If              ${is_classic}               QWeb.Click Text             Switch to Lightning Experience
-
-Click START NEW if visible or click SEE APPLICATION
-    ${isNewVisible}=            IsText                 START NEW        
-    IF                          ${isNewVisible}
-        ClickText          START NEW                   anchor=Status         recognition_mode=vision
-    ELSE
-        ClickText          SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=2
-    END
-    Log                         ${isNewVisible}
+    
 
     
 Pause
