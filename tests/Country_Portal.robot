@@ -5,7 +5,7 @@ Library                         QVision
 Library                         DataDriver                  reader_class=TestDataApi    name=Country_Portal_Gavi.xlsx
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
-Test Template                 Country_Portal_Keywords
+# Test Template                 Country_Portal_Keywords
 
 *** Test Cases ***
 Country_Portal_TestCase
@@ -219,12 +219,12 @@ Country_Portal_Keywords
     ClickText                   NEXT
 
     # 3.1.1 Vaccine and programmatic data
-    ClickText                   SELECT                      recognition_mode=vision
+    ClickText                   SELECT                      recognition_mode=vision     delay=5
     ClickText                   M, 5 doses/vial, Lyophilised                            anchor=No presentation selected
     ClickText                   APPLY
     Pause
     ClickText                   Yes                         anchor=1
-    ClickText                   SELECT                      recognition_mode=vision
+    ClickText                   SELECT                      recognition_mode=vision     delay=5
     ClickText                   M, 10 doses/vial, Lyophilised                           anchor=No presentation selected
     ClickText                   APPLY
     Wait                        25
@@ -437,12 +437,12 @@ Country_Portal_Keywords
 
     # 3.2.1 Vaccine and programmatic data
     ClickText                   SELECT                      recognition_mode=vision
-    ClickText                   MR, 5 doses/vial, Lyophilised                        anchor=No presentation selected
+    ClickText                   MR, 5 doses/vial, Lyophilised                           anchor=No presentation selected
     ClickText                   APPLY
     Pause
     ClickText                   Yes                         anchor=1
     ClickText                   SELECT                      recognition_mode=vision
-    ClickText                   MR, 10 doses/vial, Lyophilised                       anchor=No presentation selected
+    ClickText                   MR, 10 doses/vial, Lyophilised                          anchor=No presentation selected
     ClickText                   APPLY
     Wait                        20
     ClickText                   Yes                         anchor=2
