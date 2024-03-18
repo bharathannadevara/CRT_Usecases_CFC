@@ -44,7 +44,7 @@ Country_Portal_Keywords
     ClickText                   Country Portal              delay=2
     TypeText                    Search Country              ${Country}
     ClickText                   ${Country}
-    VerifyText                  START NEW
+    VerifyText                  START NEW                   recognition_mode=vision
     # Click START NEW if visible or click SEE APPLICATION
     # ClickText                   START NEW                   recognition_mode=vision
     Check And Click Based On Text Visibility
