@@ -5,7 +5,7 @@ Library                         QVision
 Library                         DataDriver                  reader_class=TestDataApi    name=Country_Portal_Gavi.xlsx
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
-Test Template                 Country_Portal_Keywords
+Test Template                   Country_Portal_Keywords
 
 *** Test Cases ***
 Country_Portal_TestCase
@@ -46,7 +46,7 @@ Country_Portal_Keywords
     ClickText                   ${Country}
 
     # Check And Click Based On Text Visibility
-    # Click Text                  START NEW                   anchor=GUIDELINES           index=1                     dist=1.0
+    # Click Text                START NEW                   anchor=GUIDELINES           index=1                     dist=1.0
     Click Text                  SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=3
     Sleep                       3
     LogScreenshot
@@ -222,12 +222,12 @@ Country_Portal_Keywords
     # 3.1.1 Vaccine and programmatic data
     ClickText                   SELECT                      recognition_mode=vision     delay=5
     ClickText                   M, 5 doses/vial, Lyophilised                            anchor=No presentation selected
-    ClickText                   APPLY
+    ClickText                   APPLY                       recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
     ClickText                   SELECT                      recognition_mode=vision     delay=5
     ClickText                   M, 10 doses/vial, Lyophilised                           anchor=No presentation selected
-    ClickText                   APPLY
+    ClickText                   APPLY                       recognition_mode=vision
     Wait                        25
     ClickText                   Yes                         anchor=2
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
@@ -439,12 +439,12 @@ Country_Portal_Keywords
     # 3.2.1 Vaccine and programmatic data
     ClickText                   SELECT                      recognition_mode=vision
     ClickText                   MR, 5 doses/vial, Lyophilised                           anchor=No presentation selected
-    ClickText                   APPLY
+    ClickText                   APPLY                       recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
     ClickText                   SELECT                      recognition_mode=vision
     ClickText                   MR, 10 doses/vial, Lyophilised                          anchor=No presentation selected
-    ClickText                   APPLY
+    ClickText                   APPLY                       recognition_mode=vision
     Wait                        20
     ClickText                   Yes                         anchor=2
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
