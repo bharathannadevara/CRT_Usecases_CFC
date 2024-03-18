@@ -55,7 +55,7 @@ Switch To Lightning If Classic
     Run Keyword If              ${is_classic}               QWeb.Click Text             Switch to Lightning Experience
 
 Click START NEW if visible or click SEE APPLICATION
-    ${isNewVisible}=            QWeb.IsText                 START NEW
+    ${isNewVisible}=            QWeb.IsText                 START NEW        recognition_mode=vision
     IF                          ${isNewVisible}
         QWeb.ClickText          START NEW
     ELSE
