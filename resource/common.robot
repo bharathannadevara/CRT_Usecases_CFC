@@ -53,8 +53,17 @@ Log Out
 Switch To Lightning If Classic
     ${is_classic} =             QWeb.IsText                 Switch to Lightning Experience                          timeout=2                   # Short timeout for quick check
     Run Keyword If              ${is_classic}               QWeb.Click Text             Switch to Lightning Experience
-    
 
-    
+Check And Click Based On Text Visibility
+    [Documentation]             This Custome Keyword checks if the text "START NEW" is visible and clicks based on its visibility.
+
+    ${isNewVisible}=            Run Keyword And Return Status                           Is Text                     START NEW                   anchor=GUIDELINES      index=1    dist=1.0
+    Run Keyword If              ${isNewVisible}             Click Text                  START NEW                   anchor=GUIDELINES      index=1    dist=1.0
+    ...                         ELSE                        Wait and Click SEE APPLICATION(S)
+
+Wait and Click SEE APPLICATION(S)
+    [Documentation]             Waits for 2 seconds and then clicks on "SEE APPLICATION(S)".
+    Click Text                  SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=3
+
 Pause
     Sleep                       8
