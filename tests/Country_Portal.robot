@@ -46,8 +46,8 @@ Country_Portal_Keywords
     ClickText                   ${Country}
 
     # Check And Click Based On Text Visibility
-    Click Text                START NEW                   anchor=GUIDELINES           index=1                     dist=1.0
-    # Click Text                  SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=3
+    # Click Text                START NEW                   anchor=GUIDELINES           index=1                     dist=1.0
+    Click Text                  SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=3
     Sleep                       3
     LogScreenshot
     ClickElement                ${Gavi_Support1_Xpath}      delay=5
