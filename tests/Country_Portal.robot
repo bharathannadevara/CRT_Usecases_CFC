@@ -45,7 +45,8 @@ Country_Portal_Keywords
     TypeText                    Search Country              ${Country}
     ClickText                   ${Country}
     VerifyText                  Status
-    Click START NEW if visible or click SEE APPLICATION
+    # Click START NEW if visible or click SEE APPLICATION
+    ClickText                   START NEW                   recognition_mode=vision
     Sleep                       3
     LogScreenshot
     ClickElement                ${Gavi_Support1_Xpath}      delay=5
