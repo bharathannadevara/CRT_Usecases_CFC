@@ -46,7 +46,16 @@ Country_Portal_Keywords
     ClickText                   ${Country}
     VerifyText                  Status
     # Click START NEW if visible or click SEE APPLICATION
-    ClickText                   START NEW                   recognition_mode=vision
+    # ClickText                   START NEW                   recognition_mode=vision
+    ${isNewVisible}=            IsText                 START NEW        
+    IF                          ${isNewVisible}
+        QVision.ClickText          START NEW                   anchor=Status         
+    ELSE
+        Sleep                      2
+        QVision.ClickText          SEE APPLICATION(S)          anchor=${Round} - ${Country}                            
+    END
+    Log                         ${isNewVisible}
+
     Sleep                       3
     LogScreenshot
     ClickElement                ${Gavi_Support1_Xpath}      delay=5
