@@ -57,7 +57,8 @@ Switch To Lightning If Classic
 Check And Click Based On Text Visibility
     [Documentation]             This Custome Keyword checks if the text "START NEW" is visible and clicks based on its visibility.
 
-    ${isNewVisible}=            Run Keyword And Return Status                           Is Text                     START NEW                   anchor=GUIDELINES      index=1    dist=1.0
+    ${isNewVisible}=            Run Keyword And Return Status                           Is Text                     START NEW    
+    Log                         ${isNewVisible}              
     Run Keyword If              ${isNewVisible}             Click Text                  START NEW                   anchor=GUIDELINES      index=1    dist=1.0
     ...                         ELSE                        Wait and Click SEE APPLICATION(S)
 
