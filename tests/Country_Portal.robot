@@ -5,7 +5,7 @@ Library                         QVision
 Library                         DataDriver                  reader_class=TestDataApi    Name=Country_Portal_Gavi.xlsx
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
-Test Template                   Country_Portal_Keywords
+# Test Template                   Country_Portal_Keywords
 
 *** Test Cases ***
 Country_Portal_TestCase
@@ -14,8 +14,8 @@ Country_Portal_TestCase
 *** Keywords ***
 Country_Portal_Keywords
     [Arguments]                 ${Contact_Rec}              ${Country}                  ${Average_Exchange_Rate}    ${Total_Government_Expenditure}                         ${Total_Government_Health_Expenditure}
-    ...                         ${Immunisation_Budget}      ${Domestic}                 ${GAVI}                     ${UNICEF}                   ${WHO}                      ${From_Year}
-    ...                         ${To_Year}                  ${Customs_Regulations}      ${Regulatory_Agency}        ${Coverage_and_Equity}
+    ...                         ${Immunisation_Budget}      ${Domestic}                 ${GAVI}                     ${UNICEF}                   ${WHO}                      ${NHSP_From_Year}
+    ...                         ${NHSP_To_Year}         ${cMYP_From_Year}           ${cMYP_To_Year}                 ${Corrected_Info}             ${Customs_Regulations}      ${Regulatory_Agency}        ${Coverage_and_Equity}
     ...                         ${Vaccine_Presentation}     ${First_Dose}               ${Second_Dose}              ${Target_Age_Cohort}        ${Target_Population_FirstDose}
     ...                         ${Target_Age_Cohort_LastDose}                           ${Target_Population_LastDose}                           ${Estimated_Wastage_Rate}
     ...                         ${Co_financing_Payment1}    ${Co_financing_Payment2}    ${Live_Births}
@@ -109,10 +109,17 @@ Country_Portal_Keywords
     END
 
     ClickElement                ${NHSP_FromYear_Xpath}
-    ClickText                   ${From_Year}                anchor=From
+    ClickText                   ${NHSP_From_Year}                anchor=From
     ClickElement                ${NHSP_ToYear_Xpath}
-    ClickText                   ${To_Year}                  anchor=To
+    ClickText                   ${NHSP_To_Year}                  anchor=To
     ClickText                   Yes
+    ClickText                   No
+    Pause
+    ClickElement                ${cMYP_FromYear_Xpath} 
+    ClickText                   2023                        #${cMYP_From_Year}                anchor=From
+    ClickElement                ${cMYP_ToYear_Xpath}
+    ClickText                   2024                        #${cMYP_To_Year}                  anchor=To
+    TypeText                    If any of the above information is not correct, please provide additional/corrected information or other comments here:                     ${Corrected_Info}
     TypeText                    National customs regulations                            ${Customs_Regulations}
     TypeText                    National Regulatory Agency                              ${Regulatory_Agency}
     ClickText                   NEXT
