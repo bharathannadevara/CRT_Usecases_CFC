@@ -57,7 +57,7 @@ Switch To Lightning If Classic
 Click START NEW if visible or click SEE APPLICATION
     ${isNewVisible}=            QWeb.IsText                 START NEW        recognition_mode=vision
     IF                          ${isNewVisible}
-        QWeb.ClickText          START NEW
+        QWeb.ClickText          START NEW                   recognition_mode=vision
     ELSE
         QWeb.ClickText          SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=2
     END
