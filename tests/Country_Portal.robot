@@ -113,7 +113,7 @@ Country_Portal_Keywords
     ClickElement                ${NHSP_ToYear_Xpath}
     ClickText                   ${NHSP_To_Year}                  anchor=To
     ClickText                   Yes
-    ClickText                   No
+    ClickText                   No                        delay=5
     Pause
     ClickElement                ${cMYP_FromYear_Xpath} 
     ClickText                   ${cMYP_From_Year}                anchor=From
