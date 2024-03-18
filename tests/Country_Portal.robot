@@ -47,7 +47,7 @@ Country_Portal_Keywords
     VerifyText                  Status
     # Click START NEW if visible or click SEE APPLICATION
     # ClickText                   START NEW                   recognition_mode=vision
-    ${isNewVisible}=            IsText                 START NEW                        anchor=Status               recognition_mode=vision   
+    ${isNewVisible}=            IsText                 START NEW                        
     IF                          ${isNewVisible}
         QVision.ClickText          START NEW                   anchor=Status         
     ELSE
