@@ -44,17 +44,10 @@ Country_Portal_Keywords
     ClickText                   Country Portal              delay=2
     TypeText                    Search Country              ${Country}
     ClickText                   ${Country}
-    VerifyText                  Status
+    VerifyText                  START NEW
     # Click START NEW if visible or click SEE APPLICATION
     # ClickText                   START NEW                   recognition_mode=vision
-    ${isNewVisible}=            QVision.IsText                 START NEW                  anchor=GUIDELINES             index=1                     dist=1.0                       
-    IF                          ${isNewVisible}
-        QVision.ClickText          START NEW                   anchor=Status         
-    ELSE
-        Sleep                      2
-        QVision.ClickText          SEE APPLICATION(S)          anchor=${Round} - ${Country}                            
-    END
-    Log                         ${isNewVisible}
+    Check And Click Based On Text Visibility
 
     Sleep                       3
     LogScreenshot
