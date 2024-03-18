@@ -116,9 +116,9 @@ Country_Portal_Keywords
     ClickText                   No
     Pause
     ClickElement                ${cMYP_FromYear_Xpath} 
-    ClickText                   2023                        #${cMYP_From_Year}                anchor=From
+    ClickText                   ${cMYP_From_Year}                anchor=From
     ClickElement                ${cMYP_ToYear_Xpath}
-    ClickText                   2024                        #${cMYP_To_Year}                  anchor=To
+    ClickText                   ${cMYP_To_Year}                  anchor=To
     TypeText                    If any of the above information is not correct, please provide additional/corrected information or other comments here:                     ${Corrected_Info}
     TypeText                    National customs regulations                            ${Customs_Regulations}
     TypeText                    National Regulatory Agency                              ${Regulatory_Agency}
