@@ -219,13 +219,12 @@ Country_Portal_Keywords
     ClickText                   NEXT
 
     # 3.1.1 Vaccine and programmatic data
-    ClickText                   SELECT
-    # ClickText                   No presentation selected
+    ClickText                   SELECT                      recognition_mode=vision
     ClickText                   M, 5 doses/vial, Lyophilised                            anchor=No presentation selected
     ClickText                   APPLY
     Pause
     ClickText                   Yes                         anchor=1
-    ClickText                   SELECT
+    ClickText                   SELECT                      recognition_mode=vision
     ClickText                   M, 10 doses/vial, Lyophilised                           anchor=No presentation selected
     ClickText                   APPLY
     Wait                        25
@@ -437,12 +436,12 @@ Country_Portal_Keywords
 
 
     # 3.2.1 Vaccine and programmatic data
-    ClickText                   SELECT
+    ClickText                   SELECT                      recognition_mode=vision
     ClickText                   MR, 5 doses/vial, Lyophilised                        anchor=No presentation selected
     ClickText                   APPLY
     Pause
     ClickText                   Yes                         anchor=1
-    ClickText                   SELECT
+    ClickText                   SELECT                      recognition_mode=vision
     ClickText                   MR, 10 doses/vial, Lyophilised                       anchor=No presentation selected
     ClickText                   APPLY
     Wait                        20
