@@ -2,7 +2,7 @@
 Resource                        ../resource/common.robot
 Resource                        ../resource/Xpath_Variables.robot
 Library                         QVision
-Library                         DataDriver                  reader_class=TestDataApi    Name=Country_Portal_Gavi.xlsx
+Library                         DataDriver                  reader_class=TestDataApi    name=Country_Portal_Gavi.xlsx
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
 Test Template                   Country_Portal_Keywords
