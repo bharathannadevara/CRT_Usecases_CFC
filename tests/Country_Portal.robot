@@ -555,9 +555,15 @@ Country_Portal_Keywords
     ScrollText                  Application documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      anchor=Budget and Planning Tool
-    Double click                suite
+    # Double click                suite
+    # Double click                Documents
+    # Double click                Test_Gavi.txt
+    Double click                Home                        anchor=Desktop
+    Double click                execution
+    Double click                Gavi                        anchor=output
     Double click                Documents
     Double click                Test_Gavi.txt
+    Sleep                       10
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
