@@ -220,7 +220,7 @@ Country_Portal_Keywords
 
     # 3.1.1 Vaccine and programmatic data
     ClickText                   SELECT
-    ClickText                   No presentation selected
+    # ClickText                   No presentation selected
     ClickText                   M, 5 doses/vial, Lyophilised                            anchor=No presentation selected
     ClickText                   APPLY
     Pause
