@@ -5,7 +5,7 @@ Library                         QVision
 Library                         DataDriver                  reader_class=TestDataApi    Name=Country_Portal_Gavi.xlsx
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
-# Test Template                   Country_Portal_Keywords
+# Test Template                 Country_Portal_Keywords
 
 *** Test Cases ***
 Country_Portal_TestCase
@@ -72,7 +72,7 @@ Country_Portal_Keywords
     Sleep                       3
     QVision.ClickText           2023                        anchor=More
     Sleep                       3
-    ${isNumberVisible}=         QWeb.Is Text             Number
+    ${isNumberVisible}=         QWeb.Is Text                Number
     IF                          ${isNumberVisible}
         QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
         Sleep                   2
@@ -213,12 +213,12 @@ Country_Portal_Keywords
     # 3.1.1 Vaccine and programmatic data
     ClickText                   SELECT
     ClickText                   No presentation selected
-    QVision.ClickText                   M, 5 doses/vial, Lyophilised                            
+    ClickText                   M, 5 doses/vial, Lyophilised                            anchor=No presentation selected
     ClickText                   APPLY
     Pause
     ClickText                   Yes                         anchor=1
     ClickText                   SELECT
-    ClickText                   M, 10 doses/vial, Lyophilised           anchor=No presentation selected            recognition_mode=vision
+    ClickText                   M, 10 doses/vial, Lyophilised                           anchor=No presentation selected
     ClickText                   APPLY
     Wait                        25
     ClickText                   Yes                         anchor=2
@@ -256,15 +256,15 @@ Country_Portal_Keywords
     ClickElement                ${Target_Age_Cohort_LastDose_Xpath}
     TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose}
     ClickText                   SAVE
-    Pause                        
+    Pause
     ClickElement                ${Target_Population_LastDose_Xpath}
     TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose}
     ClickText                   SAVE
-    Pause                        
+    Pause
     ClickElement                ${Estimated_Wastage_Rate_Xpath}
     TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate}
     ClickText                   SAVE
-    Pause                        
+    Pause
     ClickText                   NEXT
 
     # 3.1.3 Co-financing information
@@ -462,23 +462,23 @@ Country_Portal_Keywords
     ClickElement                ${Target_Age_Cohort_Xpath}
     TypeText                    Population in the target age cohort (#)-2024            ${Target_Age_Cohort1}
     ClickText                   SAVE
-    Pause                        
+    Pause
     ClickElement                ${Target_Population_FirstDose_Xpath}
     TypeText                    Target population to be vaccinated (first dose) (#)-2024                            ${Target_Population_FirstDose1}
     ClickText                   SAVE
-    Pause                        
+    Pause
     ClickElement                ${Target_Age_Cohort_LastDose_Xpath}
     TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose1}
     ClickText                   SAVE
-    Pause                        
+    Pause
     ClickElement                ${Target_Population_LastDose_Xpath}
     TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose1}
     ClickText                   SAVE
-    Pause                        
+    Pause
     ClickElement                ${Estimated_Wastage_Rate_Xpath}
     TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate1}
     ClickText                   SAVE
-    Pause                        
+    Pause
     ClickText                   NEXT
 
     # 3.2.3 Co-financing information
