@@ -1,7 +1,7 @@
 *** Settings ***
 Library                         QForce
 Library                         QWeb
-Library                         QVision
+
 
 
 *** Variables ***
@@ -55,11 +55,11 @@ Switch To Lightning If Classic
     Run Keyword If              ${is_classic}               QWeb.Click Text             Switch to Lightning Experience
 
 Click START NEW if visible or click SEE APPLICATION
-    ${isNewVisible}=            QWeb.IsText                 START NEW        recognition_mode=vision
+    ${isNewVisible}=            IsText                 START NEW        
     IF                          ${isNewVisible}
-        QWeb.ClickText          START NEW                   anchor=Status         recognition_mode=vision
+        ClickText          START NEW                   anchor=Status         recognition_mode=vision
     ELSE
-        QWeb.ClickText          SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=2
+        ClickText          SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=2
     END
     Log                         ${isNewVisible}
 
