@@ -221,12 +221,12 @@ Country_Portal_Keywords
 
     # 3.1.1 Vaccine and programmatic data
     ClickText                   SELECT                      recognition_mode=vision     delay=5
-    ClickText                   M, 5 doses/vial, Lyophilised                            anchor=No presentation selected                        recognition_mode=vision
+    ClickElement                xpath=//h3[normalize-space()='M, 5 doses/vial, Lyophilised']                     
     ClickText                   APPLY                       recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
     ClickText                   SELECT                      recognition_mode=vision     delay=5
-    ClickText                   M, 10 doses/vial, Lyophilised                           anchor=No presentation selected                        recognition_mode=vision
+    ClickElement                xpath=//h3[normalize-space()='M, 10 doses/vial, Lyophilised']
     ClickText                   APPLY                       recognition_mode=vision
     Wait                        25
     ClickText                   Yes                         anchor=2
@@ -438,12 +438,12 @@ Country_Portal_Keywords
 
     # 3.2.1 Vaccine and programmatic data
     ClickText                   SELECT                      recognition_mode=vision
-    ClickText                   MR, 5 doses/vial, Lyophilised                           anchor=No presentation selected                        recognition_mode=vision
+    ClickElement                xpath=//h3[normalize-space()='MR, 5 doses/vial, Lyophilised']
     ClickText                   APPLY                       recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
     ClickText                   SELECT                      recognition_mode=vision
-    ClickText                   MR, 10 doses/vial, Lyophilised                          anchor=No presentation selected                        recognition_mode=vision
+    ClickElement                xpath=//h3[normalize-space()='MR, 10 doses/vial, Lyophilised']
     ClickText                   APPLY                       recognition_mode=vision
     Wait                        20
     ClickText                   Yes                         anchor=2
