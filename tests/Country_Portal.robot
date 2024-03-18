@@ -5,7 +5,7 @@ Library                         QVision
 Library                         DataDriver                  reader_class=TestDataApi    name=Country_Portal_Gavi.xlsx
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
-# Test Template                   Country_Portal_Keywords
+Test Template                   Country_Portal_Keywords
 
 *** Test Cases ***
 Country_Portal_TestCase
