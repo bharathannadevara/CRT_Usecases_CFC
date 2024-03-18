@@ -5,7 +5,7 @@ Library                         QVision
 Library                         DataDriver                  reader_class=TestDataApi    name=Country_Portal_Gavi.xlsx
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
-# Test Template                   Country_Portal_Keywords
+# Test Template                 Country_Portal_Keywords
 
 *** Test Cases ***
 Country_Portal_TestCase
@@ -15,7 +15,7 @@ Country_Portal_TestCase
 Country_Portal_Keywords
     [Arguments]                 ${Contact_Rec}              ${Country}                  ${Average_Exchange_Rate}    ${Total_Government_Expenditure}                         ${Total_Government_Health_Expenditure}
     ...                         ${Immunisation_Budget}      ${Domestic}                 ${GAVI}                     ${UNICEF}                   ${WHO}                      ${NHSP_From_Year}
-    ...                         ${NHSP_To_Year}         ${cMYP_From_Year}           ${cMYP_To_Year}                 ${Corrected_Info}             ${Customs_Regulations}      ${Regulatory_Agency}        ${Coverage_and_Equity}
+    ...                         ${NHSP_To_Year}             ${cMYP_From_Year}           ${cMYP_To_Year}             ${Corrected_Info}           ${Customs_Regulations}      ${Regulatory_Agency}       ${Coverage_and_Equity}
     ...                         ${Vaccine_Presentation}     ${First_Dose}               ${Second_Dose}              ${Target_Age_Cohort}        ${Target_Population_FirstDose}
     ...                         ${Target_Age_Cohort_LastDose}                           ${Target_Population_LastDose}                           ${Estimated_Wastage_Rate}
     ...                         ${Co_financing_Payment1}    ${Co_financing_Payment2}    ${Live_Births}
@@ -44,11 +44,9 @@ Country_Portal_Keywords
     ClickText                   Country Portal              delay=2
     TypeText                    Search Country              ${Country}
     ClickText                   ${Country}
-    VerifyText                  START NEW                   recognition_mode=vision
-    # Click START NEW if visible or click SEE APPLICATION
-    # ClickText                   START NEW                   recognition_mode=vision
-    Check And Click Based On Text Visibility
 
+    # Check And Click Based On Text Visibility
+    Click Text                  START NEW                   anchor=GUIDELINES           index=1                     dist=1.0
     Sleep                       3
     LogScreenshot
     ClickElement                ${Gavi_Support1_Xpath}      delay=5
@@ -112,16 +110,16 @@ Country_Portal_Keywords
     END
 
     ClickElement                ${NHSP_FromYear_Xpath}
-    ClickText                   ${NHSP_From_Year}                anchor=1
+    ClickText                   ${NHSP_From_Year}           anchor=1
     ClickElement                ${NHSP_ToYear_Xpath}
-    ClickText                   ${NHSP_To_Year}                  anchor=1
+    ClickText                   ${NHSP_To_Year}             anchor=1
     ClickText                   Yes
-    ClickText                   No                        delay=5
+    ClickText                   No                          delay=5
     Pause
-    ClickElement                ${cMYP_FromYear_Xpath} 
-    ClickText                   ${cMYP_From_Year}                anchor=2
+    ClickElement                ${cMYP_FromYear_Xpath}
+    ClickText                   ${cMYP_From_Year}           anchor=2
     ClickElement                ${cMYP_ToYear_Xpath}
-    ClickText                   ${cMYP_To_Year}                  anchor=If any of the above information is not correct, please provide additional/corrected information or other comments here:
+    ClickText                   ${cMYP_To_Year}             anchor=If any of the above information is not correct, please provide additional/corrected information or other comments here:
     TypeText                    If any of the above information is not correct, please provide additional/corrected information or other comments here:                     ${Corrected_Info}
     TypeText                    National customs regulations                            ${Customs_Regulations}
     TypeText                    National Regulatory Agency                              ${Regulatory_Agency}
@@ -350,6 +348,9 @@ Country_Portal_Keywords
     ClickText                   UPLOAD                      anchor=Budget and Planning Tool
     # Double click              suite
     # Double click              Documents
+    Double click                execution
+    Double click                Gavi                        anchor=output
+    Double click                Documents
     Double click                Test_Gavi.txt
     Pause
 
@@ -558,10 +559,10 @@ Country_Portal_Keywords
     ScrollText                  Application documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      anchor=Budget and Planning Tool
-    # Double click                suite
-    # Double click                Documents
-    # Double click                Test_Gavi.txt
-    Double click                Home                        anchor=Desktop
+    # Double click              suite
+    # Double click              Documents
+    # Double click              Test_Gavi.txt
+    # Double click              Home                        anchor=Desktop
     Double click                execution
     Double click                Gavi                        anchor=output
     Double click                Documents
@@ -665,25 +666,36 @@ Country_Portal_Keywords
     VerifyText                  Signatures
     ClickText                   ATTACH                      anchor=Attach the signature page(s) back.
     Double click                CRT_Demo.pdf
-    ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
+
+    ClickText                   SUBMIT                      anchor=PREVIOUS
+    ClickText                   Submit                      anchor=CANCEL
+    ClickText                   DOWNLOAD A COPY
+    ClickText                   PDF
+    ClickText                   Continue
+    ClickText                   Close
 
     VerifyText                  Signatures
-    ClickText                   ATTACH                      anchor=Attach the signature page(s) back.
-    Double click                CRT_Demo.pdf
-    ClickText                   SUBMIT                      anchor=PREVIOUS
-    ClickText                   DOWNLOAD A COPY
+    # ClickText                 ATTACH                      anchor=Attach the signature page(s) back.
+    # Double click              CRT_Demo.pdf
+    ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
+    ClickText                   PDF
+    ClickText                   Continue
+    ClickText                   Close
 
     ClickElement                ${Globe_Xpath}
     ClickText                   Français
     ClickText                   TÉLÉCHARGER UNE COPIE
+    ClickText                   FERMER
 
     ClickElement                ${Globe_Xpath}
     ClickText                   Español
     ClickText                   DESCARGAR UNA COPIA
+    CLickText                   CERRAR
 
     ClickElement                ${Globe_Xpath}
-    ClickText                   Pyccknñ
+    ClickText                   Pусский
     ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
+    ClickText                   ЗАКРЫТЬ
 
 
 
