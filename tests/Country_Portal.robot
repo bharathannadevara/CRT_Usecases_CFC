@@ -220,6 +220,7 @@ Country_Portal_Keywords
     ClickText                   NEXT
 
     # 3.1.1 Vaccine and programmatic data
+    VerifyText                  SELECT                     partial_match=False
     ClickText                   SELECT                     partial_match=False
     LogScreenshot
     UseModal                    on
