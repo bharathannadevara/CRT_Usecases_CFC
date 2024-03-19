@@ -225,18 +225,15 @@ Country_Portal_Keywords
     LogScreenshot
     UseModal                    on
     ClickText                   M, 5 doses/vial, Lyophilised
-    # ClickElement              xpath=//h3[normalize-space()='M, 5 doses/vial, Lyophilised']
-    # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[2]
     ClickText                   APPLY                      anchor=CANCEL                       recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
+    Sleep                       40
 
     ClickText                   SELECT                      partial_match=False
     LogScreenshot
     UseModal                    on
     ClickText                   M, 10 doses/vial, Lyophilised
-    # ClickElement              xpath=//h3[normalize-space()='M, 10 doses/vial, Lyophilised']
-    # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[3]
     ClickText                   APPLY                       anchor=CANCEL                       recognition_mode=vision
     Wait                        25
     ClickText                   Yes                         anchor=2
@@ -361,7 +358,8 @@ Country_Portal_Keywords
     Double click                execution
     Double click                Gavi                        anchor=output
     Double click                Documents
-    Double click                Test_Gavi.txt
+    Sleep                       3
+    Double click                CRT_Demo.pdf
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
@@ -452,18 +450,15 @@ Country_Portal_Keywords
     LogScreenshot
     UseModal                    on
     ClickText                   MR, 5 doses/vial, Lyophilised
-    # ClickElement              xpath=//h3[normalize-space()='MR, 5 doses/vial, Lyophilised']
-    # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[3]
     ClickText                   APPLY                      anchor=CANCEL                       recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
+    Sleep                       40
 
     ClickText                   SELECT                      partial_match=False
     LogScreenshot
     UseModal                    on
     ClickText                   MR, 10 doses/vial, Lyophilised
-    # ClickElement              xpath=//h3[normalize-space()='MR, 10 doses/vial, Lyophilised']
-    # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[2]
     ClickText                   APPLY                       anchor=CANCEL                       recognition_mode=vision
     Wait                        25
     ClickText                   Yes                         anchor=2
@@ -587,7 +582,8 @@ Country_Portal_Keywords
     Double click                execution
     Double click                Gavi                        anchor=output
     Double click                Documents
-    Double click                Test_Gavi.txt
+    Sleep                       3
+    Double click                CRT_Demo.pdf
     Sleep                       10
     Pause
 
