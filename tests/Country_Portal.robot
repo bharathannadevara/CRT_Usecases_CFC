@@ -221,14 +221,17 @@ Country_Portal_Keywords
 
     # 3.1.1 Vaccine and programmatic data
     ClickText                   SELECT                      recognition_mode=vision
-    QVision.ClickText           M, 5 doses/vial, Lyophilised        
+    UseModal                    on
+    ClickText                   M, 5 doses/vial, Lyophilised
     # ClickElement              xpath=//h3[normalize-space()='M, 5 doses/vial, Lyophilised']
     # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[2]
     ClickText                   APPLY                       recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
+
     ClickText                   SELECT                      recognition_mode=vision
-    QVision.ClickText           M, 10 doses/vial, Lyophilised       
+    UseModal                    on
+    ClickText                   M, 10 doses/vial, Lyophilised
     # ClickElement              xpath=//h3[normalize-space()='M, 10 doses/vial, Lyophilised']
     # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[3]
     ClickText                   APPLY                       recognition_mode=vision
