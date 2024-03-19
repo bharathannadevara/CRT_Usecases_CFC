@@ -227,7 +227,7 @@ Country_Portal_Keywords
     ClickText                   M, 5 doses/vial, Lyophilised
     # ClickElement              xpath=//h3[normalize-space()='M, 5 doses/vial, Lyophilised']
     # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[2]
-    ClickText                   APPLY                       recognition_mode=vision
+    ClickText                   APPLY                      anchor=CANCEL                       recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
 
@@ -237,7 +237,7 @@ Country_Portal_Keywords
     ClickText                   M, 10 doses/vial, Lyophilised
     # ClickElement              xpath=//h3[normalize-space()='M, 10 doses/vial, Lyophilised']
     # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[3]
-    ClickText                   APPLY                       recognition_mode=vision
+    ClickText                   APPLY                       anchor=CANCEL                       recognition_mode=vision
     Wait                        25
     ClickText                   Yes                         anchor=2
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
@@ -454,7 +454,7 @@ Country_Portal_Keywords
     ClickText                   MR, 5 doses/vial, Lyophilised
     # ClickElement              xpath=//h3[normalize-space()='MR, 5 doses/vial, Lyophilised']
     # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[3]
-    ClickText                   APPLY                       recognition_mode=vision
+    ClickText                   APPLY                      anchor=CANCEL                       recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
 
@@ -464,7 +464,7 @@ Country_Portal_Keywords
     ClickText                   MR, 10 doses/vial, Lyophilised
     # ClickElement              xpath=//h3[normalize-space()='MR, 10 doses/vial, Lyophilised']
     # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[2]
-    ClickText                   APPLY                       recognition_mode=vision
+    ClickText                   APPLY                       anchor=CANCEL                       recognition_mode=vision
     Wait                        25
     ClickText                   Yes                         anchor=2
 
