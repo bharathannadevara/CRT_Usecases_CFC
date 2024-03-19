@@ -447,20 +447,27 @@ Country_Portal_Keywords
 
 
     # 3.2.1 Vaccine and programmatic data
-    ClickText                   SELECT                      recognition_mode=vision
-    ClickText                   MR, 5 doses/vial, Lyophilised                           recognition_mode=vision
+    VerifyText                  SELECT                     partial_match=False
+    ClickText                   SELECT                     partial_match=False
+    LogScreenshot
+    UseModal                    on
+    ClickText                   MR, 5 doses/vial, Lyophilised
     # ClickElement              xpath=//h3[normalize-space()='MR, 5 doses/vial, Lyophilised']
     # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[3]
     ClickText                   APPLY                       recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
-    ClickText                   SELECT                      recognition_mode=vision
-    ClickText                   MR, 10 doses/vial, Lyophilised                          recognition_mode=vision
+
+    ClickText                   SELECT                      partial_match=False
+    LogScreenshot
+    UseModal                    on
+    ClickText                   MR, 10 doses/vial, Lyophilised
     # ClickElement              xpath=//h3[normalize-space()='MR, 10 doses/vial, Lyophilised']
     # ClickElement              xpath=//body[1]/div[2]/div[1]/div[2]/mat-dialog-container[1]/app-preferred-presentation-dialog[1]/div[1]/mat-dialog-content[1]/form[1]/mat-radio-group[1]/mat-radio-button[2]
     ClickText                   APPLY                       recognition_mode=vision
-    Wait                        20
+    Wait                        25
     ClickText                   Yes                         anchor=2
+
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
     ClickText                   MAR
     ClickText                   22
