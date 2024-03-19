@@ -262,8 +262,8 @@ Country_Portal_Keywords
     TypeText                    ${Second_Dose_Xpath}        ${Second_Dose}              partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
-    UseTable                    Population in the target age cohort (#)
-    ClickElement                ${Target_Age_Cohort_Xpath}
+    # UseTable                    Population in the target age cohort (#)
+    ClickElement                ${Target_Age_Cohort_Xpath}                        delay=5
     TypeText                    Population in the target age cohort (#)-2024            ${Target_Age_Cohort}
     ClickText                   SAVE
     Pause
