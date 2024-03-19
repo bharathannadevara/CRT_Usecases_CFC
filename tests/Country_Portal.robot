@@ -262,24 +262,24 @@ Country_Portal_Keywords
     TypeText                    ${Second_Dose_Xpath}        ${Second_Dose}              partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
-    # UseTable                    Population in the target age cohort (#)
-    ClickElement                ${Target_Age_Cohort_Xpath}                        delay=5
+    UseTable                    Population in the target age cohort (#)
+    ClickElement                ${Target_Age_Cohort_Xpath}                        delay=3
     TypeText                    Population in the target age cohort (#)-2024            ${Target_Age_Cohort}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Population_FirstDose_Xpath}
+    ClickElement                ${Target_Population_FirstDose_Xpath}               delay=3     
     TypeText                    Target population to be vaccinated (first dose) (#)-2024                            ${Target_Population_FirstDose}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Age_Cohort_LastDose_Xpath}
+    ClickElement                ${Target_Age_Cohort_LastDose_Xpath}                        delay=3
     TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Population_LastDose_Xpath}
+    ClickElement                ${Target_Population_LastDose_Xpath}                        delay=3
     TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Estimated_Wastage_Rate_Xpath}
+    ClickElement                ${Estimated_Wastage_Rate_Xpath}                        delay=3
     TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate}
     ClickText                   SAVE
     Pause
