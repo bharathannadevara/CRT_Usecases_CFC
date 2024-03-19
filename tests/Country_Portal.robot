@@ -220,7 +220,8 @@ Country_Portal_Keywords
     ClickText                   NEXT
 
     # 3.1.1 Vaccine and programmatic data
-    ClickText                   SELECT                      recognition_mode=vision
+    ClickText                   SELECT                     partial_match=False
+    LogScreenshot
     UseModal                    on
     ClickText                   M, 5 doses/vial, Lyophilised
     # ClickElement              xpath=//h3[normalize-space()='M, 5 doses/vial, Lyophilised']
@@ -229,7 +230,8 @@ Country_Portal_Keywords
     Pause
     ClickText                   Yes                         anchor=1
 
-    ClickText                   SELECT                      recognition_mode=vision
+    ClickText                   SELECT                      partial_match=False
+    LogScreenshot
     UseModal                    on
     ClickText                   M, 10 doses/vial, Lyophilised
     # ClickElement              xpath=//h3[normalize-space()='M, 10 doses/vial, Lyophilised']
