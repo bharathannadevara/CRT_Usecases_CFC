@@ -491,23 +491,23 @@ Country_Portal_Keywords
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 2nd dose routine immunisation:
 
     UseTable                    Population in the target age cohort (#)
-    ClickElement                ${Target_Age_Cohort_Xpath}
+    ClickElement                ${Target_Age_Cohort_Xpath}                        delay=3
     TypeText                    Population in the target age cohort (#)-2024            ${Target_Age_Cohort1}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Population_FirstDose_Xpath}
+    ClickElement                ${Target_Population_FirstDose_Xpath}                    delay=3
     TypeText                    Target population to be vaccinated (first dose) (#)-2024                            ${Target_Population_FirstDose1}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Age_Cohort_LastDose_Xpath}
+    ClickElement                ${Target_Age_Cohort_LastDose_Xpath}                        delay=3
     TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose1}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Population_LastDose_Xpath}
+    ClickElement                ${Target_Population_LastDose_Xpath}                        delay=3
     TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose1}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Estimated_Wastage_Rate_Xpath}
+    ClickElement                ${Estimated_Wastage_Rate_Xpath}                        delay=3
     TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate1}
     ClickText                   SAVE
     Pause
@@ -688,35 +688,35 @@ Country_Portal_Keywords
     ClickText                   ATTACH                      anchor=Attach the signature page(s) back.
     Double click                CRT_Demo.pdf
 
-    ClickText                   SUBMIT                      anchor=PREVIOUS
-    ClickText                   Submit                      anchor=CANCEL
-    ClickText                   DOWNLOAD A COPY
-    ClickText                   PDF
-    ClickText                   Continue
-    ClickText                   Close
+    # ClickText                   SUBMIT                      anchor=PREVIOUS
+    # ClickText                   Submit                      anchor=CANCEL
+    # ClickText                   DOWNLOAD A COPY
+    # ClickText                   PDF
+    # ClickText                   Continue
+    # ClickText                   Close
 
-    VerifyText                  Signatures
-    # ClickText                 ATTACH                      anchor=Attach the signature page(s) back.
-    # Double click              CRT_Demo.pdf
-    ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
-    ClickText                   PDF
-    ClickText                   Continue
-    ClickText                   Close
+    # VerifyText                  Signatures
+    # # ClickText                 ATTACH                      anchor=Attach the signature page(s) back.
+    # # Double click              CRT_Demo.pdf
+    # ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
+    # ClickText                   PDF
+    # ClickText                   Continue
+    # ClickText                   Close
 
-    ClickElement                ${Globe_Xpath}
-    ClickText                   Français
-    ClickText                   TÉLÉCHARGER UNE COPIE
-    ClickText                   FERMER
+    # ClickElement                ${Globe_Xpath}
+    # ClickText                   Français
+    # ClickText                   TÉLÉCHARGER UNE COPIE
+    # ClickText                   FERMER
 
-    ClickElement                ${Globe_Xpath}
-    ClickText                   Español
-    ClickText                   DESCARGAR UNA COPIA
-    CLickText                   CERRAR
+    # ClickElement                ${Globe_Xpath}
+    # ClickText                   Español
+    # ClickText                   DESCARGAR UNA COPIA
+    # CLickText                   CERRAR
 
-    ClickElement                ${Globe_Xpath}
-    ClickText                   Pусский
-    ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
-    ClickText                   ЗАКРЫТЬ
+    # ClickElement                ${Globe_Xpath}
+    # ClickText                   Pусский
+    # ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
+    # ClickText                   ЗАКРЫТЬ
 
 
 
