@@ -332,7 +332,7 @@ Country_Portal_Keywords
 
     # 3.1.6 Report on Grant Performance Framework
     ClickText                   FILL IN GRANT PERFORMANCE FRAMEWORK
-    Sleep                       3
+    Sleep                       10
     SwitchWindow                index=1
     ClickText                   NEXT
 
@@ -556,7 +556,7 @@ Country_Portal_Keywords
 
     # 3.2.6 Report on Grant Performance Framework
     ClickText                   FILL IN GRANT PERFORMANCE FRAMEWORK
-    Sleep                       3
+    Sleep                       10
     SwitchWindow                index=1
     ClickText                   NEXT
 
@@ -703,12 +703,14 @@ Country_Portal_Keywords
     ClickText                   Français
     ClickText                   TÉLÉCHARGER UNE COPIE
     ClickText                   FERMER
+    Pause
 
     ClickElement                ${Globe_Xpath}
     ClickText                   Español
     ClickText                   DESCARGAR UNA COPIA
     CLickText                   CERRAR
-
+    Pause
+    
     ClickElement                ${Globe_Xpath}
     ClickText                   Pусский
     ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
