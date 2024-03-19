@@ -200,8 +200,10 @@ Country_Portal_Keywords
 
     # Coordination and advisory groups documents
     ScrollText                  Coordination and advisory groups documents
-    ClickText                   UPLOAD                      anchor=National Coordination Forum Terms of Reference                               delay=3
-    Double click                Test_Gavi.txt
+    ClickText                   SELECT FROM LIBRARY         anchor=National Coordination Forum Terms of Reference                               delay=3
+    UseTable                    File(s)
+    ClickCell                   r2c1                        delay=3
+    ClickText                   SELECT                      partial_match=False         delay=3
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=National Coordination Forum meeting minutes of the past 12 months
@@ -220,12 +222,12 @@ Country_Portal_Keywords
     ClickText                   NEXT
 
     # 3.1.1 Vaccine and programmatic data
-    VerifyText                  SELECT                     partial_match=False
-    ClickText                   SELECT                     partial_match=False
+    VerifyText                  SELECT                      partial_match=False
+    ClickText                   SELECT                      partial_match=False
     LogScreenshot
     UseModal                    on
     ClickText                   M, 5 doses/vial, Lyophilised
-    ClickText                   APPLY                      anchor=CANCEL                       recognition_mode=vision
+    ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
     Sleep                       40
@@ -234,7 +236,7 @@ Country_Portal_Keywords
     LogScreenshot
     UseModal                    on
     ClickText                   M, 10 doses/vial, Lyophilised
-    ClickText                   APPLY                       anchor=CANCEL                       recognition_mode=vision
+    ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
     Wait                        25
     ClickText                   Yes                         anchor=2
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
@@ -260,23 +262,23 @@ Country_Portal_Keywords
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 2nd dose routine immunisation:
 
     UseTable                    Population in the target age cohort (#)
-    ClickElement                ${Target_Age_Cohort_Xpath}                        delay=3
+    ClickElement                ${Target_Age_Cohort_Xpath}                              delay=3
     TypeText                    Population in the target age cohort (#)-2024            ${Target_Age_Cohort}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Population_FirstDose_Xpath}               delay=3     
+    ClickElement                ${Target_Population_FirstDose_Xpath}                    delay=3
     TypeText                    Target population to be vaccinated (first dose) (#)-2024                            ${Target_Population_FirstDose}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Age_Cohort_LastDose_Xpath}                        delay=3
+    ClickElement                ${Target_Age_Cohort_LastDose_Xpath}                     delay=3
     TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Population_LastDose_Xpath}                        delay=3
+    ClickElement                ${Target_Population_LastDose_Xpath}                     delay=3
     TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Estimated_Wastage_Rate_Xpath}                        delay=3
+    ClickElement                ${Estimated_Wastage_Rate_Xpath}                         delay=3
     TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate}
     ClickText                   SAVE
     Pause
@@ -445,12 +447,12 @@ Country_Portal_Keywords
 
 
     # 3.2.1 Vaccine and programmatic data
-    VerifyText                  SELECT                     partial_match=False
-    ClickText                   SELECT                     partial_match=False
+    VerifyText                  SELECT                      partial_match=False
+    ClickText                   SELECT                      partial_match=False
     LogScreenshot
     UseModal                    on
     ClickText                   MR, 5 doses/vial, Lyophilised
-    ClickText                   APPLY                      anchor=CANCEL                       recognition_mode=vision
+    ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
     Pause
     ClickText                   Yes                         anchor=1
     Sleep                       40
@@ -459,7 +461,7 @@ Country_Portal_Keywords
     LogScreenshot
     UseModal                    on
     ClickText                   MR, 10 doses/vial, Lyophilised
-    ClickText                   APPLY                       anchor=CANCEL                       recognition_mode=vision
+    ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
     Wait                        25
     ClickText                   Yes                         anchor=2
 
@@ -486,7 +488,7 @@ Country_Portal_Keywords
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 2nd dose routine immunisation:
 
     UseTable                    Population in the target age cohort (#)
-    ClickElement                ${Target_Age_Cohort_Xpath}                        delay=3
+    ClickElement                ${Target_Age_Cohort_Xpath}                              delay=3
     TypeText                    Population in the target age cohort (#)-2024            ${Target_Age_Cohort1}
     ClickText                   SAVE
     Pause
@@ -494,15 +496,15 @@ Country_Portal_Keywords
     TypeText                    Target population to be vaccinated (first dose) (#)-2024                            ${Target_Population_FirstDose1}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Age_Cohort_LastDose_Xpath}                        delay=3
+    ClickElement                ${Target_Age_Cohort_LastDose_Xpath}                     delay=3
     TypeText                    Population in the target age cohort for last dose(#)-2024                           ${Target_Age_Cohort_LastDose1}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Target_Population_LastDose_Xpath}                        delay=3
+    ClickElement                ${Target_Population_LastDose_Xpath}                     delay=3
     TypeText                    Target population to be vaccinated for last dose (#)-2024                           ${Target_Population_LastDose1}
     ClickText                   SAVE
     Pause
-    ClickElement                ${Estimated_Wastage_Rate_Xpath}                        delay=3
+    ClickElement                ${Estimated_Wastage_Rate_Xpath}                         delay=3
     TypeText                    Estimated wastage rates for preferred presentation (%)-2024                         ${Estimated_Wastage_Rate1}
     ClickText                   SAVE
     Pause
@@ -710,7 +712,7 @@ Country_Portal_Keywords
     ClickText                   DESCARGAR UNA COPIA
     CLickText                   CERRAR
     Pause
-    
+
     ClickElement                ${Globe_Xpath}
     ClickText                   Pусский
     ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
