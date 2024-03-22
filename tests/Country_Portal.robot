@@ -5,32 +5,32 @@ Library                         QVision
 Library                         DataDriver                  reader_class=TestDataApi    name=Country_Portal_Gavi.xlsx
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
-Test Template                   Country_Portal_Keywords
+# Test Template                   Country_Portal_Keywords
 
 *** Test Cases ***
 Country_Portal_TestCase
     [Tags]                      Country_Portal
 
-*** Keywords ***
-Country_Portal_Keywords
-    [Arguments]                 ${Contact_Rec}              ${Country}                  ${Average_Exchange_Rate}    ${Total_Government_Expenditure}                         ${Total_Government_Health_Expenditure}
-    ...                         ${Immunisation_Budget}      ${Domestic}                 ${GAVI}                     ${UNICEF}                   ${WHO}                      ${NHSP_From_Year}
-    ...                         ${NHSP_To_Year}             ${cMYP_From_Year}           ${cMYP_To_Year}             ${Corrected_Info}           ${Customs_Regulations}      ${Regulatory_Agency}       ${Coverage_and_Equity}
-    ...                         ${Vaccine_Presentation}     ${First_Dose}               ${Second_Dose}              ${Target_Age_Cohort}        ${Target_Population_FirstDose}
-    ...                         ${Target_Age_Cohort_LastDose}                           ${Target_Population_LastDose}                           ${Estimated_Wastage_Rate}
-    ...                         ${Co_financing_Payment1}    ${Co_financing_Payment2}    ${Live_Births}
-    ...                         ${Gov_Funding}              ${Other_Donors}             ${Gavi_Support}             ${Amount_Gov_Funding}       ${Amount_Other_Donors}      ${Amount_Gavi_Support}     ${Key_Budget}
-    ...                         ${Financial_Management}     ${Compliance_Gavi_Guidelines}                           ${Fiduciary_Management}     ${Additional_Technical_Assistance}
-    ...                         ${Rationale_Request}        ${cMYP}                     ${NITAG}                    ${Financial_Sustainability}                             ${Programmatic_Challenges}
-    ...                         ${Improving_Coverage_and_Equity}                        ${Synergies}                ${Measles_and_Rubella_Activities}
-    ...                         ${Vaccine_Presentation1}    ${First_Dose1}              ${Second_Dose1}             ${Target_Age_Cohort1}       ${Target_Population_FirstDose1}
-    ...                         ${Target_Age_Cohort_LastDose1}                          ${Target_Population_LastDose1}                          ${Estimated_Wastage_Rate1}
-    ...                         ${Co_financing_Payment11}                               ${Co_financing_Payment21}                               ${Live_Births1}
-    ...                         ${Gov_Funding1}             ${Other_Donors1}            ${Gavi_Support1}            ${Amount_Gov_Funding1}      ${Amount_Other_Donors1}     ${Amount_Gavi_Support1}    ${Key_Budget1}
-    ...                         ${Financial_Management1}    ${Compliance_Gavi_Guidelines1}                          ${Fiduciary_Management1}    ${Additional_Technical_Assistance1}
-    ...                         ${Rationale_Request1}       ${cMYP1}                    ${NITAG1}                   ${Financial_Sustainability1}                            ${Programmatic_Challenges1}
-    ...                         ${Improving_Coverage_and_Equity1}                       ${Synergies1}               ${Measles_and_Rubella_Activities1}
-    ...                         ${Name}                     ${Position}                 ${Phone_number}             ${Email}                    ${Organisation}             ${Comment}
+# *** Keywords ***
+# Country_Portal_Keywords
+#     [Arguments]                 ${Contact_Rec}              ${Country}                  ${Average_Exchange_Rate}    ${Total_Government_Expenditure}                         ${Total_Government_Health_Expenditure}
+#     ...                         ${Immunisation_Budget}      ${Domestic}                 ${GAVI}                     ${UNICEF}                   ${WHO}                      ${NHSP_From_Year}
+#     ...                         ${NHSP_To_Year}             ${cMYP_From_Year}           ${cMYP_To_Year}             ${Corrected_Info}           ${Customs_Regulations}      ${Regulatory_Agency}       ${Coverage_and_Equity}
+#     ...                         ${Vaccine_Presentation}     ${First_Dose}               ${Second_Dose}              ${Target_Age_Cohort}        ${Target_Population_FirstDose}
+#     ...                         ${Target_Age_Cohort_LastDose}                           ${Target_Population_LastDose}                           ${Estimated_Wastage_Rate}
+#     ...                         ${Co_financing_Payment1}    ${Co_financing_Payment2}    ${Live_Births}
+#     ...                         ${Gov_Funding}              ${Other_Donors}             ${Gavi_Support}             ${Amount_Gov_Funding}       ${Amount_Other_Donors}      ${Amount_Gavi_Support}     ${Key_Budget}
+#     ...                         ${Financial_Management}     ${Compliance_Gavi_Guidelines}                           ${Fiduciary_Management}     ${Additional_Technical_Assistance}
+#     ...                         ${Rationale_Request}        ${cMYP}                     ${NITAG}                    ${Financial_Sustainability}                             ${Programmatic_Challenges}
+#     ...                         ${Improving_Coverage_and_Equity}                        ${Synergies}                ${Measles_and_Rubella_Activities}
+#     ...                         ${Vaccine_Presentation1}    ${First_Dose1}              ${Second_Dose1}             ${Target_Age_Cohort1}       ${Target_Population_FirstDose1}
+#     ...                         ${Target_Age_Cohort_LastDose1}                          ${Target_Population_LastDose1}                          ${Estimated_Wastage_Rate1}
+#     ...                         ${Co_financing_Payment11}                               ${Co_financing_Payment21}                               ${Live_Births1}
+#     ...                         ${Gov_Funding1}             ${Other_Donors1}            ${Gavi_Support1}            ${Amount_Gov_Funding1}      ${Amount_Other_Donors1}     ${Amount_Gavi_Support1}    ${Key_Budget1}
+#     ...                         ${Financial_Management1}    ${Compliance_Gavi_Guidelines1}                          ${Fiduciary_Management1}    ${Additional_Technical_Assistance1}
+#     ...                         ${Rationale_Request1}       ${cMYP1}                    ${NITAG1}                   ${Financial_Sustainability1}                            ${Programmatic_Challenges1}
+#     ...                         ${Improving_Coverage_and_Equity1}                       ${Synergies1}               ${Measles_and_Rubella_Activities1}
+#     ...                         ${Name}                     ${Position}                 ${Phone_number}             ${Email}                    ${Organisation}             ${Comment}
 
 
     Run Keyword                 Login
