@@ -228,16 +228,15 @@ Country_Portal_TestCase
     UseModal                    on
     ClickText                   M, 5 doses/vial, Lyophilised
     ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
-    Pause
+    Wait                        90
     ClickText                   Yes                         anchor=1
-    Sleep                       60
 
     ClickText                   SELECT                      partial_match=False
     LogScreenshot
     UseModal                    on
     ClickText                   M, 10 doses/vial, Lyophilised
     ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
-    Wait                        25
+    Wait                        30
     ClickText                   Yes                         anchor=2
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
     ClickText                   APR
@@ -459,16 +458,15 @@ Country_Portal_TestCase
     UseModal                    on
     ClickText                   MR, 5 doses/vial, Lyophilised
     ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
-    Pause
+    Wait                        90
     ClickText                   Yes                         anchor=1
-    Sleep                       40
 
     ClickText                   SELECT                      partial_match=False
     LogScreenshot
     UseModal                    on
     ClickText                   MR, 10 doses/vial, Lyophilised
     ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
-    Wait                        25
+    Wait                        30
     ClickText                   Yes                         anchor=2
 
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
