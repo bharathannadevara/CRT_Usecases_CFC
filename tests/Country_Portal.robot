@@ -142,7 +142,8 @@ Country_Portal_TestCase
     QVision.Double click        execution
     QVision.Double click        Gavi                        anchor=output
     QVision.Double click        Documents
-    QVision.Double click        Test_Gavi.txt
+    QVision.ClickText           Test_Gavi.txt
+    QVision.ClickText           Open                        anchor=Cancel
     Sleep                       10
 
     ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
@@ -352,7 +353,8 @@ Country_Portal_TestCase
     QVision.Double click        Gavi                        anchor=output
     QVision.Double click        Documents
     Sleep                       3
-    QVision.Double click        CRT_Demo.pdf
+    QVision.ClickText           CRT_Demo.pdf
+    QVision.ClickText           Open                        anchor=Cancel
     Pause
 
     VerifyText                  Application documents
@@ -366,7 +368,8 @@ Country_Portal_TestCase
     QVision.Double click        Gavi                        anchor=output
     QVision.Double click        Documents
     Sleep                       3
-    QVision.Double click        CRT_Demo.pdf
+    QVision.ClickText           CRT_Demo.pdf
+    QVision.ClickText           Open                        anchor=Cancel
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
@@ -579,7 +582,8 @@ Country_Portal_TestCase
     QVision.Double click        Gavi                        anchor=output
     QVision.Double click        Documents
     Sleep                       3
-    QVision.Double click        CRT_Demo.pdf
+    QVision.ClickText           CRT_Demo.pdf
+    QVision.ClickText           Open                        anchor=Cancel
     Pause
 
     VerifyText                  Application documents
@@ -594,7 +598,8 @@ Country_Portal_TestCase
     QVision.Double click        Gavi                        anchor=output
     QVision.Double click        Documents
     Sleep                       3
-    QVision.Double click        CRT_Demo.pdf
+    QVision.ClickText           CRT_Demo.pdf
+    QVision.ClickText           Open                        anchor=Cancel
     Sleep                       10
     Pause
 
