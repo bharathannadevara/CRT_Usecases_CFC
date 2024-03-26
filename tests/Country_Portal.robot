@@ -73,7 +73,7 @@ Country_Portal_TestCase
     SetConfig                   ShadowDOM                   on
     Sleep                       3
     QVision.ClickText           2023                        anchor=More
-    Sleep                       3
+    Sleep                       5
     ${isNumberVisible}=         QWeb.Is Text                Number
     IF                          ${isNumberVisible}
         QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
