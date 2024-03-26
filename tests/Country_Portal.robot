@@ -166,7 +166,13 @@ Country_Portal_TestCase
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
     ClickText                   UPDATE                      anchor=7
-    QVision.Double click        CRT_Demo.pdf
+    QVision.Double click        Home                        anchor=Desktop
+    QVision.Double click        execution
+    QVision.Double click        Gavi                        anchor=output
+    QVision.Double click        Documents
+    Sleep                       3
+    QVision.ClickText           CRT_Demo.pdf
+    QVision.ClickText           Open                        anchor=Cancel
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=5
