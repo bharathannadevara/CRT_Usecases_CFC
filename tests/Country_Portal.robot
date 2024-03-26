@@ -698,7 +698,8 @@ Country_Portal_TestCase
 
     VerifyText                  Signatures
     ClickText                   ATTACH                      anchor=Attach the signature page(s) back.
-    Double click                CRT_Demo.pdf
+    QVision.ClickText           CRT_Demo.pdf
+    QVision.ClickText           Open                        anchor=Cancel
 
     ClickText                   SUBMIT                      anchor=PREVIOUS
     ClickText                   Submit                      anchor=CANCEL
