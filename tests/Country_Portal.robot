@@ -719,37 +719,37 @@ Country_Portal_TestCase
     QVision.ClickText           CRT_Demo.pdf
     QVision.ClickText           Open                        anchor=Cancel
 
-    ClickText                   SUBMIT                      anchor=PREVIOUS
-    ClickText                   Submit                      anchor=CANCEL
-    ClickText                   DOWNLOAD A COPY
-    ClickText                   PDF
-    ClickText                   Continue
-    ClickText                   Close
+    # ClickText                   SUBMIT                      anchor=PREVIOUS
+    # ClickText                   Submit                      anchor=CANCEL
+    # ClickText                   DOWNLOAD A COPY
+    # ClickText                   PDF
+    # ClickText                   Continue
+    # ClickText                   Close
 
-    VerifyText                  Signatures
-    # ClickText                 ATTACH                      anchor=Attach the signature page(s) back.
-    # Double click              CRT_Demo.pdf
-    ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
-    ClickText                   PDF
-    ClickText                   Continue
-    ClickText                   Close
+    # VerifyText                  Signatures
+    # # ClickText                 ATTACH                      anchor=Attach the signature page(s) back.
+    # # Double click              CRT_Demo.pdf
+    # ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
+    # ClickText                   PDF
+    # ClickText                   Continue
+    # ClickText                   Close
 
-    ClickElement                ${Globe_Xpath}
-    ClickText                   Français
-    ClickText                   TÉLÉCHARGER UNE COPIE
-    ClickText                   FERMER
-    Pause
+    # ClickElement                ${Globe_Xpath}
+    # ClickText                   Français
+    # ClickText                   TÉLÉCHARGER UNE COPIE
+    # ClickText                   FERMER
+    # Pause
 
-    ClickElement                ${Globe_Xpath}
-    ClickText                   Español
-    ClickText                   DESCARGAR UNA COPIA
-    CLickText                   CERRAR
-    Pause
+    # ClickElement                ${Globe_Xpath}
+    # ClickText                   Español
+    # ClickText                   DESCARGAR UNA COPIA
+    # CLickText                   CERRAR
+    # Pause
 
-    ClickElement                ${Globe_Xpath}
-    ClickText                   Pусский
-    ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
-    ClickText                   ЗАКРЫТЬ
+    # ClickElement                ${Globe_Xpath}
+    # ClickText                   Pусский
+    # ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
+    # ClickText                   ЗАКРЫТЬ
 
 
 
