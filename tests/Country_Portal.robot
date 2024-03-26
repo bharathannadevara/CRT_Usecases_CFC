@@ -142,7 +142,7 @@ Country_Portal_TestCase
     QVision.Double click        execution
     QVision.Double click        Gavi                        anchor=output
     QVision.Double click        Documents
-    QVision.ClickText           Test_Gavi.txt
+    QVision.DoubleClick           Test_Gavi.txt
     QVision.ClickText           Open                        anchor=Cancel
     Sleep                       10
 
@@ -363,20 +363,26 @@ Country_Portal_TestCase
     QVision.ClickText           Open                        anchor=Cancel
     Pause
 
-    VerifyText                  Application documents
-    ScrollText                  Application documents
-    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
-    ClickText                   UPLOAD                      anchor=Budget and Planning Tool
-    # QVision.Double click      suite
-    # QVision.Double click      Documents
-    QVision.Double click        Home                        anchor=Desktop
-    QVision.Double click        execution
-    QVision.Double click        Gavi                        anchor=output
-    QVision.Double click        Documents
-    Sleep                       3
-    QVision.ClickText           CRT_Demo.pdf
-    QVision.ClickText           Open                        anchor=Cancel
+    ClickText                   SELECT FROM LIBRARY         anchor=Budget and Planning Tool
+    UseTable                    File(s)
+    ClickCell                   r4c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
+
+    # VerifyText                  Application documents
+    # ScrollText                  Application documents
+    # ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
+    # ClickText                   UPLOAD                      anchor=Budget and Planning Tool
+    # # QVision.Double click      suite
+    # # QVision.Double click      Documents
+    # QVision.Double click        Home                        anchor=Desktop
+    # QVision.Double click        execution
+    # QVision.Double click        Gavi                        anchor=output
+    # QVision.Double click        Documents
+    # Sleep                       3
+    # QVision.ClickText           CRT_Demo.pdf
+    # QVision.ClickText           Open                        anchor=Cancel
+    # Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
     UseTable                    File(s)
@@ -592,22 +598,28 @@ Country_Portal_TestCase
     QVision.ClickText           Open                        anchor=Cancel
     Pause
 
-    VerifyText                  Application documents
-    ScrollText                  Application documents
-    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
-    ClickText                   UPLOAD                      anchor=Budget and Planning Tool
-    # QVision.Double click      suite
-    # QVision.Double click      Documents
-    # QVision.Double click      Test_Gavi.txt
-    # QVision.Double click      Home                        anchor=Desktop
-    QVision.Double click        execution
-    QVision.Double click        Gavi                        anchor=output
-    QVision.Double click        Documents
-    Sleep                       3
-    QVision.ClickText           CRT_Demo.pdf
-    QVision.ClickText           Open                        anchor=Cancel
-    Sleep                       10
+    ClickText                   SELECT FROM LIBRARY         anchor=Budget and Planning Tool
+    UseTable                    File(s)
+    ClickCell                   r1c1                        delay=4
+    ClickText                   SELECT                      partial_match=False         delay=4
     Pause
+
+    # VerifyText                  Application documents
+    # ScrollText                  Application documents
+    # ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
+    # ClickText                   UPLOAD                      anchor=Budget and Planning Tool
+    # # QVision.Double click      suite
+    # # QVision.Double click      Documents
+    # # QVision.Double click      Test_Gavi.txt
+    # # QVision.Double click      Home                        anchor=Desktop
+    # QVision.Double click        execution
+    # QVision.Double click        Gavi                        anchor=output
+    # QVision.Double click        Documents
+    # Sleep                       3
+    # QVision.ClickText           CRT_Demo.pdf
+    # QVision.ClickText           Open                        anchor=Cancel
+    # Sleep                       10
+    # Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
     UseTable                    File(s)
