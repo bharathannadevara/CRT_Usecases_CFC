@@ -142,7 +142,7 @@ Country_Portal_TestCase
     QVision.Double click        execution
     QVision.Double click        Gavi                        anchor=output
     QVision.Double click        Documents
-    QVision.DoubleClick           Test_Gavi.txt
+    QVision.ClickText           Test_Gavi.txt
     QVision.ClickText           Open                        anchor=Cancel
     Sleep                       10
 
