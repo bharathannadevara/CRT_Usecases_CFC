@@ -369,19 +369,19 @@ Country_Portal_TestCase
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    # VerifyText                  Application documents
-    # ScrollText                  Application documents
-    # ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
-    # ClickText                   UPLOAD                      anchor=Budget and Planning Tool
-    # # QVision.Double click      suite
-    # # QVision.Double click      Documents
-    # QVision.Double click        Home                        anchor=Desktop
-    # QVision.Double click        execution
-    # QVision.Double click        Gavi                        anchor=output
-    # QVision.Double click        Documents
-    # Sleep                       3
-    # QVision.ClickText           CRT_Demo.pdf
-    # QVision.ClickText           Open                        anchor=Cancel
+    # VerifyText                Application documents
+    # ScrollText                Application documents
+    # ${FILE_PATH}              Set Variable                ${CURDIR}/../Documents
+    # ClickText                 UPLOAD                      anchor=Budget and Planning Tool
+    # # QVision.Double click    suite
+    # # QVision.Double click    Documents
+    # QVision.Double click      Home                        anchor=Desktop
+    # QVision.Double click      execution
+    # QVision.Double click      Gavi                        anchor=output
+    # QVision.Double click      Documents
+    # Sleep                     3
+    # QVision.ClickText         CRT_Demo.pdf
+    # QVision.ClickText         Open                        anchor=Cancel
     # Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
@@ -604,21 +604,21 @@ Country_Portal_TestCase
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
 
-    # VerifyText                  Application documents
-    # ScrollText                  Application documents
-    # ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
-    # ClickText                   UPLOAD                      anchor=Budget and Planning Tool
-    # # QVision.Double click      suite
-    # # QVision.Double click      Documents
-    # # QVision.Double click      Test_Gavi.txt
-    # # QVision.Double click      Home                        anchor=Desktop
-    # QVision.Double click        execution
-    # QVision.Double click        Gavi                        anchor=output
-    # QVision.Double click        Documents
-    # Sleep                       3
-    # QVision.ClickText           CRT_Demo.pdf
-    # QVision.ClickText           Open                        anchor=Cancel
-    # Sleep                       10
+    # VerifyText                Application documents
+    # ScrollText                Application documents
+    # ${FILE_PATH}              Set Variable                ${CURDIR}/../Documents
+    # ClickText                 UPLOAD                      anchor=Budget and Planning Tool
+    # # QVision.Double click    suite
+    # # QVision.Double click    Documents
+    # # QVision.Double click    Test_Gavi.txt
+    # # QVision.Double click    Home                        anchor=Desktop
+    # QVision.Double click      execution
+    # QVision.Double click      Gavi                        anchor=output
+    # QVision.Double click      Documents
+    # Sleep                     3
+    # QVision.ClickText         CRT_Demo.pdf
+    # QVision.ClickText         Open                        anchor=Cancel
+    # Sleep                     10
     # Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
@@ -719,37 +719,37 @@ Country_Portal_TestCase
     QVision.ClickText           CRT_Demo.pdf
     QVision.ClickText           Open                        anchor=Cancel
 
-    # ClickText                   SUBMIT                      anchor=PREVIOUS
-    # ClickText                   Submit                      anchor=CANCEL
-    # ClickText                   DOWNLOAD A COPY
-    # ClickText                   PDF
-    # ClickText                   Continue
-    # ClickText                   Close
+    # ClickText                 SUBMIT                      anchor=PREVIOUS
+    # ClickText                 Submit                      anchor=CANCEL
+    # ClickText                 DOWNLOAD A COPY
+    # ClickText                 PDF
+    # ClickText                 Continue
+    # ClickText                 Close
 
-    # VerifyText                  Signatures
-    # # ClickText                 ATTACH                      anchor=Attach the signature page(s) back.
-    # # Double click              CRT_Demo.pdf
-    # ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
-    # ClickText                   PDF
-    # ClickText                   Continue
-    # ClickText                   Close
+    # VerifyText                Signatures
+    # # ClickText               ATTACH                      anchor=Attach the signature page(s) back.
+    # # Double click            CRT_Demo.pdf
+    # ClickText                 DOWNLOAD APPLICATION        #Download application and PDF steps
+    # ClickText                 PDF
+    # ClickText                 Continue
+    # ClickText                 Close
 
-    # ClickElement                ${Globe_Xpath}
-    # ClickText                   Français
-    # ClickText                   TÉLÉCHARGER UNE COPIE
-    # ClickText                   FERMER
+    # ClickElement              ${Globe_Xpath}
+    # ClickText                 Français
+    # ClickText                 TÉLÉCHARGER UNE COPIE
+    # ClickText                 FERMER
     # Pause
 
-    # ClickElement                ${Globe_Xpath}
-    # ClickText                   Español
-    # ClickText                   DESCARGAR UNA COPIA
-    # CLickText                   CERRAR
+    # ClickElement              ${Globe_Xpath}
+    # ClickText                 Español
+    # ClickText                 DESCARGAR UNA COPIA
+    # CLickText                 CERRAR
     # Pause
 
-    # ClickElement                ${Globe_Xpath}
-    # ClickText                   Pусский
-    # ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
-    # ClickText                   ЗАКРЫТЬ
+    # ClickElement              ${Globe_Xpath}
+    # ClickText                 Pусский
+    # ClickText                 ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
+    # ClickText                 ЗАКРЫТЬ
 
 
 
