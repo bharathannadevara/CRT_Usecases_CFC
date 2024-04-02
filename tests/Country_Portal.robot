@@ -704,11 +704,11 @@ Country_Portal_TestCase
 
     # 4.1 Submission Details
     ScrollText                  Contacts
-    TypeText                    Name                        Test                        #${Name}
-    TypeText                    Position                    Test                        #${Position}
+    TypeText                    Name                        Test1                        #${Name}
+    TypeText                    Position                    Tesl                        #${Position}
     TypeText                    Phone Number                1234567899                  #${Phone_number}
-    TypeText                    Email                       testcrt@gmail.com           #${Email}
-    TypeText                    Organisation                ABC                         #${Organisation}
+    TypeText                    Email                       crttest@gmail.com           #${Email}
+    TypeText                    Organisation                ACC                         #${Organisation}
     ClickText                   ADD CONTACT
     Sleep                       4
 
