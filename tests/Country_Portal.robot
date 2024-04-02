@@ -44,7 +44,7 @@ Country_Portal_TestCase
     ClickText                   Country Portal              delay=2
     TypeText                    Search Country              ${Country}
     ClickText                   ${Country}
-
+    Wait                        5
     # Check And Click Based On Text Visibility
     # Click Text                START NEW                   anchor=GUIDELINES           index=1                     dist=1.0
     Click Text                  SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=3
