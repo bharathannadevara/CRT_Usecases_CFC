@@ -750,12 +750,3 @@ Country_Portal_TestCase
     # ClickText                 Pусский
     # ClickText                 ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
     # ClickText                 ЗАКРЫТЬ
-
-
-
-
-
-
-
-
-    test country portal
