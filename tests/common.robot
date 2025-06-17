@@ -29,6 +29,23 @@ Login
     TypeSecret            Password                    ${Password}
     ClickText             Log In
 
+Generate Unique Account Name
+    [Documentation]             Generates a unique account name using random number
+    ${random}=                  Evaluate                    random.randint(1000, 9999)                              random
+    ${account_unique_name}=     Set Variable                Account_${random}
+    Set Suite Variable          ${account_unique_name}
+
+Generate Unique Contact Name
+    [Documentation]             Generates a unique account name using random number
+    ${random}=                  Evaluate                    random.randint(1000, 9999)                              random
+    ${lead_contact_name}=       Set Variable                Contact_${random}
+    Set Suite Variable          ${lead_contact_name}
+Generate Unique Lead Name
+    [Documentation]             Generates a unique account name using random number
+    ${random}=                  Evaluate                    random.randint(1000, 9999)                              random
+    ${lead_unique_name}=        Set Variable                Lead_${random}
+    Set Suite Variable          ${lead_unique_name}
+
 Home
     GoTo                  ${login_url}/lightning/page/home
     ${login_status} =     IsText                      To access this page, you have to log in to Salesforce.                2
