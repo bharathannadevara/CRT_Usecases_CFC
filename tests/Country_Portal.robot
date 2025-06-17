@@ -5,32 +5,32 @@ Library                         QVision
 Library                         DataDriver                  reader_class=TestDataApi    name=Country_Portal_Gavi.xlsx
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
-# Test Template                 Country_Portal_Keywords
+Test Template                   Country_Portal_Keywords
 
 *** Test Cases ***
 Country_Portal_TestCase
-    [Tags]                      Country_Portal_Test
+    [Tags]                      Country_Portal
 
-    # *** Keywords ***
-    # Country_Portal_Keywords
-    #                           [Arguments]                 ${Contact_Rec}              ${Country}                  ${Average_Exchange_Rate}    ${Total_Government_Expenditure}    ${Total_Government_Health_Expenditure}
-    #                           ...                         ${Immunisation_Budget}      ${Domestic}                 ${GAVI}                    ${UNICEF}    ${WHO}    ${NHSP_From_Year}
-    #                           ...                         ${NHSP_To_Year}             ${cMYP_From_Year}           ${cMYP_To_Year}            ${Corrected_Info}    ${Customs_Regulations}    ${Regulatory_Agency}    ${Coverage_and_Equity}
-    #                           ...                         ${Vaccine_Presentation}     ${First_Dose}               ${Second_Dose}             ${Target_Age_Cohort}    ${Target_Population_FirstDose}
-    #                           ...                         ${Target_Age_Cohort_LastDose}                           ${Target_Population_LastDose}    ${Estimated_Wastage_Rate}
-    #                           ...                         ${Co_financing_Payment1}    ${Co_financing_Payment2}    ${Live_Births}
-    #                           ...                         ${Gov_Funding}              ${Other_Donors}             ${Gavi_Support}            ${Amount_Gov_Funding}    ${Amount_Other_Donors}    ${Amount_Gavi_Support}    ${Key_Budget}
-    #                           ...                         ${Financial_Management}     ${Compliance_Gavi_Guidelines}                          ${Fiduciary_Management}    ${Additional_Technical_Assistance}
-    #                           ...                         ${Rationale_Request}        ${cMYP}                     ${NITAG}                   ${Financial_Sustainability}    ${Programmatic_Challenges}
-    #                           ...                         ${Improving_Coverage_and_Equity}                        ${Synergies}               ${Measles_and_Rubella_Activities}
-    #                           ...                         ${Vaccine_Presentation1}    ${First_Dose1}              ${Second_Dose1}            ${Target_Age_Cohort1}    ${Target_Population_FirstDose1}
-    #                           ...                         ${Target_Age_Cohort_LastDose1}                          ${Target_Population_LastDose1}    ${Estimated_Wastage_Rate1}
-    #                           ...                         ${Co_financing_Payment11}                               ${Co_financing_Payment21}    ${Live_Births1}
-    #                           ...                         ${Gov_Funding1}             ${Other_Donors1}            ${Gavi_Support1}           ${Amount_Gov_Funding1}    ${Amount_Other_Donors1}    ${Amount_Gavi_Support1}    ${Key_Budget1}
-    #                           ...                         ${Financial_Management1}    ${Compliance_Gavi_Guidelines1}                         ${Fiduciary_Management1}    ${Additional_Technical_Assistance1}
-    #                           ...                         ${Rationale_Request1}       ${cMYP1}                    ${NITAG1}                  ${Financial_Sustainability1}    ${Programmatic_Challenges1}
-    #                           ...                         ${Improving_Coverage_and_Equity1}                       ${Synergies1}              ${Measles_and_Rubella_Activities1}
-    #                           ...                         ${Name}                     ${Position}                 ${Phone_number}            ${Email}    ${Organisation}    ${Comment}
+*** Keywords ***
+Country_Portal_Keywords
+    [Arguments]                 ${Contact_Rec}              ${Country}                  ${Average_Exchange_Rate}    ${Total_Government_Expenditure}                         ${Total_Government_Health_Expenditure}
+    ...                         ${Immunisation_Budget}      ${Domestic}                 ${GAVI}                     ${UNICEF}                   ${WHO}                      ${NHSP_From_Year}
+    ...                         ${NHSP_To_Year}             ${cMYP_From_Year}           ${cMYP_To_Year}             ${Corrected_Info}           ${Customs_Regulations}      ${Regulatory_Agency}       ${Coverage_and_Equity}
+    ...                         ${Vaccine_Presentation}     ${First_Dose}               ${Second_Dose}              ${Target_Age_Cohort}        ${Target_Population_FirstDose}
+    ...                         ${Target_Age_Cohort_LastDose}                           ${Target_Population_LastDose}                           ${Estimated_Wastage_Rate}
+    ...                         ${Co_financing_Payment1}    ${Co_financing_Payment2}    ${Live_Births}
+    ...                         ${Gov_Funding}              ${Other_Donors}             ${Gavi_Support}             ${Amount_Gov_Funding}       ${Amount_Other_Donors}      ${Amount_Gavi_Support}     ${Key_Budget}
+    ...                         ${Financial_Management}     ${Compliance_Gavi_Guidelines}                           ${Fiduciary_Management}     ${Additional_Technical_Assistance}
+    ...                         ${Rationale_Request}        ${cMYP}                     ${NITAG}                    ${Financial_Sustainability}                             ${Programmatic_Challenges}
+    ...                         ${Improving_Coverage_and_Equity}                        ${Synergies}                ${Measles_and_Rubella_Activities}
+    ...                         ${Vaccine_Presentation1}    ${First_Dose1}              ${Second_Dose1}             ${Target_Age_Cohort1}       ${Target_Population_FirstDose1}
+    ...                         ${Target_Age_Cohort_LastDose1}                          ${Target_Population_LastDose1}                          ${Estimated_Wastage_Rate1}
+    ...                         ${Co_financing_Payment11}                               ${Co_financing_Payment21}                               ${Live_Births1}
+    ...                         ${Gov_Funding1}             ${Other_Donors1}            ${Gavi_Support1}            ${Amount_Gov_Funding1}      ${Amount_Other_Donors1}     ${Amount_Gavi_Support1}    ${Key_Budget1}
+    ...                         ${Financial_Management1}    ${Compliance_Gavi_Guidelines1}                          ${Fiduciary_Management1}    ${Additional_Technical_Assistance1}
+    ...                         ${Rationale_Request1}       ${cMYP1}                    ${NITAG1}                   ${Financial_Sustainability1}                            ${Programmatic_Challenges1}
+    ...                         ${Improving_Coverage_and_Equity1}                       ${Synergies1}               ${Measles_and_Rubella_Activities1}
+    ...                         ${Name}                     ${Position}                 ${Phone_number}             ${Email}                    ${Organisation}             ${Comment}
 
 
     Run Keyword                 Login
@@ -44,10 +44,10 @@ Country_Portal_TestCase
     ClickText                   Country Portal              delay=2
     TypeText                    Search Country              ${Country}
     ClickText                   ${Country}
-    Wait                        5
+
     # Check And Click Based On Text Visibility
-    Click Text                START NEW                   anchor=GUIDELINES           index=1                     dist=1.0
-    # Click Text                  SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=3
+    # Click Text                START NEW                   anchor=GUIDELINES           index=1                     dist=1.0
+    Click Text                  SEE APPLICATION(S)          anchor=${Round} - ${Country}                            delay=3
     Sleep                       3
     LogScreenshot
     ClickElement                ${Gavi_Support1_Xpath}      delay=5
@@ -73,7 +73,7 @@ Country_Portal_TestCase
     SetConfig                   ShadowDOM                   on
     Sleep                       3
     QVision.ClickText           2023                        anchor=More
-    Sleep                       5
+    Sleep                       3
     ${isNumberVisible}=         QWeb.Is Text                Number
     IF                          ${isNumberVisible}
         QVision.ClickText       Number                      anchor=1.1 Please indicate the average exchange rate used on expenditures
@@ -101,7 +101,7 @@ Country_Portal_TestCase
         QVision.ClickCell       row_text=Other capital costs                            col_text=WHO
         QVision.WriteText       ${WHO}
 
-        QVision.ScrollTo        SUBMIT                      amount=-2                   anchor=Total expenditure for immunisation              dist=2.0
+        QVision.ScrollTo        SUBMIT                      amount=-2                   anchor=Total expenditure for immunisation               dist=2.0
         Pause
         QVision.ClickText       SUBMIT
         QVision.ClickText       SUBMIT                      anchor=CANCEL
@@ -121,7 +121,7 @@ Country_Portal_TestCase
     ClickText                   ${cMYP_From_Year}           anchor=2
     ClickElement                ${cMYP_ToYear_Xpath}
     ClickText                   ${cMYP_To_Year}             anchor=If any of the above information is not correct, please provide additional/corrected information or other comments here:
-    TypeText                    If any of the above information is not correct, please provide additional/corrected information or other comments here:    ${Corrected_Info}
+    TypeText                    If any of the above information is not correct, please provide additional/corrected information or other comments here:                     ${Corrected_Info}
     TypeText                    National customs regulations                            ${Customs_Regulations}
     TypeText                    National Regulatory Agency                              ${Regulatory_Agency}
     ClickText                   NEXT
@@ -136,14 +136,13 @@ Country_Portal_TestCase
     ScrollText                  Country and planning documents
     ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
     ClickText                   UPLOAD                      anchor=1
-    # QVision.Double click      Suite
-    # QVision.Double click      Documents
-    QVision.Double click        Home                        anchor=Desktop
-    QVision.Double click        execution
-    QVision.Double click        Gavi                        anchor=output
-    QVision.Double click        Documents
-    QVision.ClickText           Test_Gavi.txt
-    QVision.ClickText           Open                        anchor=Cancel
+    # Double click              Suite
+    # Double click              Documents
+    Double click                Home                        anchor=Desktop
+    Double click                execution
+    Double click                Gavi                        anchor=output
+    Double click                Documents
+    Double click                Test_Gavi.txt
     Sleep                       10
 
     ClickText                   SELECT FROM LIBRARY         anchor=Country strategic multi-year plan / cMYP costing tool
@@ -166,13 +165,7 @@ Country_Portal_TestCase
     ClickText                   SELECT                      partial_match=False         delay=3
     Pause
     ClickText                   UPDATE                      anchor=7
-    QVision.Double click        Home                        anchor=Desktop
-    QVision.Double click        execution
-    QVision.Double click        Gavi                        anchor=output
-    QVision.Double click        Documents
-    Sleep                       3
-    QVision.ClickText           CRT_Demo.pdf
-    QVision.ClickText           Open                        anchor=Cancel
+    Double click                CRT_Demo.pdf
     Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=5
@@ -207,7 +200,7 @@ Country_Portal_TestCase
 
     # Coordination and advisory groups documents
     ScrollText                  Coordination and advisory groups documents
-    ClickText                   SELECT FROM LIBRARY         anchor=National Coordination Forum Terms of Reference                              delay=3
+    ClickText                   SELECT FROM LIBRARY         anchor=National Coordination Forum Terms of Reference                               delay=3
     UseTable                    File(s)
     ClickCell                   r2c1                        delay=3
     ClickText                   SELECT                      partial_match=False         delay=3
@@ -235,19 +228,20 @@ Country_Portal_TestCase
     UseModal                    on
     ClickText                   M, 5 doses/vial, Lyophilised
     ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
-    Wait                        90
+    Pause
     ClickText                   Yes                         anchor=1
+    Sleep                       40
 
     ClickText                   SELECT                      partial_match=False
     LogScreenshot
     UseModal                    on
     ClickText                   M, 10 doses/vial, Lyophilised
     ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
-    Wait                        30
+    Wait                        25
     ClickText                   Yes                         anchor=2
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
-    ClickText                   APR
-    ClickText                   23
+    ClickText                   MAR
+    ClickText                   22
     ClickItem                   Open calendar               anchor=Planned launch date
     ClickText                   AUG
     ClickText                   22
@@ -260,7 +254,7 @@ Country_Portal_TestCase
     ClickText                   NEXT
 
     # 3.1.2 Target Information
-    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:                           ${First_Dose}    partial_match=false
+    TypeText                    Please describe the target age cohort for the Measles 1st dose routine immunisation:                            ${First_Dose}               partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the Measles 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the Measles 2nd dose routine immunisation:
     ClickElement                ${Second_Dose_Xpath}
@@ -295,8 +289,8 @@ Country_Portal_TestCase
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.           ${Co_financing_Payment1}
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment2}
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.            ${Co_financing_Payment1}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:                              ${Co_financing_Payment2}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     Sleep                       2
@@ -329,8 +323,8 @@ Country_Portal_TestCase
 
     # 3.1.5 Strategic considerations
     TypeText                    Rationale for this request                              ${Rationale_Request}
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                        ${cMYP}
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                          ${NITAG}
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                         ${cMYP}
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                           ${NITAG}
     TypeText                    Financial sustainability    ${Financial_Sustainability}
     TypeText                    Programmatic challenges     ${Programmatic_Challenges}
     TypeText                    Improving coverage and equity of routine immunisation                               ${Improving_Coverage_and_Equity}
@@ -352,37 +346,23 @@ Country_Portal_TestCase
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
     ClickText                   UPDATE                      anchor=MoH and MoF signature page
-    # QVision.Double click      suite
-    # QVision.Double click      Documents
-    QVision.Double click        Home                        anchor=Desktop
-    QVision.Double click        execution
-    QVision.Double click        Gavi                        anchor=output
-    QVision.Double click        Documents
+    Double click                suite
+    Double click                Documents
+    Double click                CRT_Demo.pdf
+    Pause
+
+    VerifyText                  Application documents
+    ScrollText                  Application documents
+    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
+    ClickText                   UPLOAD                      anchor=Budget and Planning Tool
+    # Double click              suite
+    # Double click              Documents
+    Double click                execution
+    Double click                Gavi                        anchor=output
+    Double click                Documents
     Sleep                       3
-    QVision.ClickText           CRT_Demo.pdf
-    QVision.ClickText           Open                        anchor=Cancel
+    Double click                CRT_Demo.pdf
     Pause
-
-    ClickText                   SELECT FROM LIBRARY         anchor=Budget and Planning Tool
-    UseTable                    File(s)
-    ClickCell                   r4c1                        delay=4
-    ClickText                   SELECT                      partial_match=False         delay=4
-    Pause
-
-    # VerifyText                Application documents
-    # ScrollText                Application documents
-    # ${FILE_PATH}              Set Variable                ${CURDIR}/../Documents
-    # ClickText                 UPLOAD                      anchor=Budget and Planning Tool
-    # # QVision.Double click    suite
-    # # QVision.Double click    Documents
-    # QVision.Double click      Home                        anchor=Desktop
-    # QVision.Double click      execution
-    # QVision.Double click      Gavi                        anchor=output
-    # QVision.Double click      Documents
-    # Sleep                     3
-    # QVision.ClickText         CRT_Demo.pdf
-    # QVision.ClickText         Open                        anchor=Cancel
-    # Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
     UseTable                    File(s)
@@ -473,20 +453,21 @@ Country_Portal_TestCase
     UseModal                    on
     ClickText                   MR, 5 doses/vial, Lyophilised
     ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
-    Wait                        90
+    Pause
     ClickText                   Yes                         anchor=1
+    Sleep                       40
 
     ClickText                   SELECT                      partial_match=False
     LogScreenshot
     UseModal                    on
     ClickText                   MR, 10 doses/vial, Lyophilised
     ClickText                   APPLY                       anchor=CANCEL               recognition_mode=vision
-    Wait                        30
+    Wait                        25
     ClickText                   Yes                         anchor=2
 
     ClickItem                   Open calendar               anchor=Required date for vaccine and supplies to arrive
-    ClickText                   APR
-    ClickText                   23
+    ClickText                   MAR
+    ClickText                   22
     ClickItem                   Open calendar               anchor=Planned launch date
     ClickText                   AUG
     ClickText                   22
@@ -499,7 +480,7 @@ Country_Portal_TestCase
     ClickText                   NEXT
 
     # 3.2.2 Target Information
-    TypeText                    Please describe the target age cohort for the MR 1st dose routine immunisation:     ${First_Dose1}             partial_match=false
+    TypeText                    Please describe the target age cohort for the MR 1st dose routine immunisation:     ${First_Dose1}              partial_match=false
     ClickText                   months                      anchor=Please describe the target age cohort for the MR 1st dose routine immunisation:
     VerifyText                  Please describe the target age cohort for the MR 2nd dose routine immunisation:
     ClickElement                ${Second_Dose_Xpath}
@@ -534,8 +515,8 @@ Country_Portal_TestCase
     ScrollText                  Country choice of co-financing amount per vaccine dose
     ClickText                   Update Estimated Values To be Financed
     Pause
-    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.           ${Co_financing_Payment11}
-    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:    ${Co_financing_Payment21}
+    TypeText                    Please indicate the process for ensuring that the co-financing payments are made in a timely manner.            ${Co_financing_Payment11}
+    TypeText                    If your country is in the accelerated transition phase for Gavi support, please answer the following question:                              ${Co_financing_Payment21}
     ClickElement                ${Co_financing_Payment_fundmonth_Xpath}
     ClickText                   March
     Sleep                       2
@@ -566,8 +547,8 @@ Country_Portal_TestCase
 
     # 3.2.5 Strategic considerations
     TypeText                    Rationale for this request                              ${Rationale_Request1}
-    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                        ${cMYP1}
-    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                          ${NITAG1}
+    TypeText                    Alignment with country strategic multi-year plan / comprehensive multi-year plan (cMYP)                         ${cMYP1}
+    TypeText                    Coordination Forum (ICC, HSCC or equivalent) and technical advisory committee (NITAG)                           ${NITAG1}
     TypeText                    Financial sustainability    ${Financial_Sustainability1}
     TypeText                    Programmatic challenges     ${Programmatic_Challenges1}
     TypeText                    Improving coverage and equity of routine immunisation                               ${Improving_Coverage_and_Equity1}
@@ -589,37 +570,24 @@ Country_Portal_TestCase
     ClickText                   SELECT                      partial_match=False         delay=4
     Pause
     ClickText                   UPDATE                      anchor=MoH and MoF signature page
-    QVision.Double click        Home                        anchor=Desktop
-    QVision.Double click        execution
-    QVision.Double click        Gavi                        anchor=output
-    QVision.Double click        Documents
+    Double click                CRT_Demo.pdf
+    Pause
+
+    VerifyText                  Application documents
+    ScrollText                  Application documents
+    ${FILE_PATH}                Set Variable                ${CURDIR}/../Documents
+    ClickText                   UPLOAD                      anchor=Budget and Planning Tool
+    # Double click              suite
+    # Double click              Documents
+    # Double click              Test_Gavi.txt
+    # Double click              Home                        anchor=Desktop
+    Double click                execution
+    Double click                Gavi                        anchor=output
+    Double click                Documents
     Sleep                       3
-    QVision.ClickText           CRT_Demo.pdf
-    QVision.ClickText           Open                        anchor=Cancel
+    Double click                CRT_Demo.pdf
+    Sleep                       10
     Pause
-
-    ClickText                   SELECT FROM LIBRARY         anchor=Budget and Planning Tool
-    UseTable                    File(s)
-    ClickCell                   r1c1                        delay=4
-    ClickText                   SELECT                      partial_match=False         delay=4
-    Pause
-
-    # VerifyText                Application documents
-    # ScrollText                Application documents
-    # ${FILE_PATH}              Set Variable                ${CURDIR}/../Documents
-    # ClickText                 UPLOAD                      anchor=Budget and Planning Tool
-    # # QVision.Double click    suite
-    # # QVision.Double click    Documents
-    # # QVision.Double click    Test_Gavi.txt
-    # # QVision.Double click    Home                        anchor=Desktop
-    # QVision.Double click      execution
-    # QVision.Double click      Gavi                        anchor=output
-    # QVision.Double click      Documents
-    # Sleep                     3
-    # QVision.ClickText         CRT_Demo.pdf
-    # QVision.ClickText         Open                        anchor=Cancel
-    # Sleep                     10
-    # Pause
 
     ClickText                   SELECT FROM LIBRARY         anchor=Workplan with activities specific to Vaccine grant
     UseTable                    File(s)
@@ -704,11 +672,11 @@ Country_Portal_TestCase
 
     # 4.1 Submission Details
     ScrollText                  Contacts
-    TypeText                    Name                        Test1                        #${Name}
-    TypeText                    Position                    Tesl                        #${Position}
-    TypeText                    Phone Number                1234567899                  #${Phone_number}
-    TypeText                    Email                       crttest@gmail.com           #${Email}
-    TypeText                    Organisation                ACC                         #${Organisation}
+    TypeText                    Name                        ${Name}
+    TypeText                    Position                    ${Position}
+    TypeText                    Phone Number                ${Phone_number}
+    TypeText                    Email                       ${Email}
+    TypeText                    Organisation                ${Organisation}
     ClickText                   ADD CONTACT
     Sleep                       4
 
@@ -716,37 +684,36 @@ Country_Portal_TestCase
 
     VerifyText                  Signatures
     ClickText                   ATTACH                      anchor=Attach the signature page(s) back.
-    QVision.ClickText           CRT_Demo.pdf
-    QVision.ClickText           Open                        anchor=Cancel
+    Double click                CRT_Demo.pdf
 
-    # ClickText                 SUBMIT                      anchor=PREVIOUS
-    # ClickText                 Submit                      anchor=CANCEL
-    # ClickText                 DOWNLOAD A COPY
-    # ClickText                 PDF
-    # ClickText                 Continue
-    # ClickText                 Close
+    ClickText                   SUBMIT                      anchor=PREVIOUS
+    ClickText                   Submit                      anchor=CANCEL
+    ClickText                   DOWNLOAD A COPY
+    ClickText                   PDF
+    ClickText                   Continue
+    ClickText                   Close
 
-    # VerifyText                Signatures
-    # # ClickText               ATTACH                      anchor=Attach the signature page(s) back.
-    # # Double click            CRT_Demo.pdf
-    # ClickText                 DOWNLOAD APPLICATION        #Download application and PDF steps
-    # ClickText                 PDF
-    # ClickText                 Continue
-    # ClickText                 Close
+    VerifyText                  Signatures
+    # ClickText                 ATTACH                      anchor=Attach the signature page(s) back.
+    # Double click              CRT_Demo.pdf
+    ClickText                   DOWNLOAD APPLICATION        #Download application and PDF steps
+    ClickText                   PDF
+    ClickText                   Continue
+    ClickText                   Close
 
-    # ClickElement              ${Globe_Xpath}
-    # ClickText                 Français
-    # ClickText                 TÉLÉCHARGER UNE COPIE
-    # ClickText                 FERMER
-    # Pause
+    ClickElement                ${Globe_Xpath}
+    ClickText                   Français
+    ClickText                   TÉLÉCHARGER UNE COPIE
+    ClickText                   FERMER
+    Pause
 
-    # ClickElement              ${Globe_Xpath}
-    # ClickText                 Español
-    # ClickText                 DESCARGAR UNA COPIA
-    # CLickText                 CERRAR
-    # Pause
+    ClickElement                ${Globe_Xpath}
+    ClickText                   Español
+    ClickText                   DESCARGAR UNA COPIA
+    CLickText                   CERRAR
+    Pause
 
-    # ClickElement              ${Globe_Xpath}
-    # ClickText                 Pусский
-    # ClickText                 ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
-    # ClickText                 ЗАКРЫТЬ
+    ClickElement                ${Globe_Xpath}
+    ClickText                   Pусский
+    ClickText                   ЗАГРУЗИТЬ ЭКЗЕМПЛЯР
+    ClickText                   ЗАКРЫТЬ
